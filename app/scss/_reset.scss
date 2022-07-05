@@ -44,6 +44,13 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 input,
