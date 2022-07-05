@@ -1,52 +1,52 @@
 body {
-    overflow-x: hidden;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: $white;
-    cursor: default;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $white;
+  cursor: default;
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 
-    &--header {
-        padding: 0 40px;
-        max-width: 1920px;
-    }
+  &--header {
+    padding: 0 40px;
+    max-width: 1920px;
+  }
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    height: 56px;
-    border-radius: 40px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    background-image: linear-gradient(256.49deg, #ff5366 7.82%, #6c57ff 75.06%);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 56px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background-image: linear-gradient(256.49deg, #ff5366 7.82%, #6c57ff 75.06%);
 
-    img {
-        margin-right: 8px;
-    }
+  img {
+    margin-right: 8px;
+  }
 }
 
 .section {
-    &__head {
-        display: flex;
-        align-items: flex-end;
-    }
+  &__head {
+    display: flex;
+    align-items: flex-end;
+  }
 
-    &__title {
-        p {
-            margin-bottom: 8px;
-            font-size: 16px;
-            line-height: 24px;
-            color: $gray;
-        }
+  &__title {
+    p {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray;
     }
+  }
 }
