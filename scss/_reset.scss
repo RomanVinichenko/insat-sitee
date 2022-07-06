@@ -45,9 +45,12 @@ a {
   text-decoration: none;
   color: inherit;
 
+  &:visited,
   &:hover,
   &:active,
-  &:focus {
+  &:focus,
+  &:target {
+    outline: none;
     text-decoration: none;
     color: inherit;
   }

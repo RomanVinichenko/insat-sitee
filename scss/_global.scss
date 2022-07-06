@@ -5,6 +5,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: $white;
+  background-color: $black;
   cursor: default;
 }
 
@@ -39,6 +40,8 @@ body {
   &__head {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -47,6 +50,36 @@ body {
       font-size: 16px;
       line-height: 24px;
       color: $gray;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 24px;
+    height: 56px;
+    border: 1px solid $gray-dark;
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+
+    &::after {
+      content: url("../images/more-arrow.svg");
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
     }
   }
 }
