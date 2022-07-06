@@ -6,3 +6,12 @@ function pic() {
   });
 }
 pic();
+
+$(document).ready(function(){
+  $('.studies__list').slick({
+    arrows: false,
+    slidesToShow: 3,
+    infinite: true,
+    slidesToScroll: 1,
+});
+});
