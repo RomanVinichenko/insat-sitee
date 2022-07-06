@@ -149,6 +149,32 @@
   }
 }
 
+.trusted {
+  padding: 120px 0;
+  background-color: $gray-dark;
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 0 0 24px;
+    animation: trusted 9s linear infinite;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 -24px;
+      width: 100%;
+      height: 298px;
+      min-width: 298px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgba($white, 0.24);
+      border-radius: 50%;
+    }
+  }
+}
+
 .company {
   padding: 120px 0;
   background-image: url("../images/company.svg");
@@ -189,6 +215,7 @@
 }
 
 .studies {
+  position: relative;
   padding: 200px 0;
   border-radius: 0 0 40px 40px;
   background-color: $gray-dark;
@@ -242,4 +269,63 @@
   margin-top: -40px;
   padding: 160px 0 120px;
   background-image: linear-gradient(252.56deg, #6c57ff 26.71%, #ff5366 149.39%);
+
+  h2 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
+  }
+
+  h4 {
+    margin-bottom: 72px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__country {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+  }
+
+  &__topic {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .form {
+    width: 100%;
+    max-width: 792px;
+  }
+}
+
+@keyframes trusted {
+  0% {
+    transform: translateX(-3%);
+  }
+
+  to {
+    transform: translateX(-163%);
+  }
 }

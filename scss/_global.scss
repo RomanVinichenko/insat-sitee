@@ -44,6 +44,19 @@ body {
     margin-bottom: 40px;
   }
 
+  &__subtitle {
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+
+    span {
+      display: inline-block;
+      margin-right: 16px;
+    }
+  }
+
   &__title {
     p {
       margin-bottom: 8px;
@@ -82,4 +95,8 @@ body {
       transform: translateY(-50%);
     }
   }
+}
+
+.logo {
+  display: block;
 }
