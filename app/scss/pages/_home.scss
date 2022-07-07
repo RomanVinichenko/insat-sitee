@@ -110,28 +110,6 @@
         height: 100%;
         object-fit: cover;
       }
-
-      a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        line-height: 1;
-        background-color: $white;
-
-        &::before {
-          content: url("../images/violet-arrow.svg");
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 16px;
-          height: 16px;
-          transform: translate(-50%, -50%);
-        }
-      }
     }
 
     .do__info {
