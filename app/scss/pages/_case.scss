@@ -1,0 +1,60 @@
+.case {
+  position: relative;
+  padding: 200px 0 160px;
+  border-radius: 0 0 40px 40px;
+  background: $black;
+
+  h1 {
+    margin-bottom: 41px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    li {
+      &:not(:last-child) {
+        margin: 0 16px 16px 0;
+      }
+
+      .case__active {
+        border: 1px solid $orange;
+        background-color: $orange;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      height: 32px;
+      border: 1px solid $gray-medium;
+      border-radius: 32px;
+      font-size: 12px;
+      line-height: 20px;
+      transition: all 0.2s;
+
+      &:hover {
+        border: 1px solid $orange;
+        background-color: $orange;
+      }
+    }
+  }
+
+  .articles {
+    display: grid;
+    grid-gap: 40px 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 56px;
+  }
+
+  .button {
+    margin: 0 auto;
+    width: fit-content;
+    border: 1px solid $gray-dark;
+    border-radius: 32px;
+    background-image: none;
+    background-color: transparent;
+  }
+}
