@@ -10,43 +10,7 @@
 </head>
 
 <body>
-
-<header class="header">
-  <div class="container container--header">
-    <nav class="menu">
-      <a class="logo" href="#">
-        <img src="images/logo.svg" alt="Logo">
-      </a>
-      <ul class="menu__list">
-        <li class="menu__item">
-          <span>Service</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
-              stroke="white" stroke-miterlimit="10"/>
-            <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </li>
-        <li class="menu__item">
-          <a href="#">Case studies</a>
-        </li>
-        <li class="menu__item">
-          <span>Company</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
-              stroke="white" stroke-miterlimit="10"/>
-            <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </li>
-      </ul>
-      <a class="button" href="#">
-        <img src="images/button.svg" alt="Button">
-        <span>Contact</span>
-      </a>
-    </nav>
-  </div>
-</header>
+<include src="./header.html"></include>
 <main class="main">
   <section class="top">
     <div class="top__inner">
@@ -288,142 +252,13 @@
       </div>
     </div>
   </section>
-  <section class="touch">
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <h4>info@smidige.com</h4>
-      <div class="touch__inner">
-        <div class="touch__place">
-          <p class="touch__country">United States</p>
-          <a class="touch__tel" href="tel:720207282">720 207 2820</a>
-          <p class="touch__topic">Sales inquiries</p>
-          <p class="touch__country">United Kingdom</p>
-          <a class="touch__tel" href="tel:442036872281">44 203 687 2281</a>
-          <p class="touch__topic">Sales inquiries</p>
-          <a class="touch__tel" href="tel:442036872282">44 203 687 2282</a>
-          <p class="touch__topic">Sales inquiries</p>
-        </div>
-        <form class="form">
-          <div class="form__block">
-            <label>
-              <span>Name</span>
-              <input type="text">
-            </label>
-            <label>
-              <span>Name</span>
-              <input type="text">
-            </label>
-          </div>
-          <div class="form__block">
-            <label>
-              <span>Name</span>
-              <input type="text">
-            </label>
-            <label>
-              <span>Name</span>
-              <input type="text">
-            </label>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+  <include src="./touch.html"></include>
 </main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__main">
-        <a class="logo" href="#">
-          <img src="images/logo.svg" alt="Logo">
-        </a>
-        <ul>
-          <li>
-            <img src="images/linkedin.svg" alt="Linkedin">
-          </li>
-          <li>
-            <img src="images/facebook.svg" alt="Facebook">
-          </li>
-          <li>
-            <img src="images/instagram.svg" alt="Instagram">
-          </li>
-        </ul>
-      </div>
-      <ul class="footer__menu">
-        <li class="footer__item">
-          <a href="#">Service</a>
-          <ul class="footer__submenu">
-            <li>
-              <a href="#">Engineering services</a>
-              <ul class="footer__thirdmenu">
-                <li>
-                  <a href="#">IT consulting</a>
-                </li>
-                <li>
-                  <a href="#">Software engineering</a>
-                </li>
-                <li>
-                  <a href="#">Managed IT Services</a>
-                </li>
-                <li>
-                  <a href="#">DevOps</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Technology advisory</a>
-              <ul class="footer__thirdmenu">
-                <li>
-                  <a href="#">Cloud</a>
-                </li>
-                <li>
-                  <a href="#">Atlassian</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="footer__item">
-          <a href="#">Case studies</a>
-        </li>
-        <li class="footer__item">
-          <a href="#">Company</a>
-          <ul class="footer__submenu">
-            <li>
-              <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">Approach</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-          </ul>
-        </li>
-        <li class="footer__item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__copy">
-      <p>© Copyright 2022. All Rights Reserved.</p>
-      <ul>
-        <li>
-          <a href="#">Terms & conditions</a>
-        </li>
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-      </ul>
-      <p class="footer__by">
-        designed by:
-        <a href="#">Celerart</a>
-      </p>
-    </div>
-  </div>
-</footer>
+<include src="./footer.html"></include>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/htmlincludejs"></script>
 <script src="js/index.min.js"></script>
 </body>
 
