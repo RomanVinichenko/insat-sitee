@@ -206,39 +206,13 @@
     border: 1px solid $gray-medium;
   }
 
-  &__list {
+  .articles {
     margin-right: -24px;
   }
 
-  &__item {
-    pointer-events: none;
-
-    + .studies__item {
+  .article {
+    + .article {
       margin-left: 24px;
-    }
-
-    img {
-      margin-bottom: 24px;
-      border-radius: 16px;
-      object-fit: cover;
-    }
-
-    h4 {
-      margin-bottom: 16px;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: -0.04em;
-    }
-
-    span {
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
-      width: fit-content;
-      height: 32px;
-      border: 1px solid $gray;
-      border-radius: 32px;
     }
   }
 }

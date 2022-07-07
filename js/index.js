@@ -8,7 +8,7 @@ function pic() {
 pic();
 
 $(document).ready(function(){
-  $('.studies__list').slick({
+  $('.articles-slick').slick({
     arrows: false,
     slidesToShow: 3,
     infinite: true,
