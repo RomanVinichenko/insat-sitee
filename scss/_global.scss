@@ -264,10 +264,18 @@ h6 {
   }
 }
 
-.engineering {
+.engineering-block {
   .preview {
     img {
-      top: -200px;
+      top: -80%;
+    }
+  }
+}
+
+.careers-block {
+  .preview {
+    img {
+      top: -65%;
     }
   }
 }
