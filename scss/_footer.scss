@@ -8,7 +8,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 46px;
+    padding-bottom: 62px;
     border-bottom: 1px solid rgba($white, 0.24);
   }
 
@@ -41,8 +41,6 @@
       display: block;
       margin-bottom: 16px;
       font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
     }
 
     + .footer__item {
@@ -57,18 +55,25 @@
       font-size: 14px;
       line-height: 22px;
     }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &__thirdmenu {
     a {
+      margin-bottom: 0;
       font-size: 12px;
       line-height: 20px;
       color: $gray-medium;
     }
 
     li {
-      &:last-child {
-        margin-bottom: 16px;
+      &:not(:last-child) {
+        margin-bottom: 12px;
       }
     }
   }
