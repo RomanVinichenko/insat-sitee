@@ -1,0 +1,77 @@
+.vacancy-open {
+  position: relative;
+  padding: 200px 0 160px;
+  border-radius: 0 0 40px 40px;
+  background: $black;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 32px;
+    color: $gray;
+  }
+
+  &__params {
+    display: flex;
+    margin-bottom: 64px;
+
+    span {
+      display: block;
+      font-weight: 600;
+
+      + span {
+        position: relative;
+        margin-left: 48px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: 0;
+          width: 1px;
+          height: 100%;
+          background-color: $gray-medium;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 384px 1fr;
+
+    ul {
+      width: 100%;
+      max-width: 792px;
+
+      li {
+        position: relative;
+        padding-left: 28px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 6px;
+          width: 12px;
+          height: 12px;
+          border-radius: 4px;
+          background: $red;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    + .vacancy-open__info {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid $gray-dark;
+    }
+  }
+}
