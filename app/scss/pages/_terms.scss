@@ -13,30 +13,8 @@
     justify-content: space-between;
   }
 
-  &__navigation {
-    span {
-      display: flex;
-      margin-bottom: 12px;
-      font-size: 14px;
-      line-height: 22px;
-      color: $gray;
-    }
-
-    ul {
-      li {
-        &:not(:last-child) {
-          margin-bottom: 16px;
-        }
-
-        a {
-          display: block;
-          font-weight: 600;
-        }
-      }
-    }
-  }
-
   &__info {
+    width: 100%;
     max-width: 894px;
 
     h3 {
@@ -58,6 +36,96 @@
 
     h5 {
       margin: 56px 0 24px;
+    }
+  }
+}
+
+.terms__navigation {
+  width: 100%;
+  max-width: 200px;
+
+  span {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray;
+  }
+}
+
+.second-span {
+  padding-top: 24px;
+  border-top: 1px solid $gray-dark;
+}
+
+.terms__navigation-list {
+  margin-bottom: 24px;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    a {
+      display: block;
+      font-weight: 600;
+    }
+  }
+}
+
+.terms__navigation-social {
+  display: flex;
+
+  svg {
+    fill: transparent;
+    transition: fill 0.3s;
+
+    circle {
+      transition: stroke 0.3s;
+    }
+
+    path {
+      transition: fill 0.3s;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    + li {
+      margin-left: 12px;
+    }
+
+    &:hover {
+      svg {
+        fill: $white;
+
+        circle {
+          stroke: $white;
+        }
+
+        path {
+          fill: $black;
+        }
+      }
+    }
+
+    &:last-child:hover {
+      svg {
+        fill: $white;
+
+        circle {
+          stroke: $white;
+        }
+
+        path {
+          fill: transparent;
+          stroke: $black;
+        }
+      }
     }
   }
 }
