@@ -248,7 +248,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
+  width: fit-content;
   height: 48px;
   border-radius: 50%;
   line-height: 1;
@@ -262,6 +262,40 @@ h6 {
     width: 16px;
     height: 16px;
     transform: translate(-50%, -50%);
+  }
+}
+
+.link__service-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 58px;
+  width: fit-content;
+  height: 48px;
+  font-weight: 600;
+
+  &::before {
+    content: url("../images/violet-arrow.svg");
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $white;
   }
 }
 

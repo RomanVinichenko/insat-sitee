@@ -1,0 +1,303 @@
+.strategy {
+  padding-top: 160px;
+
+  h2 {
+    margin-bottom: 42px;
+  }
+
+  ul {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    li {
+      img {
+        margin-bottom: 24px;
+        width: 48px;
+        height: 48px;
+      }
+
+      h6 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.expertise {
+  position: relative;
+  padding: 160px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    border-radius: 40px;
+    background-color: $orange;
+    transform: translateX(-50%);
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    li {
+      padding-top: 16px;
+      border-top: 2px solid $white;
+
+      h6 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.models {
+  padding-top: 160px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 60px;
+    color: $gray;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 588px;
+
+    img {
+      width: 100%;
+      height: 588px;
+      border-radius: 24px;
+      object-fit: cover;
+    }
+  }
+
+  .tab-content {
+    max-width: 486px;
+  }
+
+  .accordion {
+    max-width: 486px;
+  }
+}
+
+.platform {
+  @include bg-figure;
+
+  position: relative;
+  padding: 160px 0;
+
+  &::after {
+    right: 0;
+    max-width: 1680px;
+    border-radius: 40px 0 0 40px;
+    background-color: $gray-dark;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .link__service-text {
+    margin-top: 16px;
+  }
+
+  ul {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      padding: 40px;
+      border-radius: 24px;
+      background: $black;
+
+      img {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.options {
+  padding: 160px 0;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .link__service-text {
+    margin-top: auto;
+  }
+
+  ul {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      height: 464px;
+      border-radius: 24px;
+      background: $gray-dark;
+
+      h5 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .logos-roll {
+    display: flex;
+    grid-gap: 0;
+    grid-template-columns: none;
+    margin-top: 16px;
+
+    img {
+      width: 72px;
+      height: 72px;
+    }
+
+    li {
+      padding: 0;
+      height: fit-content;
+      border-radius: 0;
+      background: transparent;
+
+      + li {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.micro {
+  @include bg-figure;
+
+  position: relative;
+  margin-bottom: 160px;
+  padding: 160px 0;
+
+  &::after {
+    left: 0;
+    max-width: 1680px;
+    border-radius: 0 40px 40px 0;
+    background-color: $gray-dark;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 486px;
+  }
+
+  ul {
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+
+    img {
+      height: 588px;
+      max-width: 588px;
+      border-radius: 24px;
+      object-fit: cover;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .logos-roll {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      width: 116px;
+      height: 116px;
+    }
+  }
+}
+
+.expertise--second {
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+  }
+}
+
+.expertise--extras {
+  padding: 160px 0 0;
+
+  &::before {
+    display: none;
+  }
+
+  p {
+    color: $gray;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+
+    li {
+      border-top: 2px solid $gray-dark;
+    }
+  }
+
+  .link__service-text {
+    margin-top: 16px;
+  }
+}
