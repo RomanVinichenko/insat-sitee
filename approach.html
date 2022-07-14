@@ -10,7 +10,6 @@
 </head>
 
 <body>
-<include src="./header.html"></include>
 <main class="main">
   <section class="preview">
     <img src="images/approach-preview.jpg" alt="Preview">
@@ -20,7 +19,15 @@
           <p>Company</p>
           <h1>Approach</h1>
         </div>
-        <a href="#"></a>
+        <div class="relate">
+          <a class="link__service" href="#">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span></span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="preview__holder">
@@ -137,7 +144,10 @@
         <div class="expert__head">
           <h5>Get to know our team to discuss your project in detail</h5>
         </div>
-        <a class="button" href="#">Contact us</a>
+        <a class="button expert__button" href="#">
+          <p>Contact us</p>
+          <span></span>
+        </a>
       </div>
     </div>
   </div>
@@ -280,7 +290,10 @@
           <h5>We’re looking forward to putting our best practices to the test on your project
           </h5>
         </div>
-        <a class="button" href="#">Contact us</a>
+        <a class="button expert__button" href="#">
+          <p>Contact us</p>
+          <span></span>
+        </a>
       </div>
     </div>
   </div>
@@ -317,7 +330,6 @@
       </div>
     </div>
   </section>
-
   <include src="./touch.html"></include>
 </main>
 <include src="./footer.html"></include>
