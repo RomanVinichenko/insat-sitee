@@ -99,6 +99,16 @@ h5 {
 h6 {
   font-size: 24px;
   line-height: 32px;
+
+  @include m($xl) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @include m($lg) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 .button {
@@ -419,6 +429,18 @@ h6 {
     border-radius: 16px;
     object-fit: cover;
     transition: 0.2s;
+
+    @include m($xl) {
+      min-height: 300px;
+    }
+
+    @include m($xl) {
+      min-height: 270px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   h6 {
@@ -433,7 +455,7 @@ h6 {
     display: flex;
     align-items: center;
     padding: 0 12px;
-    width: fit-content;
+    width: max-content;
     height: 32px;
     overflow: hidden;
     border: 1px solid $gray;
@@ -461,6 +483,10 @@ h6 {
     h6 {
       color: $orange;
     }
+  }
+
+  @include m($xl) {
+    max-width: 100%;
   }
 }
 
