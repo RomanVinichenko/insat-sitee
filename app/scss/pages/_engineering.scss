@@ -41,6 +41,8 @@
 }
 
 .approach {
+  @include bg-figure;
+
   position: relative;
   padding: 160px 0;
 
@@ -138,15 +140,41 @@
     }
   }
 
-  .button {
+  &__button {
+    @include relate;
+
+    position: relative;
     height: 88px;
+    border: 1px solid $white;
     border-radius: 48px;
-    color: $orange;
     background: $white;
+
+    p {
+      z-index: 15;
+      color: $orange;
+      transition: all 0.4s;
+    }
+
+    span {
+      z-index: 0;
+    }
+
+    &:hover {
+      span {
+        width: 350px;
+        height: 350px;
+      }
+
+      p {
+        color: $white;
+      }
+    }
   }
 }
 
 .results {
+  @include bg-figure;
+
   position: relative;
   padding: 160px 0;
 
@@ -192,6 +220,8 @@
 }
 
 .ecosystem {
+  @include bg-figure;
+
   position: relative;
   padding: 160px 0;
 

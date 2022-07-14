@@ -67,13 +67,16 @@ h6 {
 }
 
 .button {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 32px;
   width: fit-content;
   height: 56px;
+  overflow: hidden;
   border-radius: 32px;
   font-weight: 600;
+  transition: all 0.4s;
 
   img {
     margin-right: 8px;
@@ -105,14 +108,16 @@ h6 {
   }
 
   &__link {
+    @include relate;
+
     position: relative;
     display: flex;
     align-items: center;
     padding: 0 50px 0 24px;
     height: 56px;
+    overflow: hidden;
     border: 1px solid $gray-dark;
     border-radius: 32px;
-    font-weight: 600;
     line-height: 1;
 
     &::after {
@@ -123,6 +128,22 @@ h6 {
       width: 16px;
       height: 16px;
       transform: translateY(-50%);
+    }
+
+    p {
+      z-index: 5;
+      font-weight: 600;
+    }
+
+    span {
+      z-index: 0;
+    }
+
+    &:hover {
+      span {
+        width: 350px;
+        height: 350px;
+      }
     }
   }
 }
@@ -171,28 +192,6 @@ h6 {
     justify-content: space-between;
     padding-bottom: 80px;
     height: 500px;
-  }
-
-  a {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: $white;
-
-    &::after {
-      content: url("../images/services-scroll.svg");
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-      transform: translate(-50%, -50%);
-    }
   }
 
   h1 {
@@ -244,25 +243,68 @@ h6 {
   }
 }
 
+.relate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 .link__service {
+  @include relate;
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: 48px;
   height: 48px;
+  min-width: 48px;
   border-radius: 50%;
-  line-height: 1;
   background-color: $white;
+  transition: all 0.2s;
 
-  &::before {
-    content: url("../images/violet-arrow.svg");
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    transform: translate(-50%, -50%);
+  svg {
+    z-index: 15;
+
+    path {
+      transition: all 0.4s;
+    }
+  }
+
+  span {
+    z-index: 0;
+  }
+
+  &:focus {
+    background-color: $gray;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:hover {
+    span {
+      width: 130px;
+      height: 130px;
+    }
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
   }
 }
 
@@ -315,16 +357,27 @@ h6 {
     margin-bottom: 16px;
   }
 
-  span {
+  &__element {
+    @include relate;
+
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 12px;
     width: fit-content;
     height: 32px;
+    overflow: hidden;
     border: 1px solid $gray;
     border-radius: 32px;
     font-size: 12px;
     line-height: 20px;
+
+    &:hover {
+      span {
+        width: 350px;
+        height: 350px;
+      }
+    }
   }
 }
 
