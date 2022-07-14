@@ -43,6 +43,21 @@
       background-color: $orange;
       filter: blur(150px);
     }
+
+    @include m($xl) {
+      justify-content: space-around;
+      min-height: 680px;
+    }
+
+    @include m($lg) {
+      justify-content: space-around;
+      min-height: 561px;
+    }
+
+    @include m($md) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -55,10 +70,31 @@
       font-size: 304px;
       line-height: 456px;
       letter-spacing: -0.04em;
+
+      @include m($xl) {
+        width: 101px;
+        font-size: 160px;
+        line-height: 240px;
+      }
+
+      @include m($sm) {
+        width: 101px;
+        font-size: 140px;
+        line-height: 220px;
+      }
     }
 
     img {
       padding: 0 40px;
+
+      @include m($xl) {
+        padding: 0 10px;
+        width: 120px;
+      }
+
+      @include m($sm) {
+        width: 100px;
+      }
     }
   }
 
@@ -68,6 +104,10 @@
     h4 {
       margin-bottom: 24px;
       max-width: 285px;
+
+      @include m($md) {
+        text-align: center;
+      }
     }
 
     .button {
@@ -75,6 +115,10 @@
       height: 56px;
       color: $orange;
       background-color: $white;
+
+      @include m($md) {
+        margin: 0 auto;
+      }
     }
   }
 }

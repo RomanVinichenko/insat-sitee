@@ -79,6 +79,16 @@ h3 {
 h4 {
   font-size: 40px;
   line-height: 48px;
+
+  @include m($xl) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @include m($lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 h5 {
