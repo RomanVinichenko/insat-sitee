@@ -24,6 +24,11 @@ body {
     padding: 0 40px;
     max-width: 1920px;
   }
+
+  @include m(1400) {
+    padding: 0 16px;
+    max-width: 1232px;
+  }
 }
 
 h1,
@@ -39,11 +44,31 @@ h6 {
 h1 {
   font-size: 64px;
   line-height: 72px;
+
+  @include m($xl) {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  @include m($lg) {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 h2 {
   font-size: 56px;
   line-height: 64px;
+
+  @include m($xl) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @include m($lg) {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 h3 {
@@ -59,6 +84,16 @@ h4 {
 h5 {
   font-size: 32px;
   line-height: 40px;
+
+  @include m($xl) {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  @include m($lg) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 h6 {
@@ -135,10 +170,6 @@ h6 {
       font-weight: 600;
     }
 
-    span {
-      z-index: 0;
-    }
-
     &:hover {
       span {
         width: 350px;
@@ -154,7 +185,6 @@ h6 {
 
 .preview {
   position: relative;
-  height: 500px;
   overflow: hidden;
   border-radius: 0 0 40px 40px;
 
@@ -164,6 +194,29 @@ h6 {
     left: 8%;
     top: 10%;
     z-index: 0;
+
+    @include m(1700) {
+      left: -80px;
+      top: 0;
+      transform: scale(0.7);
+    }
+
+    @include m(1550) {
+      left: -130px;
+    }
+
+    @include m(1400) {
+      left: -200px;
+    }
+
+    @include m($xl) {
+      left: -250px;
+      top: -80px;
+    }
+
+    @include m($sm) {
+      transform: scale(0.6);
+    }
   }
 
   &::after {
@@ -192,6 +245,11 @@ h6 {
     justify-content: space-between;
     padding-bottom: 80px;
     height: 500px;
+
+    @include m($xl) {
+      padding-bottom: 48px;
+      height: 400px;
+    }
   }
 
   h1 {
@@ -230,6 +288,20 @@ h6 {
       height: 300px;
       background-color: $red;
       filter: blur(200px);
+
+      @include m($xl) {
+        bottom: 0;
+        filter: blur(100px);
+      }
+
+      @include m($lg) {
+        filter: blur(40px);
+      }
+
+      @include m($md) {
+        left: 5%;
+        filter: blur(30px);
+      }
     }
 
     &::after {
@@ -239,6 +311,28 @@ h6 {
       height: 600px;
       background-color: $orange;
       filter: blur(200px);
+
+      @include m($xl) {
+        bottom: -40%;
+        filter: blur(150px);
+      }
+
+      @include m($lg) {
+        filter: blur(80px);
+        transform: scale(0.8);
+      }
+
+      @include m($md) {
+        left: 15%;
+        filter: blur(70px);
+        transform: scale(0.75);
+      }
+    }
+  }
+
+  .relate {
+    @include m($sm) {
+      display: none;
     }
   }
 }
@@ -285,10 +379,6 @@ h6 {
     path {
       transition: all 0.4s;
     }
-  }
-
-  span {
-    z-index: 0;
   }
 
   &:focus {
@@ -355,10 +445,6 @@ h6 {
       z-index: 5;
     }
 
-    span {
-      z-index: 0;
-    }
-
     &:hover {
       span {
         width: 500px;
@@ -379,10 +465,28 @@ h6 {
 }
 
 .services-block {
+  position: relative;
   width: 100%;
   max-width: 588px;
+  overflow: hidden;
   border-radius: 24px;
   background-color: $orange;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 25;
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: $orange;
+
+    @include m($md) {
+      display: block;
+    }
+  }
 
   &__holder {
     position: relative;
@@ -418,11 +522,29 @@ h6 {
       left: 40px;
       top: 40px;
       z-index: 10;
+
+      @include m($md) {
+        display: none;
+      }
     }
 
     h5,
     a {
       z-index: 10;
+    }
+
+    @include m($xl) {
+      height: 340px;
+    }
+
+    @include m($lg) {
+      height: 300px;
+    }
+
+    @include m($md) {
+      z-index: 20;
+      padding: 24px;
+      height: 140px;
     }
   }
 
@@ -431,12 +553,28 @@ h6 {
 
     img {
       margin-bottom: 16px;
+
+      @include m($lg) {
+        margin-bottom: 12px;
+      }
     }
 
     p {
       font-size: 14px;
       line-height: 22px;
     }
+
+    @include m($lg) {
+      padding: 25px;
+    }
+
+    @include m($md) {
+      display: none;
+    }
+  }
+
+  @include m($md) {
+    background-color: $black;
   }
 }
 

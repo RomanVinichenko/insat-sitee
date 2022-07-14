@@ -6,6 +6,22 @@
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($xl) {
+      margin-bottom: 30px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -16,6 +32,25 @@
 
   &:not(:last-child) {
     margin-bottom: 160px;
+
+    @include m($xl) {
+      margin-bottom: 110px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 56px;
+    }
+  }
+
+  .services-block {
+    @include m($md) {
+      max-width: 100%;
+    }
+  }
+
+  @include m($md) {
+    grid-gap: 16px 0;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -41,6 +76,12 @@
           stroke: $white;
         }
       }
+    }
+  }
+
+  .services-block {
+    &::after {
+      background-color: $red;
     }
   }
 }
