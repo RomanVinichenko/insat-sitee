@@ -14,6 +14,14 @@
 
   h1 {
     margin-bottom: 41px;
+
+    @include m($xl) {
+      margin-bottom: 30px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   ul {
@@ -24,12 +32,22 @@
     li {
       &:not(:last-child) {
         margin: 0 16px 16px 0;
+
+        @include m($sm) {
+          margin: 0 16px 0 0;
+        }
       }
 
       .case__active {
         border: 1px solid $orange;
         background-color: $orange;
       }
+    }
+
+    @include m($sm) {
+      flex-wrap: nowrap;
+      margin-bottom: 40px;
+      overflow: scroll;
     }
   }
 
@@ -38,11 +56,33 @@
     grid-gap: 40px 24px;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 56px;
+
+    @include m(830) {
+      grid-gap: 40px 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
+
+    @include m($sm) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
   }
 
   .button {
     margin: 0 auto;
     border: 1px solid $gray-dark;
     background-color: transparent;
+  }
+
+  @include m($xl) {
+    padding: 150px 0 120px;
+  }
+
+  @include m($lg) {
+    padding: 104px 0 80px;
   }
 }
