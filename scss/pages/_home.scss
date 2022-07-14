@@ -13,33 +13,26 @@
     min-height: 100vh;
   }
 
+  &__link {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transform: translateX(-50%);
+
+    p {
+      margin-left: 12px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
   h1 {
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
-  }
-
-  &__scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 88px;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0 0 0 60px;
-    height: 48px;
-    font-size: 12px;
-    line-height: 20px;
-    transform: translateX(-50%);
-
-    &::after {
-      content: url("../images/top-scroll.svg");
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 48px;
-      height: 48px;
-    }
   }
 }
 
@@ -192,16 +185,6 @@
   .section__link {
     border: 1px solid $gray-medium;
   }
-
-  .articles {
-    margin-right: -24px;
-  }
-
-  .article {
-    + .article {
-      margin-left: 24px;
-    }
-  }
 }
 
 .touch {
@@ -267,4 +250,8 @@
   to {
     transform: translateX(-163%);
   }
+}
+
+.swiper__studies {
+  margin-right: -34%;
 }
