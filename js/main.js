@@ -11,7 +11,7 @@ pic();
 // INCLUDES HTML FILES
 
 $(function () {
-  $('.link__service, .section__link, .article__element, .expert__button')
+  $('.link__service, .section__link, .article__element, .expert__button, .footer__network')
     .on('mouseenter', function (e) {
       let parentOffset = $(this).offset(),
         relX = e.pageX - parentOffset.left,
@@ -24,7 +24,7 @@ $(function () {
         relY = e.pageY - parentOffset.top;
       $(this).find('span').css({top: relY, left: relX})
     });
-  $('[href=#]').click(function () {
+  $('[href="#"]').click(function () {
     return false
   });
 });

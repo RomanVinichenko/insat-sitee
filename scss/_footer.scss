@@ -1,6 +1,14 @@
 .footer {
   padding: 96px 0 42px;
 
+  a {
+    transition: all 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
   .logo {
     margin-bottom: 52px;
   }
@@ -12,23 +20,40 @@
     border-bottom: 1px solid rgba($white, 0.24);
   }
 
+  &__network {
+    @include relate;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border: 1px solid $gray-dark;
+    border-radius: 50%;
+
+    img {
+      z-index: 10;
+    }
+
+    + .footer__network {
+      margin-left: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
+
   &__main {
     ul {
       display: flex;
-
-      li + li {
-        margin-left: 16px;
-      }
-
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 56px;
-        border: 1px solid $gray-dark;
-        border-radius: 50%;
-      }
     }
   }
 
@@ -84,6 +109,14 @@
     padding-top: 42px;
     font-size: 12px;
     line-height: 20px;
+
+    a {
+      text-decoration: underline transparent;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 
     ul {
       display: flex;
