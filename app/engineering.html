@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<include src="./header.html"></include>
+<!--<include src="./header.html"></include>-->
 <main class="main">
   <section class="preview">
     <img src="images/engineering-preview.jpg" alt="Preview">
@@ -20,7 +20,15 @@
           <p>Engineering services</p>
           <h1>IT consulting</h1>
         </div>
-        <a href="#"></a>
+        <div class="relate">
+          <a class="link__service" href="#">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span></span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="preview__holder">
@@ -142,7 +150,7 @@
         </div>
         <a class="button expert__button" href="#">
           <p>Contact us</p>
-        <span></span>
+          <span></span>
         </a>
       </div>
     </div>
@@ -212,7 +220,10 @@
           <h5>Do you want your software investment to bring tangible results?</h5>
           <h6>Learn how from our consultants</h6>
         </div>
-        <a class="button" href="#">Let’s talk</a>
+        <a class="button expert__button" href="#">
+          <p>Let’s talk</p>
+          <span></span>
+        </a>
       </div>
     </div>
   </div>
@@ -269,19 +280,26 @@
         </li>
         <li>
           <h6>Cross-disciplinary talent pool</h6>
-          <p>Partnering with Itransition, you can build your project team choosing from over 3,000+ software engineers, solution architects, business analysts, testing experts, and project managers.</p>
+          <p>Partnering with Itransition, you can build your project team choosing from over 3,000+ software engineers,
+            solution architects, business analysts, testing experts, and project managers.</p>
         </li>
         <li>
           <h6>Industry knowledge</h6>
-          <p>We manage software consulting and development projects across multiple industries. Our team includes experienced business analysts who can effectively translate industry requirements to the language of technical specifications.</p>
+          <p>We manage software consulting and development projects across multiple industries. Our team includes
+            experienced business analysts who can effectively translate industry requirements to the language of
+            technical specifications.</p>
         </li>
         <li>
           <h6>Partnership with global software vendors</h6>
-          <p>Itransition is a long-term partner of the world’s leading technology vendors, including Microsoft, Salesforce, Atlassian, Amazon, and more. Our specialists go through regular certification to validate their knowledge of providers’ requirements and best practices.</p>
+          <p>Itransition is a long-term partner of the world’s leading technology vendors, including Microsoft,
+            Salesforce, Atlassian, Amazon, and more. Our specialists go through regular certification to validate their
+            knowledge of providers’ requirements and best practices.</p>
         </li>
         <li>
           <h6>Adherence to international security & quality standards</h6>
-          <p>Itransition follows recognized security and compliance standards. We ensure secure project workflows and help businesses implement software aligned with specific industry guidelines on software configuration, data storage and processing.</p>
+          <p>Itransition follows recognized security and compliance standards. We ensure secure project workflows and
+            help businesses implement software aligned with specific industry guidelines on software configuration, data
+            storage and processing.</p>
         </li>
       </ul>
     </div>
@@ -293,7 +311,10 @@
           <h5>Are you looking for expert technology consultants?</h5>
           <h6>Let them assess your project now</h6>
         </div>
-        <a class="button" href="#">Contact us</a>
+        <a class="button expert__button" href="#">
+          <p>Contact us</p>
+          <span></span>
+        </a>
       </div>
     </div>
   </div>
@@ -307,59 +328,114 @@
           <h2>Complete service scope</h2>
         </div>
         <a class="section__link" href="#">
-          All service
+          <p>All service</p>
+          <span></span>
         </a>
       </div>
-      <ul class="scope__list">
-        <li class="services-block">
-          <div class="services-block__holder">
-            <img src="images/do1.jpg" alt="IT consulting">
-            <h5>IT consulting</h5>
-            <a class="link__service" href="engineering.html"></a>
+      <div class="swiper swiper__scope">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="services-block">
+              <div class="services-block__holder">
+                <img src="images/do1.jpg" alt="IT consulting">
+                <h5>IT consulting</h5>
+                <div class="relate">
+                  <a class="link__service" href="engineering.html">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.11133 11.8892L11.8895 4.11099" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                      <path d="M11.8887 10.4749V4.11089H5.52471" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+              <div class="services-block__info">
+                <img src="images/services-icon.svg" alt="Icon">
+                <p>Our software development company delivers corporate and consumer applications based on our profound
+                  understanding of technologies and the markets they operate in.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="services-block__info">
-            <img src="images/services-icon.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
-            </p>
+          <div class="swiper-slide">
+            <div class="services-block">
+              <div class="services-block__holder">
+                <img src="images/do2.jpg" alt="IT consulting">
+                <h5>Software engineering</h5>
+                <div class="relate">
+                  <a class="link__service" href="engineering.html">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.11133 11.8892L11.8895 4.11099" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                      <path d="M11.8887 10.4749V4.11089H5.52471" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+              <div class="services-block__info">
+                <img src="images/services-icon.svg" alt="Icon">
+                <p>Our software development company delivers corporate and consumer applications based on our profound
+                  understanding of technologies and the markets they operate in.
+                </p>
+              </div>
+            </div>
           </div>
-        </li>
-        <li class="services-block">
-          <div class="services-block__holder">
-            <img src="images/do2.jpg" alt="IT consulting">
-            <h5>Software engineering</h5>
-            <a class="link__service" href="#"></a>
+          <div class="swiper-slide">
+            <div class="services-block">
+              <div class="services-block__holder">
+                <img src="images/do1.jpg" alt="IT consulting">
+                <h5>IT consulting</h5>
+                <div class="relate">
+                  <a class="link__service" href="engineering.html">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.11133 11.8892L11.8895 4.11099" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                      <path d="M11.8887 10.4749V4.11089H5.52471" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+              <div class="services-block__info">
+                <img src="images/services-icon.svg" alt="Icon">
+                <p>Our software development company delivers corporate and consumer applications based on our profound
+                  understanding of technologies and the markets they operate in.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="services-block__info">
-            <img src="images/services-icon.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
-            </p>
+          <div class="swiper-slide">
+            <div class="services-block">
+              <div class="services-block__holder">
+                <img src="images/do2.jpg" alt="IT consulting">
+                <h5>Software engineering</h5>
+                <div class="relate">
+                  <a class="link__service" href="engineering.html">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.11133 11.8892L11.8895 4.11099" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                      <path d="M11.8887 10.4749V4.11089H5.52471" stroke="#6C57FF" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+              <div class="services-block__info">
+                <img src="images/services-icon.svg" alt="Icon">
+                <p>Our software development company delivers corporate and consumer applications based on our profound
+                  understanding of technologies and the markets they operate in.
+                </p>
+              </div>
+            </div>
           </div>
-        </li>
-        <li class="services-block">
-          <div class="services-block__holder">
-            <img src="images/do1.jpg" alt="IT consulting">
-            <h5>IT consulting</h5>
-            <a class="link__service" href="engineering.html"></a>
-          </div>
-          <div class="services-block__info">
-            <img src="images/services-icon.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
-            </p>
-          </div>
-        </li>
-        <li class="services-block">
-          <div class="services-block__holder">
-            <img src="images/do2.jpg" alt="IT consulting">
-            <h5>Software engineering</h5>
-            <a class="link__service" href="#"></a>
-          </div>
-          <div class="services-block__info">
-            <img src="images/services-icon.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
-            </p>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </section>
   <section class="studies">
@@ -372,70 +448,61 @@
           <h2>Case studies</h2>
         </div>
         <a class="section__link" href="#">
-          All cases
+          <p>All cases</p>
+          <span></span>
         </a>
       </div>
-      <div class="articles articles-slick">
-        <article class="article">
-          <a href="#">
-            <img src="images/article1.jpg" alt="Article">
-            <h6>Stock trading software development for TradeSmith</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
-        <article class="article">
-          <a href="#">
-            <img src="images/article2.jpg" alt="Article">
-            <h6>Affiliate network portal for Expedia</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
-        <article class="article">
-          <a href="#">
-            <img src="images/article1.jpg" alt="Article">
-            <h6>Stock trading software development for TradeSmith</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
-        <article class="article">
-          <a href="#">
-            <img src="images/article1.jpg" alt="Article">
-            <h6>Stock trading software development for TradeSmith</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
-        <article class="article">
-          <a href="#">
-            <img src="images/article1.jpg" alt="Article">
-            <h6>Stock trading software development for TradeSmith</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
-        <article class="article">
-          <a href="#">
-            <img src="images/article1.jpg" alt="Article">
-            <h6>Stock trading software development for TradeSmith</h6>
-            <div class="article__element">
-              <p>Digital Enterprise</p>
-              <span></span>
-            </div>
-          </a>
-        </article>
+      <div class="swiper swiper__studies">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article class="article">
+              <a href="#">
+                <img src="images/article1.jpg" alt="Article">
+                <h6>Stock trading software development for TradeSmith</h6>
+                <div class="article__element">
+                  <p>Digital Enterprise</p>
+                  <span></span>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="article">
+              <a href="#">
+                <img src="images/article1.jpg" alt="Article">
+                <h6>Stock trading software development for TradeSmith</h6>
+                <div class="article__element">
+                  <p>Digital Enterprise</p>
+                  <span></span>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="article">
+              <a href="#">
+                <img src="images/article1.jpg" alt="Article">
+                <h6>Stock trading software development for TradeSmith</h6>
+                <div class="article__element">
+                  <p>Digital Enterprise</p>
+                  <span></span>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="article">
+              <a href="#">
+                <img src="images/article1.jpg" alt="Article">
+                <h6>Stock trading software development for TradeSmith</h6>
+                <div class="article__element">
+                  <p>Digital Enterprise</p>
+                  <span></span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -443,10 +510,10 @@
 </main>
 <include src="./footer.html"></include>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/htmlincludejs"></script>
-<script src="js/index.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

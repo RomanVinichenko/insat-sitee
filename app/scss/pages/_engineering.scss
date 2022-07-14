@@ -291,19 +291,9 @@
 }
 
 .scope {
+  position: relative;
   padding: 40px 0 200px;
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    margin-right: -24px;
-  }
-
-  .services-block {
-    + .services-block {
-      margin-left: 24px;
-    }
-  }
+  background-color: $black;
 
   .section__head {
     h2 {

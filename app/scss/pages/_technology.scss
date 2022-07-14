@@ -218,12 +218,12 @@
     background-color: $gray-dark;
   }
 
-  h2 {
-    margin-bottom: 40px;
+  .relate__text {
+    margin-top: 16px;
   }
 
-  .link__service-text {
-    margin-top: 16px;
+  h2 {
+    margin-bottom: 40px;
   }
 
   ul {
@@ -246,12 +246,12 @@
 .options {
   padding: 160px 0;
 
-  h2 {
-    margin-bottom: 40px;
+  .relate__text {
+    margin-top: auto;
   }
 
-  .link__service-text {
-    margin-top: auto;
+  h2 {
+    margin-bottom: 40px;
   }
 
   ul {
@@ -381,6 +381,10 @@
     display: none;
   }
 
+  .relate__text {
+    margin-top: 16px;
+  }
+
   p {
     color: $gray;
   }
@@ -396,9 +400,5 @@
     li {
       border-top: 2px solid $gray-dark;
     }
-  }
-
-  .link__service-text {
-    margin-top: 16px;
   }
 }
