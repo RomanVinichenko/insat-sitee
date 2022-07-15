@@ -135,6 +135,7 @@ h6 {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 32px;
   width: fit-content;
   height: 56px;
@@ -162,6 +163,10 @@ h6 {
         display: inline-block;
         margin-right: 16px;
       }
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
     }
   }
 
@@ -267,6 +272,10 @@ h6 {
   p {
     margin-bottom: 8px;
     font-weight: 600;
+
+    @include m($lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__inner {
@@ -364,6 +373,10 @@ h6 {
     @include m($sm) {
       display: none;
     }
+  }
+
+  @include m($lg) {
+    border-radius: 0 0 32px 32px;
   }
 }
 
@@ -626,4 +639,8 @@ h6 {
 
 .swiper__scope {
   margin-right: -51%;
+
+  @include m(1400) {
+    margin-right: 0;
+  }
 }

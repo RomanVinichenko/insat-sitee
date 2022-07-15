@@ -69,12 +69,36 @@ $(document).ready(function () {
 
 let swiperStudies = new Swiper('.swiper__studies', {
   loop: true,
-  slidesPerView: 4,
-  spaceBetween: 24,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    850: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    580: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    }
+  }
 });
 
 let swiperScope = new Swiper('.swiper__scope', {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 24,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    695: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    }
+  }
 });
