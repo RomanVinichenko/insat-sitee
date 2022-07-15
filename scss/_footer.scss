@@ -10,7 +10,15 @@
   }
 
   .logo {
-    margin-bottom: 52px;
+    margin: 0 0 52px;
+
+    @include m($md) {
+      margin: 0 0 42px;
+
+      img {
+        margin: 0 auto;
+      }
+    }
   }
 
   &__inner {
@@ -18,6 +26,10 @@
     justify-content: space-between;
     padding-bottom: 62px;
     border-bottom: 1px solid rgba($white, 0.24);
+
+    @include m(680) {
+      flex-direction: column;
+    }
   }
 
   &__network {
@@ -54,11 +66,47 @@
   &__main {
     ul {
       display: flex;
+
+      @include m(680) {
+        margin: 0 auto 53px;
+        max-width: 285px;
+      }
     }
   }
 
   &__menu {
     display: flex;
+
+    @include m($md) {
+      justify-content: center;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+
+    .footer__item {
+      a {
+        @include m($lg) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:not(:last-child) {
+        @include m($lg) {
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+    @include m($lg) {
+      flex-direction: column;
+      margin-left: 48px !important;
+    }
+
+    @include m($md) {
+      margin-left: 35px !important;
+    }
   }
 
   &__item {
@@ -70,6 +118,10 @@
 
     + .footer__item {
       margin-left: 48px;
+
+      @include m($lg) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -118,6 +170,13 @@
       }
     }
 
+    p {
+      @include m(680) {
+        margin-bottom: 16px;
+        text-align: center;
+      }
+    }
+
     ul {
       display: flex;
 
@@ -139,6 +198,20 @@
           transform: translateY(-50%);
         }
       }
+
+      @include m(680) {
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+    }
+
+    @include m($lg) {
+      padding-top: 35px;
+    }
+
+    @include m(680) {
+      flex-direction: column;
+      padding-top: 24px;
     }
   }
 
@@ -147,5 +220,17 @@
       display: inline-block;
       margin-left: 4px;
     }
+
+    @include m(680) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  @include m($lg) {
+    padding: 72px 0 32px;
+  }
+
+  @include m($lg) {
+    padding: 56px 0 24px;
   }
 }
