@@ -196,33 +196,21 @@
   padding: 160px 0 120px;
   background-image: linear-gradient(252.56deg, #6c57ff 26.71%, #ff5366 149.39%);
 
-  h2 {
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 72px;
-    letter-spacing: -0.04em;
-  }
-
   h4 {
     margin-bottom: 72px;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.04em;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
-  &__country {
+  h6 {
     margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.04em;
   }
 
   &__tel {
@@ -234,7 +222,7 @@
     letter-spacing: -0.04em;
   }
 
-  &__topic {
+  p {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -243,6 +231,84 @@
   .form {
     width: 100%;
     max-width: 792px;
+
+    p {
+      margin-bottom: 32px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    label {
+      margin: 0;
+      width: 100%;
+
+      span {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: $gray;
+      }
+
+      input {
+        padding-bottom: 14px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $white;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $white;
+        background-color: transparent;
+
+        &::placeholder {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: $white;
+        }
+      }
+
+      textarea {
+        margin-bottom: 24px;
+        padding: 16px;
+        width: 100%;
+        height: 122px;
+        outline: none;
+        border: 1px solid $white;
+        background-color: transparent;
+        resize: none;
+
+        &::placeholder {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: $white;
+        }
+      }
+
+      .textarea {
+        color: $white;
+      }
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      label:first-child {
+        margin-right: 24px;
+      }
+    }
+
+    .button {
+      margin-left: auto;
+      border: none;
+      color: $orange;
+    }
   }
 }
 

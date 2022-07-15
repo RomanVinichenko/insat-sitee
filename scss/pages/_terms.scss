@@ -6,14 +6,27 @@
 
   h1 {
     margin-bottom: 80px;
+
+    @include m($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
   }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   &__info {
+    margin-left: 20px;
     width: 100%;
     max-width: 894px;
 
@@ -37,6 +50,18 @@
     h5 {
       margin: 56px 0 24px;
     }
+
+    @include m($lg) {
+      margin-left: 0;
+    }
+  }
+
+  @include m($xl) {
+    padding: 150px 0 100px;
+  }
+
+  @include m($lg) {
+    padding: 100px 0 56px;
   }
 }
 
@@ -54,6 +79,11 @@
     line-height: 22px;
     color: $gray;
   }
+
+  @include m($lg) {
+    position: relative;
+    top: 0;
+  }
 }
 
 .second-span {
@@ -67,12 +97,20 @@
   li {
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @include m($lg) {
+        margin-bottom: 24px;
+      }
     }
 
     a {
       display: block;
       font-weight: 600;
     }
+  }
+
+  @include m($lg) {
+    margin-bottom: 40px;
   }
 }
 
