@@ -22,8 +22,24 @@
     padding: 160px 0;
 
     h2 {
+      margin-right: 30px;
       width: 100%;
       max-width: 500px;
+
+      @include m($lg) {
+        margin-right: 0;
+        margin-bottom: 16px;
+        max-width: 100%;
+      }
+    }
+
+    @include m($xl) {
+      padding: 120px 0;
+    }
+
+    @include m($lg) {
+      flex-direction: column;
+      padding: 80px 0;
     }
   }
 
@@ -41,6 +57,14 @@
       border-radius: 48px;
       color: $orange;
       background-color: $white;
+
+      @include m($lg) {
+        margin-top: 16px;
+      }
+    }
+
+    @include m($lg) {
+      max-width: 100%;
     }
   }
 
@@ -61,6 +85,18 @@
       border-radius: 40px;
       background-color: $orange;
       transform: translateX(-50%);
+
+      @include m($lg) {
+        border-radius: 12px;
+      }
+    }
+
+    @include m($xl) {
+      padding: 120px 0;
+    }
+
+    @include m($lg) {
+      padding: 80px 0;
     }
   }
 
@@ -68,19 +104,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__work-wrap {
     z-index: 10;
+    margin-right: 30px;
     max-width: 486px;
 
     h2 {
       margin-bottom: 24px;
       max-width: 350px;
+
+      @include m($lg) {
+        margin-bottom: 16px;
+        max-width: 100%;
+      }
     }
 
     p {
       margin-bottom: 24px;
+
+      @include m($lg) {
+        margin-bottom: 16px;
+      }
     }
 
     .button {
@@ -89,11 +139,21 @@
       border-radius: 48px;
       color: $orange;
       background-color: $white;
+
+      @include m($lg) {
+        margin-top: 16px;
+      }
+    }
+
+    @include m($lg) {
+      margin-right: 0;
+      max-width: 100%;
     }
   }
 
   &__work-img {
     z-index: 10;
+    width: 100%;
     height: 588px;
     max-width: 588px;
     overflow: hidden;
@@ -104,18 +164,75 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include m($xl) {
+      margin: 0 auto;
+      height: 460px;
+      max-width: 460px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
+
+    @include m($md) {
+      height: 400px;
+      max-width: 400px;
+    }
+
+    @include m($sm) {
+      height: 344px;
+      max-width: 344px;
+    }
   }
 
   &__say {
     padding: 160px 0;
+
+    @include m($xl) {
+      padding: 120px 0;
+    }
+
+    @include m($lg) {
+      padding: 80px 0;
+    }
+  }
+
+  &__say-img {
+    margin: 0 auto;
+
+    img {
+      margin: 0 auto;
+
+      @include m(1400) {
+        max-width: 90%;
+      }
+
+      @include m($lg) {
+        max-width: 70%;
+      }
+
+      @include m($sm) {
+        max-width: 90%;
+      }
+    }
+
+    @include m($lg) {
+      margin-bottom: 56px;
+    }
   }
 
   &__say-inner {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   &__say-wrap {
+    margin-left: 30px;
     max-width: 486px;
 
     h2 {
@@ -124,6 +241,11 @@
 
     p {
       color: $gray;
+    }
+
+    @include m($lg) {
+      margin-left: 0;
+      max-width: 100%;
     }
   }
 }
