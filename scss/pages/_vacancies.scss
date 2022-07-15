@@ -8,34 +8,81 @@
     li {
       a {
         display: flex;
-        justify-content: space-between;
         padding: 32px 0;
         border-top: 1px solid $gray-dark;
         transition: all 0.2s;
 
+        span {
+          display: none;
+          margin-bottom: 4px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $gray-medium;
+
+          @include m($md) {
+            display: block;
+          }
+        }
+
         p {
+          margin: 0 26px 0 0;
           font-weight: 600;
 
-          &:first-child {
-            margin-right: 26px;
+          &:first-of-type {
             width: 100%;
             max-width: 384px;
+
+            @include m($xl) {
+              max-width: 320px;
+            }
+
+            @include m($lg) {
+              max-width: 180px;
+            }
+
+            @include m($md) {
+              max-width: 100%;
+            }
+          }
+
+          &:nth-of-type(2) {
+            width: 100%;
+            max-width: 282px;
+
+            @include m($lg) {
+              max-width: 180px;
+            }
+
+            @include m($md) {
+              max-width: 100%;
+            }
           }
 
           &:last-child {
+            margin-right: 0;
             margin-left: auto;
+            text-align: right;
+
+            @include m($md) {
+              margin-left: 0;
+              text-align: left;
+            }
           }
 
-          &:nth-child(2) {
-            margin-right: 26px;
-            width: 100%;
-            max-width: 282px;
+          @include m($md) {
+            margin: 0 0 16px;
           }
         }
 
         &:hover {
           border-top: 1px solid $orange;
           color: $orange;
+        }
+
+        @include m($md) {
+          flex-direction: column;
+          padding: 16px 0 0;
         }
       }
 
@@ -59,17 +106,40 @@
         margin-right: 26px;
         width: 100%;
         max-width: 384px;
+
+        @include m($xl) {
+          max-width: 320px;
+        }
+
+        @include m($lg) {
+          max-width: 180px;
+        }
       }
 
       &:last-child {
         margin-left: auto;
+        text-align: right;
       }
 
       &:nth-child(2) {
         margin-right: 26px;
         width: 100%;
         max-width: 282px;
+
+        @include m($lg) {
+          max-width: 180px;
+        }
       }
+
+      &:nth-child(3) {
+        @include m($lg) {
+          margin-right: 26px;
+        }
+      }
+    }
+
+    @include m($md) {
+      display: none;
     }
   }
 
@@ -118,7 +188,23 @@
         margin-right: 26px;
         width: 100%;
         max-width: 384px;
+
+        @include m($md) {
+          max-width: 100%;
+        }
       }
     }
+
+    @include m($md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
