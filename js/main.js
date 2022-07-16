@@ -70,7 +70,7 @@ $(document).ready(function () {
 let swiperStudies = new Swiper('.swiper__studies', {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 12,
   breakpoints: {
     1400: {
       slidesPerView: 4,
@@ -90,7 +90,7 @@ let swiperStudies = new Swiper('.swiper__studies', {
 let swiperScope = new Swiper('.swiper__scope', {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 12,
   breakpoints: {
     1400: {
       slidesPerView: 3,
