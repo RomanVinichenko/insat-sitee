@@ -4,6 +4,28 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+
+    h5 {
+      @include m($lg) {
+        margin: 56px 0 16px;
+      }
+    }
+
+    img {
+      @include m($lg) {
+        margin-top: 24px;
+      }
+    }
+
+    ul {
+      @include m($lg) {
+        margin-top: 24px;
+      }
+    }
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -15,6 +37,10 @@
       font-weight: 600;
       color: $white;
       background-color: $red;
+
+      @include m($lg) {
+        padding: 24px;
+      }
     }
 
     h6 {
@@ -36,11 +62,25 @@
       &::before {
         right: 40px;
         bottom: 40px;
+
+        @include m($lg) {
+          right: 24px;
+          bottom: 24px;
+        }
       }
 
       &::after {
         left: 40px;
         top: 40px;
+
+        @include m($lg) {
+          left: 24px;
+          top: 24px;
+        }
+      }
+
+      @include m($lg) {
+        padding: 68px 24px;
       }
     }
 
@@ -92,6 +132,11 @@
           letter-spacing: -0.04em;
           color: $white;
           background-color: transparent;
+
+          @include m($lg) {
+            font-size: 18px;
+            line-height: 26px;
+          }
         }
       }
     }
@@ -112,5 +157,41 @@
     &__head {
       max-width: 430px;
     }
+  }
+
+  @include m($xl) {
+    padding: 120px 0 150px;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
+  }
+}
+
+.case-preview {
+  .preview__inner {
+    @include m($lg) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.case__navigation {
+  @include m($lg) {
+    margin-bottom: 64px;
+  }
+}
+
+.case__navigation-list {
+  li {
+    &:not(:last-child) {
+      @include m($lg) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  @include m($lg) {
+    margin-bottom: 24px;
   }
 }
