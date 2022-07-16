@@ -3,6 +3,10 @@
 
   h2 {
     margin-bottom: 42px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
@@ -15,10 +19,18 @@
         margin-bottom: 24px;
         width: 48px;
         height: 48px;
+
+        @include m($lg) {
+          margin-bottom: 16px;
+        }
       }
 
       h6 {
         margin-bottom: 24px;
+
+        @include m($lg) {
+          margin-bottom: 16px;
+        }
       }
 
       p {
@@ -26,6 +38,19 @@
         line-height: 22px;
       }
     }
+
+    @include m($md) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding-top: 120px;
+  }
+
+  @include m($lg) {
+    padding-top: 80px;
   }
 }
 
@@ -46,10 +71,18 @@
     border-radius: 40px;
     background-color: $orange;
     transform: translateX(-50%);
+
+    @include m($lg) {
+      border-radius: 24px;
+    }
   }
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
@@ -65,6 +98,24 @@
         margin-bottom: 16px;
       }
     }
+
+    @include m($lg) {
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include m(680) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -78,21 +129,45 @@
   p {
     margin-bottom: 60px;
     color: $gray;
+
+    @include m($xl) {
+      margin-bottom: 45px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 32px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   &__img {
-    width: 588px;
+    margin: 0 30px 0 0;
 
     img {
       width: 100%;
-      height: 588px;
+      max-width: 588px;
       border-radius: 24px;
       object-fit: cover;
+
+      @include m($xl) {
+        max-width: 480px;
+      }
+
+      @include m($lg) {
+        margin: 0 auto;
+      }
+    }
+
+    @include m($lg) {
+      margin: 0 0 40px;
     }
   }
 
@@ -100,10 +175,25 @@
     margin-bottom: 0;
     width: 100%;
     max-width: 486px;
+
+    @include m($lg) {
+      max-width: 100%;
+    }
   }
 
   .panel-title {
     font-size: 24px;
+    line-height: 32px;
+
+    @include m($xl) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @include m($lg) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   .panel-heading {
@@ -136,6 +226,10 @@
       rect {
         stroke: $orange;
       }
+    }
+
+    @include m($lg) {
+      height: 70px;
     }
   }
 
@@ -198,10 +292,29 @@
         height: 72px;
       }
 
-      li + li {
-        margin-left: 24px;
+      li {
+        &:not(:last-child) {
+          margin-right: 24px;
+
+          @include m($lg) {
+            margin-bottom: 4px;
+          }
+        }
+      }
+
+      @include m($lg) {
+        flex-wrap: wrap;
+        margin-bottom: 26px;
       }
     }
+  }
+
+  @include m($xl) {
+    padding-top: 120px;
+  }
+
+  @include m($lg) {
+    padding-top: 80px;
   }
 }
 
@@ -216,6 +329,10 @@
     max-width: 1680px;
     border-radius: 40px 0 0 40px;
     background-color: $gray-dark;
+
+    @include m($lg) {
+      border-radius: 24px;
+    }
   }
 
   .relate__text {
@@ -224,6 +341,10 @@
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
@@ -239,7 +360,24 @@
       img {
         margin-bottom: 24px;
       }
+
+      @include m($lg) {
+        padding: 24px;
+      }
     }
+
+    @include m($lg) {
+      grid-gap: 24px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -248,10 +386,18 @@
 
   .relate__text {
     margin-top: auto;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
@@ -263,21 +409,39 @@
       display: flex;
       flex-direction: column;
       padding: 40px;
-      height: 464px;
+      min-height: 464px;
       border-radius: 24px;
       background: $gray-dark;
+
+      p {
+        margin-bottom: 16px;
+      }
 
       h5 {
         margin-bottom: 16px;
       }
+
+      @include m($lg) {
+        padding: 24px;
+      }
+
+      @include m($md) {
+        min-height: 324px;
+      }
+    }
+
+    @include m($md) {
+      grid-gap: 24px 0;
+      grid-template-columns: 1fr;
     }
   }
 
   .logos-roll {
     display: flex;
+    flex-wrap: wrap;
     grid-gap: 0;
     grid-template-columns: none;
-    margin: 16px 0;
+    margin: 0 0 12px;
 
     img {
       width: 72px;
@@ -286,14 +450,25 @@
 
     li {
       padding: 0;
-      height: fit-content;
+      width: 72px;
+      height: 72px;
+      min-height: 72px;
       border-radius: 0;
       background: transparent;
 
-      + li {
-        margin-left: 24px;
+      &:not(:last-child) {
+        margin-right: 24px;
+        margin-bottom: 4px;
       }
     }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -309,16 +484,33 @@
     max-width: 1680px;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
+
+    @include m($lg) {
+      border-radius: 24px;
+    }
   }
 
   &__info {
     width: 100%;
     max-width: 486px;
+
+    @include m($md) {
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
   }
 
   ul {
     h2 {
       margin-bottom: 40px;
+
+      @include m($xl) {
+        margin-bottom: 30px;
+      }
+
+      @include m($lg) {
+        margin-bottom: 16px;
+      }
     }
 
     li {
@@ -328,14 +520,66 @@
 
       &:not(:last-child) {
         margin-bottom: 80px;
+
+        @include m($lg) {
+          margin-bottom: 64px;
+        }
+      }
+
+      &:first-child {
+        .micro__info {
+          margin-right: 30px;
+
+          @include m($lg) {
+            margin-right: 15px;
+          }
+
+          @include m($md) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        .micro__info {
+          margin-left: 30px;
+
+          @include m($lg) {
+            margin-left: 15px;
+          }
+
+          @include m($md) {
+            margin-left: 0;
+          }
+        }
+
+        @include m($md) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      @include m($md) {
+        flex-direction: column;
       }
     }
 
     img {
-      height: 588px;
       max-width: 588px;
       border-radius: 24px;
       object-fit: cover;
+
+      @include m($xl) {
+        max-width: 460px;
+      }
+
+      @include m($lg) {
+        max-width: 350px;
+        border-radius: 14px;
+      }
+
+      @include m($sm) {
+        max-width: 100%;
+      }
     }
 
     p {
@@ -352,25 +596,111 @@
 
     li {
       &:not(:last-child) {
-        margin-bottom: 0;
+        margin: 0;
+
+        @include m($xl) {
+          margin: 0 24px 0 0;
+        }
+
+        @include m($md) {
+          margin: 0 19px 16px;
+        }
+
+        @include m($sm) {
+          margin: 0 10px 16px;
+        }
+
+        @include m(375) {
+          margin: 0 10px 5px;
+        }
+      }
+
+      &:last-child {
+        @include m($md) {
+          margin: 0 19px 16px;
+        }
+
+        @include m($sm) {
+          margin: 0 10px 16px;
+        }
+
+        @include m(375) {
+          margin: 0 10px 5px;
+        }
       }
     }
 
     img {
       width: 116px;
       height: 116px;
+
+      @include m($xl) {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include m($lg) {
+        width: 56px;
+        height: 56px;
+      }
     }
+
+    @include m($lg) {
+      margin-top: 32px;
+    }
+
+    @include m($md) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 32px auto 0;
+      max-width: 400px;
+    }
+
+    @include m($sm) {
+      max-width: 320px;
+    }
+
+    @include m(375) {
+      max-width: 180px;
+    }
+  }
+
+  @include m($xl) {
+    margin-bottom: 120px;
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    margin-bottom: 80px;
+    padding: 80px 0;
+  }
+
+  @include m($md) {
+    padding: 80px 0 64px;
+  }
+
+  @include m(375) {
+    padding: 80px 0 75px;
   }
 }
 
 .expertise--second {
   h2 {
     margin-bottom: 24px;
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   ul {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 40px;
+
+    @include m($md) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -391,6 +721,10 @@
 
   h2 {
     margin-bottom: 24px;
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   ul {
@@ -400,5 +734,18 @@
     li {
       border-top: 2px solid $gray-dark;
     }
+
+    @include m($md) {
+      grid-gap: 24px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0 0;
   }
 }
