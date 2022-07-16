@@ -83,6 +83,7 @@
   @include m($lg) {
     position: relative;
     top: 0;
+    max-width: 100%;
   }
 }
 
@@ -138,6 +139,10 @@
   li {
     + li {
       margin-left: 12px;
+
+      @include m($lg) {
+        margin-left: 24px;
+      }
     }
 
     &:hover {
