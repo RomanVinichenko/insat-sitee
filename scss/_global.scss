@@ -424,11 +424,10 @@ h6 {
     }
   }
 
-  &:focus {
-    background-color: $gray;
-
+  &:hover {
     span {
-      display: none;
+      width: 130px;
+      height: 130px;
     }
 
     svg {
@@ -438,10 +437,11 @@ h6 {
     }
   }
 
-  &:hover {
+  &:disabled {
+    background-color: $gray;
+
     span {
-      width: 130px;
-      height: 130px;
+      display: none;
     }
 
     svg {
