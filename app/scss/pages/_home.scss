@@ -221,6 +221,54 @@
 
   h4 {
     margin-bottom: 72px;
+
+    @include m($xl) {
+      margin-bottom: 56px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 16px;
+
+    @include m($lg) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__place {
+    li {
+      &:not(:last-child) {
+        margin: 0 0 32px;
+
+        @include m($lg) {
+          margin: 0 0 0 41px;
+        }
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+
+        @include m($lg) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    @include m($lg) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    @include m($lg) {
+      margin-bottom: 32px;
+    }
   }
 
   &__inner {
@@ -243,11 +291,15 @@
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.04em;
-  }
 
-  p {
-    &:not(:last-child) {
-      margin-bottom: 32px;
+    @include m($xl) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @include m($lg) {
+      font-size: 18px;
+      line-height: 26px;
     }
   }
 
@@ -332,6 +384,22 @@
       border: none;
       color: $orange;
     }
+
+    @include m($xl) {
+      max-width: 700px;
+    }
+
+    @include m($lg) {
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 130px 0 100px;
+  }
+
+  @include m($lg) {
+    padding: 111px 0 80px;
   }
 }
 

@@ -4,18 +4,139 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   &__text {
+    margin-right: 30px;
     max-width: 588px;
 
     h2 {
       margin-bottom: 24px;
+
+      @include m($lg) {
+        margin-bottom: 16px;
+      }
     }
 
     p {
       color: $gray;
     }
+
+    @include m($lg) {
+      margin-right: 0;
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0 97px;
+  }
+}
+
+.delivery {
+  @include bg-figure;
+
+  position: relative;
+  padding: 160px 0;
+
+  &::after {
+    right: 0;
+    max-width: 1680px;
+    border-radius: 40px 0 0 40px;
+    background-color: $gray-dark;
+
+    @include m($lg) {
+      border-radius: 24px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    margin-right: 30px;
+    max-width: 470px;
+
+    h2 {
+      margin-bottom: 24px;
+
+      @include m($lg) {
+        margin-bottom: 16px;
+      }
+    }
+
+    @include m($lg) {
+      margin-right: 0;
+      margin-bottom: 56px;
+      max-width: 100%;
+    }
+  }
+
+  &__stats {
+    max-width: 588px;
+
+    h5 {
+      margin-bottom: 32px;
+
+      @include m($lg) {
+        margin-bottom: 24px;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-gap: 0 24px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      li {
+        padding-top: 24px;
+        border-top: 1px solid $white;
+
+        h4 {
+          margin-bottom: 12px;
+
+          @include m($lg) {
+            margin-bottom: 4px;
+          }
+        }
+
+        @include m($lg) {
+          padding-top: 16px;
+        }
+      }
+
+      @include m($lg) {
+        grid-gap: 0 16px;
+      }
+
+      @include m(605) {
+        grid-gap: 32px 16px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -73,6 +194,10 @@
       top: 0;
     }
   }
+
+  @include m($lg) {
+    max-width: 100%;
+  }
 }
 
 .expertise-about {
@@ -80,6 +205,22 @@
   padding: 160px 0;
   border-radius: 0 0 40px 40px;
   background-color: $black;
+
+  .expertise {
+    ul {
+      @include m($lg) {
+        grid-gap: 24px 0;
+      }
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
+  }
 }
 
 .say {
@@ -87,16 +228,41 @@
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
     display: grid;
     grid-gap: 88px 0;
     grid-template-columns: 1fr 1fr;
+
+    @include m($xl) {
+      grid-gap: 88px 30px;
+    }
+
+    @include m($lg) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
   }
 
   .digital-info {
     max-width: 486px;
+
+    @include m($lg) {
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0 150px;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -105,6 +271,10 @@
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   ul {
@@ -115,56 +285,24 @@
     img {
       margin-bottom: 24px;
     }
-  }
-}
 
-.delivery {
-  @include bg-figure;
+    @include m($lg) {
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr;
+    }
 
-  position: relative;
-  padding: 160px 0;
-
-  &::after {
-    right: 0;
-    max-width: 1680px;
-    border-radius: 40px 0 0 40px;
-    background-color: $gray-dark;
-  }
-
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__info {
-    max-width: 486px;
-
-    h2 {
-      margin-bottom: 24px;
+    @include m(620) {
+      grid-gap: 24px 0;
+      grid-template-columns: 1fr;
     }
   }
 
-  &__stats {
-    max-width: 588px;
+  @include m($xl) {
+    padding: 150px 0 120px;
+  }
 
-    h5 {
-      margin-bottom: 32px;
-    }
-
-    ul {
-      display: grid;
-      grid-gap: 0 24px;
-      grid-template-columns: 1fr 1fr 1fr;
-
-      li {
-        padding-top: 24px;
-        border-top: 1px solid $white;
-
-        h4 {
-          margin-bottom: 12px;
-        }
-      }
-    }
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
 
@@ -179,23 +317,40 @@
     max-width: 1680px;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
+
+    @include m($lg) {
+      border-radius: 24px;
+    }
   }
 
   h2 {
     margin-bottom: 40px;
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
+
+    @include m($xl) {
+      flex-direction: column;
+    }
   }
 
   &__info {
+    margin-right: 30px;
     max-width: 588px;
 
     p {
       margin-bottom: 18px;
       color: $gray;
+
+      @include m($lg) {
+        margin-bottom: 24px;
+      }
     }
 
     ul {
@@ -219,6 +374,12 @@
         }
       }
     }
+
+    @include m($xl) {
+      margin-right: 0;
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
   }
 
   &__logos {
@@ -226,13 +387,39 @@
 
     ul {
       display: grid;
-      grid-gap: 56px;
+      grid-gap: 40px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
       img {
         width: 72px;
         height: 72px;
       }
+
+      @include m(690) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      @include m(512) {
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include m(350) {
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
+    @include m($xl) {
+      margin: 0 auto;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
