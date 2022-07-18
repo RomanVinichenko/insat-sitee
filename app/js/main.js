@@ -102,3 +102,12 @@ let swiperScope = new Swiper('.swiper__scope', {
     }
   }
 });
+
+const burger = document.querySelector('.menu__burger');
+const menuMobile = document.querySelector('.menu-mobile');
+if (burger) {
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('menu__burger--active');
+    menuMobile.classList.toggle('menu-mobile--active');
+  });
+}

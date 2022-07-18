@@ -3,13 +3,21 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 20;
+  z-index: 30;
   display: flex;
   align-items: center;
   height: 74px;
   border: 1px solid transparent;
   background-color: transparent;
   transition: all 0.4s;
+
+  .logo {
+    z-index: 30;
+
+    @include m($lg) {
+      max-width: 243px;
+    }
+  }
 
   .menu {
     display: flex;
@@ -33,6 +41,10 @@
 
       + .menu__item {
         margin-left: 80px;
+
+        @include m($xl) {
+          margin-left: 50px;
+        }
       }
 
       .menu__drop {
@@ -139,41 +151,104 @@
       display: flex;
       margin: 0 76px 0 auto;
       height: 56px;
+
+      @include m($xl) {
+        margin: 0 45px 0 auto;
+      }
+
+      @include m($lg) {
+        display: none;
+      }
     }
 
-    .button {
+    &__burger {
       position: relative;
-      z-index: 1;
-      padding: 0 24px;
-      height: 54px;
-      border-radius: 40px;
-      background-image: linear-gradient(256.49deg, #ff5366 7.82%, #6c57ff 75.06%);
+      z-index: 30;
+      display: none;
+      margin: 0;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba($white, 0.24);
+      border-radius: 50%;
+      font-size: 0;
+      line-height: 1;
+      background-color: transparent;
 
-      &::after {
+      &::after,
+      &::before {
         content: "";
         position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        width: 100%;
-        height: 0;
-        background-image: linear-gradient(256.49deg, #6c57ff 7.82%, #ff5366 75.06%);
-        transition: all 0.4s;
+        left: 50%;
+        width: 11px;
+        height: 2px;
+        background-color: $white;
+        transform: translateX(-50%);
+        transition: all 0.2s;
       }
 
-      &:hover::after {
-        top: 0;
-        height: 100%;
+      &::before {
+        bottom: 19px;
       }
 
-      &:disabled {
-        background-image: none;
-        background-color: $gray-medium;
-
-        &::after {
-          display: none;
-        }
+      &::after {
+        top: 19px;
       }
+
+      @include m($lg) {
+        display: block;
+      }
+    }
+
+    &__burger--active {
+      &::before {
+        bottom: 22px;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+
+      &::after {
+        top: 22px;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  .button {
+    position: relative;
+    z-index: 1;
+    padding: 0 24px;
+    height: 54px;
+    border-radius: 40px;
+    background-image: linear-gradient(256.49deg, #ff5366 7.82%, #6c57ff 75.06%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 0;
+      background-image: linear-gradient(256.49deg, #6c57ff 7.82%, #ff5366 75.06%);
+      transition: all 0.4s;
+    }
+
+    &:hover::after {
+      top: 0;
+      height: 100%;
+    }
+
+    &:disabled {
+      background-image: none;
+      background-color: $gray-medium;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include m($lg) {
+      display: none;
     }
   }
 
@@ -181,5 +256,90 @@
     border-bottom: 1px solid $gray-dark;
     background-color: rgba(1, 12, 33, 0.72);
     backdrop-filter: blur(20px);
+
+    @include m($lg) {
+      background-color: $black;
+    }
+  }
+}
+
+.menu-mobile {
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  z-index: 20;
+  padding: 73px 0 0 !important;
+  height: 100vh;
+  background-color: $black;
+  transform: translateX(-200%);
+  transition: all 0.3s;
+
+  .button {
+    display: flex;
+    margin: 0 auto 40px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .accordion-toggle {
+    height: 72px !important;
+    border-top: 1px solid $gray-dark !important;
+
+    svg {
+      path {
+        stroke: $white !important;
+      }
+    }
+  }
+
+  .panel-group {
+    margin-bottom: 40px !important;
+  }
+
+  .panel-body {
+    display: flex;
+
+    ul {
+      margin-bottom: 24px !important;
+    }
+  }
+
+  &__block {
+    span {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: 12px;
+        line-height: 20px;
+        color: $gray-medium;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+  }
+
+  &--active {
+    transform: translateX(0);
   }
 }
