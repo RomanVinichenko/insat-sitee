@@ -329,6 +329,10 @@
       margin-bottom: 32px;
       font-size: 12px;
       line-height: 20px;
+
+      @include m($md) {
+        margin-bottom: 24px;
+      }
     }
 
     label {
@@ -345,7 +349,7 @@
       }
 
       input {
-        padding-bottom: 14px;
+        padding-bottom: 16px;
         width: 100%;
         outline: none;
         border: none;
@@ -393,7 +397,15 @@
       margin-bottom: 40px;
 
       label:first-child {
-        margin-right: 24px;
+        margin: 0 24px 0 0;
+
+        @include m($md) {
+          margin: 0 0 40px;
+        }
+      }
+
+      @include m($md) {
+        flex-direction: column;
       }
     }
 
@@ -436,5 +448,66 @@
 
   @include m(1400) {
     margin-right: 0;
+  }
+}
+
+.contact {
+  margin-top: 0;
+  padding: 160px 0;
+  background-image: none;
+  background-color: $black;
+
+  h1 {
+    margin-bottom: 24px;
+
+    @include m($lg) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__wrap {
+    p {
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $orange;
+    }
+  }
+
+  &__vac {
+    .touch__place {
+      margin-top: 16px;
+
+      @include m($lg) {
+        margin-top: 8px;
+        margin-bottom: 40px;
+      }
+    }
+
+    h6 {
+      @include m($lg) {
+        margin-bottom: 8px;
+      }
+    }
+
+    @include m($xl) {
+      max-width: 350px;
+    }
+
+    @include m($lg) {
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 120px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
   }
 }
