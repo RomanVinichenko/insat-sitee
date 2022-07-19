@@ -32,7 +32,7 @@
                 <a href="index.html">Home</a>
               </li>
               <li>
-                <a href="services.html">Service</a>
+                <a href="services.html">Services</a>
               </li>
               <li>
                 <a href="engineering.html">Engineering</a>
@@ -44,7 +44,7 @@
             <span>Technology advisory</span>
             <ul>
               <li>
-                <a href="case.html">Case</a>
+                <a href="case.html">Cases</a>
               </li>
               <li>
                 <a href="case-details.html">Case-details</a>
@@ -56,7 +56,7 @@
           <a href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
-          <a href="#">Company</a>
+          <a href="about.html">Company</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -79,6 +79,9 @@
               </li>
               <li>
                 <a href="vacancy-open.html">Vacancy-open</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
               </li>
               <li>
                 <a href="error.html">404</a>
@@ -116,16 +119,16 @@
                   <span>Engineering services</span>
                   <ul>
                     <li>
-                      <a href="#">IT consulting</a>
+                      <a href="index.html">Home</a>
                     </li>
                     <li>
-                      <a href="#">Software engineering</a>
+                      <a href="services.html">Services</a>
                     </li>
                     <li>
-                      <a href="#">Managed IT Services</a>
+                      <a href="engineering.html">Engineering</a>
                     </li>
                     <li>
-                      <a href="#">DevOps</a>
+                      <a href="technology.html">Technology</a>
                     </li>
                   </ul>
                 </div>
@@ -133,10 +136,10 @@
                   <span>Technology advisory</span>
                   <ul>
                     <li>
-                      <a href="#">Cloud</a>
+                      <a href="case.html">Cases</a>
                     </li>
                     <li>
-                      <a href="#">Atlassian</a>
+                      <a href="case-details.html">Case-details</a>
                     </li>
                     <li>
                   </ul>
@@ -160,16 +163,22 @@
                   <span>Engineering services</span>
                   <ul>
                     <li>
-                      <a href="#">IT consulting</a>
+                      <a href="about.html">About</a>
                     </li>
                     <li>
-                      <a href="#">Software engineering</a>
+                      <a href="approach.html">Approach</a>
                     </li>
                     <li>
-                      <a href="#">Managed IT Services</a>
+                      <a href="careers.html">Careers</a>
                     </li>
                     <li>
-                      <a href="#">DevOps</a>
+                      <a href="vacancies.html">Vacancies</a>
+                    </li>
+                    <li>
+                      <a href="vacancy-open.html">Vacancy-open</a>
+                    </li>
+                    <li>
+                      <a href="contact.html">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -177,10 +186,10 @@
                   <span>Technology advisory</span>
                   <ul>
                     <li>
-                      <a href="#">Cloud</a>
+                      <a href="error.html">404</a>
                     </li>
                     <li>
-                      <a href="#">Atlassian</a>
+                      <a href="terms.html">Terms</a>
                     </li>
                     <li>
                   </ul>
@@ -255,7 +264,6 @@
     </div>
   </div>
 </header>
-
 <main class="main">
   <section class="terms">
     <div class="container">
@@ -353,7 +361,62 @@
       </div>
     </div>
   </section>
-  <include src="./touch.html"></include>
+  <section class="touch">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <h4>info@smidige.com</h4>
+      <div class="touch__inner">
+        <ul class="touch__place">
+          <li>
+            <h6>United States</h6>
+            <a class="touch__tel" href="tel:720207282">720 207 2820</a>
+            <p>Sales inquiries</p>
+          </li>
+          <li>
+            <h6>United Kingdom</h6>
+            <a class="touch__tel" href="tel:442036872281">44 203 687 2281</a>
+            <p>Sales inquiries</p>
+            <a class="touch__tel" href="tel:442036872282">44 203 687 2282</a>
+            <p>Sales inquiries</p>
+          </li>
+        </ul>
+        <form class="form">
+          <div class="form__block">
+            <label>
+              <span>Name</span>
+              <input type="text" placeholder="Write a name">
+            </label>
+            <label>
+              <span>Work e-mail*</span>
+              <input type="text" placeholder="kstanti1992@gmail.com">
+            </label>
+          </div>
+          <div class="form__block">
+            <label>
+              <span>Phone*</span>
+              <input type="text" placeholder="Phone">
+            </label>
+            <label>
+              <span>Company</span>
+              <input type="text" placeholder="Company">
+            </label>
+          </div>
+          <label class="textarea">
+            <span>Company</span>
+            <textarea placeholder="Enter your messagе..."></textarea>
+          </label>
+          <p>
+            Please be informed that when you click the Send button Itransition Group will process your personal data in
+            accordance with our Privacy notice for the purpose of providing you with appropriate information.
+          </p>
+          <div class="button__form">
+            <input class="button" type="submit" value="Send">
+            <span></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
   <div class="container">
@@ -455,7 +518,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/htmlincludejs"></script>
 <script src="js/main.js"></script>
 </body>
 

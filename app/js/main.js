@@ -8,8 +8,6 @@ function pic() {
 
 pic();
 
-// INCLUDES HTML FILES
-
 $(function () {
   $('.link__service, .section__link, .article__element, .expert__button, .footer__network')
     .on('mouseenter', function (e) {
@@ -28,19 +26,6 @@ $(function () {
     return false
   });
 });
-
-let includes = document.getElementsByTagName('include');
-for (let i = 0; i < includes.length; i++) {
-  let include = includes[i];
-  load_file(includes[i].attributes.src.value, function (text) {
-    include.insertAdjacentHTML('afterend', text);
-    include.remove();
-  });
-}
-
-function load_file(filename, callback) {
-  fetch(filename).then(response => response.text()).then(text => callback(text));
-}
 
 // HEADER ACTIVE
 
