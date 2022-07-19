@@ -44,6 +44,12 @@
       }
     }
 
+    .article__element {
+      &:hover {
+        border: 1px solid $orange;
+      }
+    }
+
     @include m($sm) {
       flex-wrap: nowrap;
       margin-bottom: 32px;
