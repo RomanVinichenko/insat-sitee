@@ -16,7 +16,7 @@
   &__link {
     position: absolute;
     left: 50%;
-    bottom: 50px;
+    bottom: 88px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -26,6 +26,14 @@
       margin-left: 12px;
       font-size: 12px;
       line-height: 20px;
+
+      @include m($md) {
+        display: none;
+      }
+    }
+
+    @include m($md) {
+      bottom: 32px;
     }
   }
 
@@ -111,6 +119,16 @@
       }
     }
 
+    .do-red {
+      background-color: $red;
+
+      .link__service {
+        span {
+          background-color: $red;
+        }
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 40px;
     }
@@ -118,32 +136,87 @@
 }
 
 .trusted {
+  position: relative;
   padding: 120px 0;
   background-color: $gray-dark;
 
+  .section__title {
+    p {
+      @include m($lg) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .section__head {
+    h5 {
+      span {
+        @include m($md) {
+          margin-right: 8px;
+        }
+      }
+
+      @include m($md) {
+        position: absolute;
+        left: 16px;
+        bottom: 80px;
+        padding-bottom: 0;
+      }
+    }
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
+  }
+
   ul {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 0 0 0 24px;
-    animation: trusted 9s linear infinite;
+    width: 100vw;
+    animation: trusted 20s linear infinite;
 
     li {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 0 0 -24px;
-      width: 100%;
-      height: 298px;
-      min-width: 298px;
+      margin: 0 -24px 0 0;
+      width: calc(20vw + 24px);
+      height: calc(20vw + 24px);
+      min-width: calc(20vw + 24px);
+      min-height: calc(20vw + 24px);
+      max-width: calc(20vw + 24px);
+      max-height: calc(20vw + 24px);
       border-style: solid;
       border-width: 1px;
       border-color: rgba($white, 0.24);
       border-radius: 50%;
+
+      img {
+        @include m($lg) {
+          max-width: 80px;
+        }
+
+        @include m($md) {
+          max-width: 70px;
+        }
+      }
     }
+  }
+
+  @include m($xl) {
+    padding: 100px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0;
+  }
+
+  @include m($lg) {
+    padding: 80px 0 140px;
   }
 }
 
 .company {
+  position: relative;
   padding: 120px 0;
   background-image: url("../images/company.svg");
   background-position: top left -200px;
@@ -152,6 +225,23 @@
 
   .section__head {
     margin-bottom: 90px;
+
+    @include m($xl) {
+      margin-bottom: 60px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .section__link {
+    @include m($md) {
+      position: absolute;
+      left: 50%;
+      bottom: 72px;
+      transform: translateX(-50%);
+    }
   }
 
   &__list {
@@ -168,7 +258,38 @@
 
     h3 {
       margin-bottom: 4px;
+
+      @include m($lg) {
+        font-size: 40px;
+        line-height: 48px;
+      }
     }
+
+    @include m($md) {
+      margin-left: 0;
+      max-width: 100%;
+    }
+
+    @include m($sm) {
+      grid-gap: 48px 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include m($md) {
+    background-image: none;
+  }
+
+  @include m($xl) {
+    padding: 100px 0;
+  }
+
+  @include m($lg) {
+    padding: 72px 0;
+  }
+
+  @include m($md) {
+    padding: 72px 0 168px;
   }
 }
 
@@ -186,7 +307,7 @@
     }
 
     @include m($lg) {
-      margin-bottom: 24px;
+      margin-bottom: 37px;
     }
   }
 
@@ -447,12 +568,12 @@
 }
 
 @keyframes trusted {
-  0% {
-    transform: translateX(-3%);
+  from {
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-163%);
+    transform: translateX(-100%);
   }
 }
 

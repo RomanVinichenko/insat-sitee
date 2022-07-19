@@ -27,8 +27,12 @@ body {
   }
 
   @include m(1400) {
+    padding: 0 24px;
+    max-width: 1248px;
+  }
+
+  @include m($md) {
     padding: 0 16px;
-    max-width: 1232px;
   }
 }
 
@@ -62,13 +66,13 @@ h2 {
   line-height: 64px;
 
   @include m($xl) {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   @include m($lg) {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
@@ -496,6 +500,7 @@ h6 {
     border-radius: 32px;
     font-size: 12px;
     line-height: 20px;
+    transition: all 0.5s;
 
     p {
       z-index: 5;

@@ -32,6 +32,7 @@
       a {
         font-size: 14px;
         line-height: 22px;
+        transition: 0.2s;
       }
 
       svg {
@@ -108,10 +109,11 @@
             font-weight: 600;
             font-size: 14px;
             line-height: 24px;
+            color: $white !important;
             transition: 0.2s;
 
             &:hover {
-              color: $orange;
+              color: $orange !important;
             }
           }
 
@@ -123,6 +125,10 @@
 
       &:hover {
         cursor: pointer;
+
+        a {
+          color: $gray-medium;
+        }
 
         svg {
           transform: rotate(180deg);
