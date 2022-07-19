@@ -227,10 +227,23 @@
 
     h1 {
       margin-bottom: 24px !important;
+
+      @include m($lg) {
+        margin-bottom: 16px !important;
+      }
     }
 
     p {
       font-weight: 600;
+    }
+
+    @include m($xl) {
+      max-width: 350px;
+    }
+
+    @include m($lg) {
+      margin: 0 0 24px;
+      max-width: 100%;
     }
   }
 
