@@ -660,10 +660,6 @@
     @include m($sm) {
       max-width: 320px;
     }
-
-    @include m(375) {
-      max-width: 180px;
-    }
   }
 
   @include m($xl) {

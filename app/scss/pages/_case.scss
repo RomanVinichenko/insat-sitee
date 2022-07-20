@@ -24,6 +24,12 @@
     }
   }
 
+  .container__list {
+    @include m($sm) {
+      padding: 0 0 0 16px;
+    }
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
