@@ -262,10 +262,6 @@
     border-bottom: 1px solid $gray-dark;
     background-color: rgba(1, 12, 33, 0.72);
     backdrop-filter: blur(20px);
-
-    @include m($lg) {
-      background-color: $black;
-    }
   }
 }
 

@@ -234,7 +234,6 @@
     position: relative;
     height: 88px;
     min-width: 156px;
-    border: 1px solid $white;
     border-radius: 48px;
     background: $white;
 
@@ -530,6 +529,14 @@
   position: relative;
   padding: 40px 0 200px;
   background-color: $black;
+
+  .swiper-slide {
+    max-width: 588px;
+
+    @include m(600) {
+      max-width: 300px;
+    }
+  }
 
   .section__head {
     h2 {

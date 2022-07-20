@@ -54,19 +54,21 @@ $(document).ready(function () {
 
 let swiperStudies = new Swiper('.swiper__studies', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 12,
   breakpoints: {
     1400: {
-      slidesPerView: 4,
+      loop: true,
       spaceBetween: 24,
     },
     850: {
-      slidesPerView: 3,
+      loop: true,
+      slidesPerView: 'auto',
       spaceBetween: 24,
     },
     580: {
-      slidesPerView: 2,
+      loop: true,
+      slidesPerView: 'auto',
       spaceBetween: 24,
     }
   }
@@ -74,15 +76,17 @@ let swiperStudies = new Swiper('.swiper__studies', {
 
 let swiperScope = new Swiper('.swiper__scope', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 12,
   breakpoints: {
     1400: {
-      slidesPerView: 3,
+      loop: true,
+      slidesPerView: 'auto',
       spaceBetween: 24,
     },
     695: {
-      slidesPerView: 2,
+      loop: true,
+      slidesPerView: 'auto',
       spaceBetween: 24,
     }
   }
@@ -96,3 +100,23 @@ if (burger) {
     menuMobile.classList.toggle('menu-mobile--active');
   });
 }
+
+let elements = document.querySelectorAll('.job__wave');
+
+elements.forEach(element => {
+  let innerText = element.innerText;
+  element.innerHTML = '';
+
+  let textContainer = document.createElement('div');
+  textContainer.classList.add('block');
+
+  for (let letter of innerText) {
+    let span = document.createElement('span');
+    span.innerText = letter.trim() === '' ? '\xa0' : letter;
+    span.classList.add('letter');
+    textContainer.appendChild(span);
+  }
+
+  element.appendChild(textContainer);
+  element.appendChild(textContainer.cloneNode(true));
+});

@@ -287,12 +287,12 @@
     }
 
     @include m($lg) {
-      grid-gap: 24px;
+      grid-gap: 40px 24px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include m(620) {
-      grid-gap: 24px 0;
+      grid-gap: 40px 0;
       grid-template-columns: 1fr;
     }
   }
@@ -388,30 +388,37 @@
     ul {
       display: grid;
       grid-gap: 40px;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: minmax(72px, 1fr) minmax(72px, 1fr) minmax(72px, 1fr) minmax(72px, 1fr) minmax(72px, 1fr);
+      width: 100%;
 
       img {
         width: 72px;
         height: 72px;
+        min-width: 72px;
+
+        @include m($lg) {
+          width: 49px;
+          height: 49px;
+          min-width: 49px;
+        }
       }
 
-      @include m(690) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+      li {
+        @include m($xl) {
+          margin-right: 24px;
+        }
       }
 
-      @include m(512) {
-        grid-gap: 24px;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-      @include m(350) {
-        grid-gap: 24px;
-        grid-template-columns: 1fr 1fr;
+      @include m($xl) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 0;
       }
     }
 
     @include m($xl) {
-      margin: 0 auto;
+      max-width: 100%;
     }
   }
 

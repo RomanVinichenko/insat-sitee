@@ -255,6 +255,7 @@ h6 {
     }
 
     @include m($sm) {
+      top: 15%;
       transform: scale(0.6);
     }
   }
@@ -293,6 +294,10 @@ h6 {
     @include m($xl) {
       padding-bottom: 48px;
       height: 400px;
+    }
+
+    @include m($sm) {
+      height: 100vh;
     }
   }
 
@@ -346,6 +351,10 @@ h6 {
         left: 5%;
         filter: blur(30px);
       }
+
+      @include m($sm) {
+        bottom: -10%;
+      }
     }
 
     &::after {
@@ -371,6 +380,10 @@ h6 {
         filter: blur(70px);
         transform: scale(0.75);
       }
+    }
+
+    @include m($sm) {
+      height: 100vh;
     }
   }
 
@@ -403,7 +416,30 @@ h6 {
     p {
       margin-right: 10px;
       font-weight: 600;
+      text-decoration: line-through;
+      color: $orange;
     }
+
+    &:hover {
+      cursor: pointer;
+
+      .job__wave {
+        .letter {
+          transform: translateY(-100%);
+        }
+      }
+    }
+  }
+}
+
+.job__wave {
+  display: inline-block;
+  height: 24px;
+  overflow: hidden;
+
+  .letter {
+    display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
   }
 }
 
@@ -458,12 +494,13 @@ h6 {
 }
 
 .article {
-  width: 100%;
+  display: inline-block;
   max-width: 384px;
 
   img {
     margin-bottom: 24px;
     min-height: 384px;
+    max-height: 384px;
     border-radius: 16px;
     object-fit: cover;
     transition: 0.2s;

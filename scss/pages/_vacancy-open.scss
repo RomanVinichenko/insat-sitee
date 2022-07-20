@@ -1,8 +1,33 @@
 .vacancy-open {
   position: relative;
-  padding: 200px 0 160px;
+  padding: 136px 0 160px;
   border-radius: 0 0 40px 40px;
   background: $black;
+
+  &__back {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+    padding-left: 26px;
+    height: 24px;
+    font-weight: 600;
+
+    &::before {
+      content: url("../images/vac-back.svg");
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
+  }
 
   h1 {
     margin-bottom: 24px;
@@ -116,7 +141,7 @@
   }
 
   @include m($xl) {
-    padding: 150px 0 120px;
+    padding: 136px 0 120px;
   }
 
   @include m($lg) {
