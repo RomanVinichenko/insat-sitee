@@ -143,6 +143,7 @@
 .trusted {
   position: relative;
   padding: 120px 0;
+  overflow: hidden;
   background-color: $gray-dark;
 
   .section__title {

@@ -12,7 +12,31 @@
   transition: all 0.4s;
 
   .logo {
+    position: relative;
     z-index: 30;
+
+    &::after {
+      content: url("../images/logo.gif");
+      position: absolute;
+      left: 0;
+      top: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+
+    img {
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        visibility: visible;
+      }
+
+      img {
+        visibility: hidden;
+      }
+    }
 
     @include m($lg) {
       max-width: 243px;
@@ -155,7 +179,7 @@
 
     &__list {
       display: flex;
-      margin: 0 76px 0 auto;
+      margin: 0 58px 0 auto;
       height: 56px;
 
       @include m($xl) {

@@ -1,6 +1,14 @@
 .key {
   padding: 160px 0;
 
+  &__img-black {
+    display: block;
+  }
+
+  &__img-white {
+    display: none;
+  }
+
   h2 {
     margin-bottom: 24px;
   }
@@ -552,6 +560,8 @@
   }
 
   .section__link {
+    border: 1px solid $gray-medium;
+
     @include m($md) {
       position: absolute;
       left: 50%;

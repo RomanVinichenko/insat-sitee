@@ -129,6 +129,10 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    @include m($lg) {
+      max-width: 100%;
+    }
   }
 
   @include m($xl) {
@@ -158,6 +162,7 @@
 
   p {
     margin-bottom: 8px;
+    font-weight: 600;
   }
 
   span {
@@ -205,14 +210,6 @@
   padding: 160px 0;
   border-radius: 0 0 40px 40px;
   background-color: $black;
-
-  .expertise {
-    ul {
-      @include m($lg) {
-        grid-gap: 24px 0;
-      }
-    }
-  }
 
   @include m($xl) {
     padding: 120px 0;

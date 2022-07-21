@@ -120,3 +120,14 @@ elements.forEach(element => {
   element.appendChild(textContainer);
   element.appendChild(textContainer.cloneNode(true));
 });
+const body = document.body
+const theme = document.querySelector('.theme-toggle');
+if (theme) {
+
+  theme.addEventListener('click', function () {
+    setTimeout(function () {
+      body.classList.toggle('light');
+    }, 200);
+    theme.classList.toggle('theme-toggle__active');
+  });
+}

@@ -25,6 +25,10 @@
   }
 
   .container__list {
+    .article__element {
+      border: 1px solid $gray-medium;
+    }
+
     @include m($sm) {
       padding: 0 0 0 16px;
     }
@@ -47,6 +51,10 @@
       .case__active {
         border: 1px solid $orange;
         background-color: $orange;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
 
