@@ -596,6 +596,76 @@ body {
   .expertise-about {
     background-color: $white;
   }
+
+  .setup {
+    color: $black;
+
+    p {
+      color: $gray-dark;
+    }
+
+    &__wrap {
+      p {
+        color: $gray-medium;
+      }
+    }
+
+    &__img-black,
+    &__mobile-black {
+      display: none;
+    }
+
+    &__img-white,
+    &__mobile-white {
+      display: block;
+    }
+  }
+
+  .cooperation {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    &__info {
+      li:first-child {
+        border-top: 2px solid $black;
+      }
+    }
+  }
+
+  .model-approach {
+    p {
+      color: $black;
+    }
+  }
+
+  .vendor {
+    background-color: $white;
+
+    h2 {
+      color: $black;
+    }
+
+    &__inner {
+      &::after {
+        background-color: $gray;
+      }
+    }
+
+    ul {
+      li {
+        color: $gray-dark;
+      }
+
+      ul {
+        li {
+          color: $black;
+        }
+      }
+    }
+  }
 }
 
 .theme-toggle {
