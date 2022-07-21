@@ -18,6 +18,14 @@
     }
   }
 
+  .logo-white {
+    display: block;
+  }
+
+  .logo-black {
+    display: none;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -81,6 +89,14 @@
 
   &__item-wrap {
     display: flex;
+
+    .footer__submenu {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
 
     @include m(540) {
       flex-wrap: wrap;

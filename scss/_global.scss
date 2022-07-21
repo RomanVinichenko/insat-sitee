@@ -10,6 +10,632 @@ body {
   cursor: default;
 }
 
+.light {
+  background-color: $white;
+
+  .section__head {
+    p {
+      color: $gray-medium;
+    }
+
+    h2 {
+      color: $black;
+    }
+
+    .section__link {
+      border: 1px solid $gray-medium;
+
+      &::after {
+        content: url("../images/more-arrow-white.svg");
+      }
+
+      p {
+        color: $black;
+      }
+    }
+  }
+
+  .do {
+    h6 {
+      color: $black;
+    }
+  }
+
+  .trusted {
+    background: $gray;
+
+    .section__title {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    h5 {
+      color: $black;
+    }
+
+    .trusted__list {
+      img {
+        filter: invert(1);
+      }
+
+      li {
+        border-color: $gray-medium;
+      }
+    }
+  }
+
+  .company {
+    background-image: url("../images/company-white.svg");
+
+    &__list {
+      color: $black;
+    }
+  }
+
+  .studies {
+    background-color: $gray;
+
+    .section__title {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    .article__element {
+      border: 1px solid $gray-medium;
+    }
+  }
+
+  .article {
+    h6 {
+      color: $black;
+    }
+
+    &__element {
+      p {
+        color: $black;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:hover {
+        p {
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  .footer {
+    a {
+      color: $black;
+    }
+
+    .logo-white {
+      display: none;
+    }
+
+    .logo-black {
+      display: block;
+    }
+
+    &__thirdmenu {
+      a {
+        color: $gray-medium;
+      }
+    }
+
+    &__copy {
+      color: $black;
+    }
+
+    &__inner {
+      border-bottom: 1px solid $gray;
+    }
+
+    &__network {
+      border: 1px solid $gray;
+
+      img {
+        filter: invert(1);
+        transition: filter 0.5s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          filter: invert(0);
+        }
+      }
+    }
+  }
+
+  .services {
+    background-color: $white;
+
+    h2 {
+      color: $black;
+    }
+  }
+
+  .key {
+    h2 {
+      color: $black;
+    }
+
+    &__top {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__img-black {
+      display: none;
+    }
+
+    &__img-white {
+      display: block;
+    }
+
+    ul {
+      h6 {
+        color: $black;
+      }
+
+      p {
+        color: $gray-dark;
+      }
+    }
+  }
+
+  .approach {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    &__head {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__wrap {
+      span {
+        border: 1px solid $gray-medium;
+      }
+    }
+  }
+
+  .results {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    p {
+      color: $gray-dark;
+    }
+  }
+
+  .consulting {
+    color: $black;
+
+    p {
+      color: $gray-dark;
+    }
+
+    ul {
+      border-top: 1px solid $gray;
+
+      li {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+
+  .scope {
+    background-color: $white;
+
+    .section__title {
+      p {
+        color: $gray-dark;
+      }
+    }
+  }
+
+  .strategy {
+    color: $black;
+
+    &__img-black {
+      display: none;
+    }
+
+    &__img-white {
+      display: block;
+    }
+
+    p {
+      color: $gray-dark;
+    }
+  }
+
+  .models {
+    color: $black;
+
+    p {
+      color: $gray-dark;
+    }
+
+    .panel {
+      .panel-body {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    .accordion-toggle.collapsed {
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+  }
+
+  .platform {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    &__img-black {
+      display: none;
+    }
+
+    &__img-white {
+      display: block;
+    }
+
+    ul {
+      li {
+        background-color: $white;
+      }
+    }
+
+    .relate__text {
+      p {
+        color: $black;
+      }
+    }
+
+    .link__service {
+      border: 1px solid $gray;
+    }
+  }
+
+  .options {
+    color: $black;
+
+    ul {
+      li {
+        background-color: $gray;
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    .relate__text {
+      p {
+        color: $black;
+      }
+    }
+  }
+
+  .micro {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    p {
+      color: $gray-dark;
+    }
+
+    .logos-roll {
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .expertise--extras {
+    color: $black;
+
+    p {
+      color: $gray-dark;
+    }
+
+    ul {
+      li {
+        border-top: 2px solid $gray;
+      }
+    }
+
+    .relate__text {
+      p {
+        color: $black;
+      }
+    }
+
+    .link__service {
+      border: 1px solid $gray;
+    }
+  }
+
+  .case {
+    background-color: $white;
+
+    h1 {
+      color: $black;
+    }
+
+    &__active {
+      p {
+        color: $white;
+      }
+    }
+
+    .container__list {
+      .article__element {
+        border: 1px solid $gray;
+      }
+    }
+
+    .button {
+      color: $black;
+    }
+  }
+
+  .header-custom {
+    border-bottom: 1px solid $gray-dark;
+    background-color: rgba(1, 12, 33, 0.72);
+    backdrop-filter: blur(20px);
+  }
+
+  .case-details {
+    color: $black;
+
+    &__info {
+      h6 {
+        color: $black;
+        background-color: $gray;
+
+        &::after,
+        &::before {
+          filter: invert(1);
+        }
+      }
+
+      ul {
+        li {
+          color: $gray-dark;
+        }
+      }
+
+      ol {
+        li {
+          color: $gray-dark;
+        }
+
+        span {
+          color: $black;
+        }
+      }
+    }
+
+    .expert {
+      h5 {
+        color: $white;
+      }
+    }
+  }
+
+  .terms__navigation-social {
+    svg {
+      path {
+        fill: $black;
+      }
+    }
+
+    li {
+      &:hover {
+        svg {
+          fill: $black;
+
+          circle {
+            stroke: $black;
+          }
+
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    li:last-child {
+      svg {
+        path {
+          fill: transparent;
+          stroke: $black;
+        }
+      }
+
+      &:hover {
+        svg {
+          fill: $black;
+
+          circle {
+            stroke: $black;
+          }
+
+          path {
+            fill: transparent;
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .terms {
+    &__navigation {
+      span {
+        color: $gray-dark;
+      }
+    }
+
+    &__info {
+      p {
+        color: $gray-dark;
+      }
+    }
+  }
+
+  .digital {
+    color: $black;
+
+    &__text {
+      p {
+        color: $gray-dark;
+      }
+    }
+  }
+
+  .digital-person {
+    span {
+      color: $gray-dark;
+    }
+  }
+
+  .delivery {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    &__info {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__stats {
+      p {
+        color: $gray-dark;
+      }
+
+      ul {
+        li {
+          border-top: 1px solid $gray-medium;
+        }
+      }
+    }
+  }
+
+  .say {
+    color: $black;
+  }
+
+  .values {
+    color: $black;
+
+    img {
+      filter: invert(1);
+    }
+
+    p {
+      color: $gray-dark;
+    }
+  }
+
+  .management {
+    color: $black;
+
+    &::after {
+      background-color: $gray;
+    }
+
+    &__info {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__logos {
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .expertise-about {
+    background-color: $white;
+  }
+}
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 32px;
+  padding: 0 4px;
+  width: 60px;
+  height: 32px;
+  border: 1px solid $gray-dark;
+  border-radius: 100px;
+  background-color: $black;
+  transition: all 0.2s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4);
+    background: $white;
+    transform: translateY(-50%) translateX(0);
+    transition: all 0.2s;
+  }
+
+  &__active {
+    border: 1px solid $gray;
+    background-color: $white;
+
+    &::after {
+      transform: translateY(-50%) translateX(-28px);
+    }
+  }
+}
+
 .container {
   margin: 0 auto;
   padding: 0;
@@ -415,6 +1041,7 @@ h6 {
 
     p {
       margin-right: 10px;
+      margin-bottom: 0 !important;
       font-weight: 600;
       text-decoration: line-through;
       color: $orange;
@@ -537,13 +1164,15 @@ h6 {
     border-radius: 32px;
     font-size: 12px;
     line-height: 20px;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
 
     p {
       z-index: 5;
     }
 
     &:hover {
+      border: 1px solid $orange !important;
+
       span {
         width: 500px;
         height: 500px;

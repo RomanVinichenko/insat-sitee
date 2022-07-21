@@ -1,6 +1,14 @@
 .strategy {
   padding-top: 160px;
 
+  &__img-black {
+    display: block;
+  }
+
+  &__img-white {
+    display: none;
+  }
+
   h2 {
     margin-bottom: 42px;
 
@@ -96,6 +104,12 @@
 
       h6 {
         margin-bottom: 16px;
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
       }
     }
 
@@ -336,6 +350,14 @@
     }
   }
 
+  &__img-black {
+    display: block;
+  }
+
+  &__img-white {
+    display: none;
+  }
+
   .relate__text {
     margin-top: 16px;
   }
@@ -371,6 +393,10 @@
       grid-gap: 24px 0;
       grid-template-columns: 1fr;
     }
+  }
+
+  .link__service {
+    border: 1px solid transparent;
   }
 
   @include m($xl) {
