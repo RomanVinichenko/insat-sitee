@@ -96,6 +96,16 @@
     }
   }
 
+  &__img-black,
+  &__mobile-black {
+    display: block;
+  }
+
+  &__img-white,
+  &__mobile-white {
+    display: none;
+  }
+
   @include m($xl) {
     padding: 120px 0;
   }
@@ -181,6 +191,8 @@
         border: 1px solid $gray;
         border-radius: 50%;
         font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
 
         @include m($lg) {
           top: 58px;
