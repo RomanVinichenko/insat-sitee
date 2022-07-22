@@ -502,6 +502,9 @@ body {
   }
 
   .terms {
+    color: $black;
+    background-color: $white;
+
     &__navigation {
       span {
         color: $gray-dark;
@@ -666,6 +669,190 @@ body {
       }
     }
   }
+
+  .careers {
+    color: $black;
+    background-color: $white;
+
+    &__people-wrap {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__people {
+      .expert__button {
+        border: 1px solid $gray;
+      }
+    }
+
+    &__work {
+      color: $white;
+    }
+
+    &__say-wrap {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__say-black {
+      display: none;
+    }
+
+    &__say-white {
+      display: block;
+    }
+  }
+
+  .vacancies {
+    color: $black;
+    background-color: $white;
+
+    &__list {
+      li {
+        a {
+          border-top: 1px solid $gray;
+        }
+      }
+    }
+
+    &__symbol {
+      li {
+        color: $gray-dark;
+      }
+    }
+
+    &__filter {
+      label {
+        span {
+          color: $gray-dark;
+        }
+      }
+
+      input {
+        border-bottom: 1px solid $black;
+        color: $black;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      select {
+        border-bottom: 1px solid $black;
+        color: $black;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .vacancy-open {
+    color: $black;
+    background-color: $white;
+
+    &__back {
+      &::before {
+        filter: invert(1);
+      }
+    }
+
+    p {
+      color: $gray-dark;
+    }
+  }
+
+  .contact {
+    color: $black;
+    background-color: $white;
+
+    &__wrap {
+      p {
+        color: $gray-dark;
+      }
+    }
+
+    &__vac {
+      a {
+        color: $orange;
+      }
+
+      .touch__place {
+        p {
+          color: $gray-dark;
+        }
+      }
+    }
+
+    .form {
+      span {
+        color: $gray-dark;
+      }
+
+      p {
+        color: $gray-dark;
+      }
+
+      input {
+        border-bottom: 1px solid $black;
+        color: $black;
+      }
+
+      textarea {
+        border: 1px solid $black;
+        color: $black;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+    }
+
+    .button__form {
+      input {
+        border: 1px solid $gray;
+        color: $orange;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .error {
+    &::before {
+      z-index: 5;
+    }
+  }
+
+  .menu-mobile {
+    background-color: $white;
+  }
+
+  .menu-mobile--active {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: 50;
+      width: 100vw;
+      height: 74px;
+      background-color: $black;
+    }
+
+    .button {
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  .menu-mobile__block {
+    a {
+      color: $gray-dark;
+    }
+  }
 }
 
 .theme-toggle {
@@ -677,6 +864,7 @@ body {
   padding: 0 4px;
   width: 60px;
   height: 32px;
+  min-width: 60px;
   border: 1px solid $gray-dark;
   border-radius: 100px;
   background-color: $black;
@@ -703,6 +891,10 @@ body {
     &::after {
       transform: translateY(-50%) translateX(-28px);
     }
+  }
+
+  @include m($lg) {
+    margin: 0 20px 0 auto;
   }
 }
 

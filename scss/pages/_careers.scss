@@ -110,6 +110,14 @@
     }
   }
 
+  &__say-black {
+    display: block;
+  }
+
+  &__say-white {
+    display: none;
+  }
+
   &__work-wrap {
     z-index: 10;
     margin-right: 30px;
@@ -122,6 +130,12 @@
       @include m($lg) {
         margin-bottom: 16px;
         max-width: 100%;
+      }
+    }
+
+    .expert__button {
+      span {
+        background-color: $red;
       }
     }
 
