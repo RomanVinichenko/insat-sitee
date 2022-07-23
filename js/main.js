@@ -8,6 +8,16 @@ function pic() {
 
 pic();
 
+function picWhite() {
+  const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
+
+  $('.top--white').css({
+    'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
+  });
+}
+
+picWhite();
+
 $(function () {
   $('.link__service, .section__link, .article__element, .expert__button, .footer__network')
     .on('mouseenter', function (e) {
@@ -121,6 +131,7 @@ elements.forEach(element => {
   element.appendChild(textContainer.cloneNode(true));
 });
 const body = document.body
+const topIndex = document.querySelector('.top')
 const theme = document.querySelector('.theme-toggle');
 if (theme) {
 
@@ -129,5 +140,6 @@ if (theme) {
       body.classList.toggle('light');
     }, 200);
     theme.classList.toggle('theme-toggle__active');
+    topIndex.classList.toggle('top--white');
   });
 }
