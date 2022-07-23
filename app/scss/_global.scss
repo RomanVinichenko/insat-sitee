@@ -17,6 +17,14 @@ body {
 .light {
   background-color: $white;
 
+  .menu-mobile .accordion-toggle svg path {
+    stroke: $gray-medium !important;
+  }
+
+  .menu-mobile .accordion-toggle {
+    border-top: 1px solid $gray !important;
+  }
+
   .section__head {
     p {
       color: $gray-medium;
@@ -281,6 +289,8 @@ body {
     }
 
     .accordion-toggle.collapsed {
+      border-top: 1px solid $gray;
+
       svg {
         path {
           stroke: $black;
@@ -836,7 +846,8 @@ body {
       z-index: 50;
       width: 100vw;
       height: 74px;
-      background-color: $black;
+      background-color: $gray-medium;
+      backdrop-filter: blur(20px);
     }
 
     .button {
@@ -850,6 +861,86 @@ body {
     a {
       color: $gray-dark;
     }
+  }
+
+  .header--active {
+    border-bottom: 1px solid $gray;
+    background-color: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+
+    .menu__burger {
+      border: 1px solid $gray-dark !important;
+
+      &::after,
+      &::before {
+        background-color: $gray-dark !important;
+      }
+    }
+
+    .header__logo-white {
+      display: none;
+    }
+
+    .header__logo-black {
+      display: block;
+    }
+
+    .menu__item {
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+
+      &:hover {
+        .menu__item-link {
+          color: $gray-medium !important;
+        }
+
+        svg {
+          path {
+            stroke: $gray-medium !important;
+          }
+        }
+      }
+    }
+
+    .menu__item-link {
+      color: $black;
+    }
+
+    .menu__drop {
+      border: 1px solid $gray !important;
+      background-color: $white !important;
+
+      &::before {
+        border-bottom: 10px solid $white !important;
+      }
+
+      &::after {
+        border-bottom: 12px solid $gray !important;
+      }
+
+      ul {
+        color: $black !important;
+
+        a {
+          color: $black !important;
+        }
+      }
+    }
+  }
+
+  .models .panel:last-child {
+    border-bottom: 1px solid $gray;
+  }
+
+  .terms__info h3 {
+    border-top: 1px solid $gray;
+  }
+
+  .second-span {
+    border-top: 1px solid $gray;
   }
 }
 

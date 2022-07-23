@@ -11,6 +11,14 @@
   background-color: transparent;
   transition: all 0.4s;
 
+  &__logo-white {
+    display: block;
+  }
+
+  &__logo-black {
+    display: none;
+  }
+
   .logo {
     position: relative;
     z-index: 30;
@@ -73,20 +81,24 @@
     align-items: center;
     justify-content: space-between;
 
+    .theme-toggle {
+      @include m($lg) {
+        display: none;
+      }
+    }
+
     .menu__item {
       position: relative;
       display: flex;
       align-items: center;
 
-      a {
-        font-size: 14px;
-        line-height: 22px;
-        transition: 0.2s;
-      }
-
       svg {
         margin-left: 4px;
         transition: all 0.2s;
+
+        path {
+          transition: all 0.2s;
+        }
       }
 
       + .menu__item {
@@ -158,7 +170,7 @@
             font-weight: 600;
             font-size: 14px;
             line-height: 24px;
-            color: $white !important;
+            color: $white;
             transition: 0.2s;
 
             &:hover {
@@ -175,12 +187,16 @@
       &:hover {
         cursor: pointer;
 
-        a {
-          color: $gray-medium;
+        .menu__item-link {
+          color: $gray;
         }
 
         svg {
           transform: rotate(180deg);
+
+          path {
+            stroke: $gray;
+          }
         }
 
         .menu__drop {
@@ -188,6 +204,12 @@
           opacity: 1;
         }
       }
+    }
+
+    .menu__item-link {
+      font-size: 14px;
+      line-height: 22px;
+      transition: 0.2s;
     }
 
     .menu__item-small {
@@ -327,9 +349,13 @@
   transform: translateX(-200%);
   transition: all 0.3s;
 
+  .theme-mob {
+    margin: 0 auto 20px;
+  }
+
   .button {
     display: flex;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
   }
 
   &__social {

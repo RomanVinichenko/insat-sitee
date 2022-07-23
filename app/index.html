@@ -14,11 +14,12 @@
   <div class="container container--header">
     <nav class="menu">
       <a class="logo" href="index.html">
-        <img src="images/logo.svg" alt="Logo">
+        <img class="header__logo-white" src="images/logo.svg" alt="Logo">
+        <img class="header__logo-black" src="images/logo-black.svg" alt="Logo">
       </a>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="services.html">Service</a>
+          <a class="menu__item-link" href="services.html">Service</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -53,10 +54,10 @@
           </div>
         </li>
         <li class="menu__item">
-          <a href="case-details.html">Case studies</a>
+          <a class="menu__item-link" href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
-          <a href="about.html">Company</a>
+          <a class="menu__item-link" href="about.html">Company</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -155,14 +156,8 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <a class="accordion-toggle collapsed"  href="approach.html">
                 Case studies
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
-                    stroke="white" stroke-miterlimit="10"/>
-                  <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
               </a>
             </h6>
             <div id="collapseTwo" class="panel-collapse collapse">
@@ -257,6 +252,10 @@
           <img src="images/button.svg" alt="Button">
           <span>Contact</span>
         </a>
+        <button class="theme-toggle theme-mob">
+          <img src="images/dark.svg" alt="Dark">
+          <img src="images/light.svg" alt="Light">
+        </button>
         <ul class="menu-mobile__social">
           <li class="footer__network">
             <img src="images/linkedin.svg" alt="Linkedin">
@@ -276,7 +275,7 @@
   </div>
 </header>
 <main class="main">
-  <section class="top" id="top">
+  <section class="top">
     <div class="top__inner">
       <h1>WORK BETTER WITH SMIDIGE TECHNOLOGIES</h1>
       <div class="top__link">
