@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -102,12 +106,6 @@ body {
         p {
           color: $white;
         }
-      }
-    }
-
-    &:hover {
-      img {
-        opacity: 1;
       }
     }
   }
@@ -1386,13 +1384,18 @@ h6 {
   display: inline-block;
   max-width: 384px;
 
-  img {
+  &__img {
     margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  img {
     min-height: 384px;
     max-height: 384px;
     border-radius: 16px;
     object-fit: cover;
-    transition: 0.2s;
+    transition: all 0.4s;
 
     @include m($xl) {
       min-height: 300px;
@@ -1444,7 +1447,7 @@ h6 {
 
   &:hover {
     img {
-      opacity: 0.7;
+      transform: scale(1.1);
     }
 
     h6 {
@@ -1576,5 +1579,23 @@ h6 {
 
   @include m(1400) {
     margin-right: 0;
+  }
+}
+
+.rich-text {
+  p {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #bcc5d7;
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
   }
 }
