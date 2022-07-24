@@ -152,3 +152,46 @@ if (themeMob) {
 //   }, 200);
 //   theme2.classList.toggle('theme-toggle__active');
 // });
+
+function slidesItem(item, mainEl) {
+  gsap.registerPlugin(ScrollTrigger);
+  const containerWidth = mainEl.getBoundingClientRect().width
+  const tl = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: item,
+      scrub: 1,
+      start: "top 95%",
+      end: 'bottom 5%'
+    }
+  })
+
+  tl.to(item, {
+    width: `${containerWidth}px`,
+    duration: 0.1,
+    ease: 'none'
+  })
+  tl.to(item, {
+    width: `${containerWidth / 2}px`,
+    duration: 0.1,
+    ease: 'none'
+  }, '+=0.1')
+
+}
+
+
+const ww = window.innerWidth
+console.log(ww)
+if (ww > 767) {
+  const item_do_slider = document.querySelectorAll('.item_do_slider')
+  if (item_do_slider.length > 0) {
+    item_do_slider.forEach((el) => {
+      const slide_items = el.querySelectorAll('.slide-item')
+      slide_items.forEach((item) => {
+        slidesItem(item, el)
+      })
+
+
+    })
+  }
+}
