@@ -1,22 +1,17 @@
 function pic() {
   const bgm = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top2.jpg'];
+  const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
 
   $('.top').css({
     'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
   });
-}
-
-pic();
-
-function picWhite() {
-  const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
-
   $('.top--white').css({
     'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
   });
 }
 
-picWhite();
+pic();
+
 
 $(function () {
   $('.link__service, .section__link, .article__element, .expert__button, .footer__network')
@@ -130,16 +125,30 @@ elements.forEach(element => {
   element.appendChild(textContainer);
   element.appendChild(textContainer.cloneNode(true));
 });
-const body = document.body
-const topIndex = document.querySelector('.top')
-const theme = document.querySelector('.theme-toggle');
-if (theme) {
 
+const body = document.body
+const theme = document.querySelector('.theme-toggle');
+const themeMob = document.querySelector('.theme-mob');
+
+if (theme) {
   theme.addEventListener('click', function () {
     setTimeout(function () {
       body.classList.toggle('light');
     }, 200);
     theme.classList.toggle('theme-toggle__active');
-    topIndex.classList.toggle('top--white');
   });
 }
+if (themeMob) {
+  themeMob.addEventListener('click', function () {
+    setTimeout(function () {
+      body.classList.toggle('light');
+    }, 200);
+    themeMob.classList.toggle('theme-toggle__active');
+  });
+}
+// theme2.addEventListener('click', function () {
+//   setTimeout(function () {
+//     body.classList.toggle('light');
+//   }, 200);
+//   theme2.classList.toggle('theme-toggle__active');
+// });
