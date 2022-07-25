@@ -1,5 +1,6 @@
 .setup {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__mobile {
     display: none;
@@ -120,6 +121,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -309,6 +311,7 @@
   padding-bottom: 160px;
   border-radius: 0 0 40px 40px;
   background-color: $black;
+  animation: fade 0.8s;
 
   &__wrap {
     z-index: 10;

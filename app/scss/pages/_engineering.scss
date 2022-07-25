@@ -1,5 +1,6 @@
 .key {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__img-black {
     display: block;
@@ -83,6 +84,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -191,6 +193,7 @@
 
 .expert {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__wrapper {
     display: flex;
@@ -285,6 +288,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     left: 0;
@@ -367,6 +371,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -467,6 +472,7 @@
 
 .consulting {
   padding-top: 160px;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;

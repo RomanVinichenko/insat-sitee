@@ -1137,6 +1137,7 @@ h6 {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 40px;
+    animation: fade 0.8s;
 
     h5 {
       padding-bottom: 8px;
@@ -1204,6 +1205,7 @@ h6 {
   position: relative;
   overflow: hidden;
   border-radius: 0 0 40px 40px;
+  animation: fade 0.8s;
 
   &::before {
     content: url("../images/services-decor.svg");
@@ -1667,6 +1669,7 @@ h6 {
 
 .swiper__scope {
   margin-right: -51%;
+  animation: fade 0.8s;
 
   @include m(1400) {
     margin-right: 0;
@@ -1688,5 +1691,33 @@ h6 {
         margin-bottom: 16px;
       }
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-link {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
   }
 }

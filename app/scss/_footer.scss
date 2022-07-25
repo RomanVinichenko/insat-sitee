@@ -1,6 +1,7 @@
 .footer {
   padding: 96px 0 42px;
   border-top: 1px solid rgba($white, 0.24);
+  animation: fade 0.8s;
 
   a {
     transition: all 0.2s;

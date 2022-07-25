@@ -21,6 +21,7 @@
     flex-direction: row-reverse;
     align-items: center;
     transform: translateX(-50%);
+    animation: fade-link 0.8s;
 
     p {
       margin-left: 12px;
@@ -41,6 +42,7 @@
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
+    animation: fade 0.8s;
 
     @include m($lg) {
       padding: 0 16px;
@@ -53,6 +55,7 @@
 
   h6 {
     margin-bottom: 24px;
+    animation: fade 0.8s;
   }
 
   ul {
@@ -80,7 +83,7 @@
       }
 
       @media (max-width: 1248px) {
-        width: calc((100vw - 48px)/2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -130,8 +133,8 @@
       }
 
       @media (max-width: 1248px) {
-        flex: 0 0 calc((100vw - 48px)/2);
-        width: calc((100vw - 48px)/2);
+        flex: 0 0 calc((100vw - 48px) / 2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -160,8 +163,8 @@
       }
 
       @media (max-width: 1248px) {
-        flex: 0 0 calc((100vw - 48px)/2);
-        width: calc((100vw - 48px)/2);
+        flex: 0 0 calc((100vw - 48px) / 2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -186,6 +189,10 @@
   padding: 120px 0;
   overflow: hidden;
   background-color: $gray-dark;
+
+  &__list {
+    animation: fade 0.8s;
+  }
 
   .section__title {
     p {
@@ -297,6 +304,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: auto;
     max-width: 588px;
+    animation: fade 0.8s;
 
     li {
       width: 100%;
@@ -399,6 +407,7 @@
     margin-bottom: 16px;
     font-size: 64px;
     line-height: 72px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       font-size: 56px;
@@ -446,6 +455,7 @@
 
   h4 {
     margin-bottom: 72px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       margin-bottom: 56px;
@@ -502,6 +512,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    animation: fade 0.8s;
 
     @include m($lg) {
       flex-direction: column;
@@ -653,6 +664,7 @@
 
 .swiper__studies {
   margin-right: -34%;
+  animation: fade 0.8s;
 
   @include m(1400) {
     margin-right: 0;

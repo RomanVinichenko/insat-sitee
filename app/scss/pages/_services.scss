@@ -3,9 +3,11 @@
   padding: 160px 0;
   border-radius: 0 0 40px 40px;
   background-color: $black;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       margin-bottom: 30px;
@@ -30,6 +32,7 @@
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr 1fr;
+  animation: fade 0.8s;
 
   &:not(:last-child) {
     margin-bottom: 160px;
