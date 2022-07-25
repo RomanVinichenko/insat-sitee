@@ -1,5 +1,6 @@
 .digital {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__wrap {
     display: flex;
@@ -47,6 +48,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -210,6 +212,7 @@
   padding: 160px 0;
   border-radius: 0 0 40px 40px;
   background-color: $black;
+  animation: fade 0.8s;
 
   @include m($xl) {
     padding: 120px 0;
@@ -222,6 +225,7 @@
 
 .say {
   padding: 160px 0 200px;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;
@@ -265,6 +269,7 @@
 
 .values {
   padding: 200px 0 160px;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;
@@ -308,6 +313,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     left: 0;

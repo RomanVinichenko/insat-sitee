@@ -13,22 +13,39 @@
     min-height: 100vh;
   }
 
-  &__link {
+  .slime {
     position: absolute;
     left: 50%;
     bottom: 88px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    height: 48px;
+    border: none;
+    background-color: $white;
     transform: translateX(-50%);
+    animation: fade-link 2.8s;
 
-    p {
-      margin-left: 12px;
-      font-size: 12px;
-      line-height: 20px;
+    &__wrap {
+      height: 20px;
+    }
 
-      @include m($md) {
-        display: none;
+    &__block {
+      transform: translateY(-100%);
+
+      p {
+        font-size: 12px;
+        line-height: 20px;
+        color: $orange;
+      }
+
+      svg {
+        path {
+          stroke: $orange;
+        }
+      }
+    }
+
+    &:hover {
+      .slime__block {
+        transform: translateY(0);
       }
     }
 
@@ -41,6 +58,7 @@
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
+    animation: fade 1.6s;
 
     @include m($lg) {
       padding: 0 16px;
@@ -53,6 +71,7 @@
 
   h6 {
     margin-bottom: 24px;
+    animation: fade 0.8s;
   }
 
   ul {
@@ -80,7 +99,7 @@
       }
 
       @media (max-width: 1248px) {
-        width: calc((100vw - 48px)/2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -130,8 +149,8 @@
       }
 
       @media (max-width: 1248px) {
-        flex: 0 0 calc((100vw - 48px)/2);
-        width: calc((100vw - 48px)/2);
+        flex: 0 0 calc((100vw - 48px) / 2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -160,8 +179,8 @@
       }
 
       @media (max-width: 1248px) {
-        flex: 0 0 calc((100vw - 48px)/2);
-        width: calc((100vw - 48px)/2);
+        flex: 0 0 calc((100vw - 48px) / 2);
+        width: calc((100vw - 48px) / 2);
       }
     }
 
@@ -186,6 +205,10 @@
   padding: 120px 0;
   overflow: hidden;
   background-color: $gray-dark;
+
+  &__list {
+    animation: fade 0.8s;
+  }
 
   .section__title {
     p {
@@ -219,7 +242,7 @@
   ul {
     display: flex;
     width: 100vw;
-    animation: trusted 20s linear infinite;
+    animation: trusted 12s linear infinite;
 
     li {
       display: flex;
@@ -282,7 +305,7 @@
     }
   }
 
-  .section__link {
+  .slime {
     @include m($md) {
       position: absolute;
       left: 50%;
@@ -297,6 +320,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: auto;
     max-width: 588px;
+    animation: fade 0.8s;
 
     li {
       width: 100%;
@@ -366,7 +390,7 @@
     }
   }
 
-  .section__link {
+  .slime {
     border: 1px solid $gray-medium;
 
     @include m($md) {
@@ -399,6 +423,7 @@
     margin-bottom: 16px;
     font-size: 64px;
     line-height: 72px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       font-size: 56px;
@@ -446,6 +471,7 @@
 
   h4 {
     margin-bottom: 72px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       margin-bottom: 56px;
@@ -467,7 +493,7 @@
   &__place {
     li {
       &:not(:last-child) {
-        margin: 0 0 32px;
+        margin: 0 0 64px;
 
         @include m($lg) {
           margin: 0 0 0 41px;
@@ -480,7 +506,7 @@
       line-height: 22px;
 
       &:not(:last-child) {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
 
         @include m($lg) {
           margin-bottom: 24px;
@@ -502,6 +528,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    animation: fade 0.8s;
 
     @include m($lg) {
       flex-direction: column;
@@ -509,7 +536,7 @@
   }
 
   h6 {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
   &__tel {
@@ -617,10 +644,37 @@
       }
     }
 
-    .button {
+    &__button {
+      position: relative;
       margin-left: auto;
-      border: none;
-      color: $orange;
+      max-width: fit-content;
+      border-radius: 32px;
+
+      .slime {
+        padding: 0 32px;
+        border: none;
+        background-color: $white;
+
+        p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: $orange;
+        }
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     @include m($xl) {
@@ -653,6 +707,7 @@
 
 .swiper__studies {
   margin-right: -34%;
+  animation: fade 0.8s;
 
   @include m(1400) {
     margin-right: 0;

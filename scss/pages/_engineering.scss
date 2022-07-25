@@ -1,5 +1,6 @@
 .key {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__img-black {
     display: block;
@@ -83,6 +84,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: under-right 0.8s;
 
   &::after {
     right: 0;
@@ -101,6 +103,7 @@
 
     ul {
       max-width: 486px;
+      animation: fade 1.4s;
 
       @include m($lg) {
         max-width: 100%;
@@ -115,6 +118,7 @@
   &__head {
     margin-right: 30px;
     max-width: 588px;
+    animation: fade 1.2s;
 
     h2 {
       margin-bottom: 40px;
@@ -191,6 +195,7 @@
 
 .expert {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &__wrapper {
     display: flex;
@@ -202,6 +207,8 @@
     max-width: 792px;
     border-radius: 40px;
     background-image: linear-gradient(256.49deg, #ff5366 7.82%, #6c57ff 75.06%);
+    background-size: 200%;
+    animation: gradient 8s infinite linear;
 
     @include m($lg) {
       padding: 30px 50px;
@@ -212,6 +219,20 @@
       flex-direction: column;
       padding: 24px;
       text-align: center;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 80% 0;
+      }
+
+      50% {
+        background-position: 20% 100%;
+      }
+
+      100% {
+        background-position: 80% 0;
+      }
     }
   }
 
@@ -285,6 +306,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     left: 0;
@@ -367,6 +389,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -467,6 +490,7 @@
 
 .consulting {
   padding-top: 160px;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;
@@ -559,7 +583,7 @@
     }
   }
 
-  .section__link {
+  .slime {
     border: 1px solid $gray-medium;
 
     @include m($md) {

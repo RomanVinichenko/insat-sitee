@@ -1,5 +1,6 @@
 .strategy {
   padding-top: 160px;
+  animation: fade 0.8s;
 
   &__img-black {
     display: block;
@@ -66,6 +67,7 @@
   position: relative;
   z-index: 10;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::before {
     content: "";
@@ -135,6 +137,7 @@
 
 .models {
   padding-top: 160px;
+  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 24px;
@@ -338,6 +341,7 @@
 
   position: relative;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     right: 0;
@@ -410,6 +414,7 @@
 
 .options {
   padding: 160px 0;
+  animation: fade 0.8s;
 
   .relate__text {
     margin-top: auto;
@@ -505,6 +510,7 @@
   position: relative;
   margin-bottom: 160px;
   padding: 160px 0;
+  animation: fade 0.8s;
 
   &::after {
     left: 0;
