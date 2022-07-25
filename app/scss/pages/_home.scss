@@ -13,23 +13,39 @@
     min-height: 100vh;
   }
 
-  &__link {
+  .slime {
     position: absolute;
     left: 50%;
     bottom: 88px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    height: 48px;
+    border: none;
+    background-color: $white;
     transform: translateX(-50%);
-    animation: fade-link 0.8s;
+    animation: fade-link 2.8s;
 
-    p {
-      margin-left: 12px;
-      font-size: 12px;
-      line-height: 20px;
+    &__wrap {
+      height: 20px;
+    }
 
-      @include m($md) {
-        display: none;
+    &__block {
+      transform: translateY(-100%);
+
+      p {
+        font-size: 12px;
+        line-height: 20px;
+        color: $orange;
+      }
+
+      svg {
+        path {
+          stroke: $orange;
+        }
+      }
+    }
+
+    &:hover {
+      .slime__block {
+        transform: translateY(0);
       }
     }
 
@@ -42,7 +58,7 @@
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
-    animation: fade 0.8s;
+    animation: fade 1.6s;
 
     @include m($lg) {
       padding: 0 16px;
@@ -226,7 +242,7 @@
   ul {
     display: flex;
     width: 100vw;
-    animation: trusted 20s linear infinite;
+    animation: trusted 12s linear infinite;
 
     li {
       display: flex;
@@ -289,7 +305,7 @@
     }
   }
 
-  .section__link {
+  .slime {
     @include m($md) {
       position: absolute;
       left: 50%;
@@ -374,7 +390,7 @@
     }
   }
 
-  .section__link {
+  .slime {
     border: 1px solid $gray-medium;
 
     @include m($md) {
@@ -477,7 +493,7 @@
   &__place {
     li {
       &:not(:last-child) {
-        margin: 0 0 32px;
+        margin: 0 0 64px;
 
         @include m($lg) {
           margin: 0 0 0 41px;
@@ -490,7 +506,7 @@
       line-height: 22px;
 
       &:not(:last-child) {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
 
         @include m($lg) {
           margin-bottom: 24px;
@@ -520,7 +536,7 @@
   }
 
   h6 {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
   &__tel {
@@ -628,10 +644,37 @@
       }
     }
 
-    .button {
+    &__button {
+      position: relative;
       margin-left: auto;
-      border: none;
-      color: $orange;
+      max-width: fit-content;
+      border-radius: 32px;
+
+      .slime {
+        padding: 0 32px;
+        border: none;
+        background-color: $white;
+
+        p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: $orange;
+        }
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     @include m($xl) {

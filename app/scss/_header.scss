@@ -12,69 +12,9 @@
   transition: all 0.4s;
   animation: fade 0.8s;
 
-  &__logo-white {
-    display: block;
-  }
-
-  &__logo-black {
-    display: none;
-  }
-
   .logo {
     position: relative;
     z-index: 30;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      visibility: hidden;
-      width: 100%;
-      height: 28px;
-      max-width: 277px;
-      background-image: url("../images/logo.gif");
-      background-size: cover;
-      background-repeat: no-repeat;
-      object-fit: cover;
-      transition: all 0.2s;
-
-      @include m($lg) {
-        width: 220px;
-        height: 22px;
-      }
-
-      @include m($sm) {
-        width: 150px;
-        height: 15px;
-      }
-    }
-
-    img {
-      transition: all 0.2s;
-
-      @include m($lg) {
-        width: 220px;
-        height: 22px;
-        max-width: 220px;
-      }
-
-      @include m($sm) {
-        width: 150px;
-        height: 16px;
-        max-width: 150px;
-      }
-    }
-
-    &:hover {
-      &::after {
-        visibility: visible;
-      }
-
-      img {
-        visibility: hidden;
-      }
-    }
   }
 
   .menu {

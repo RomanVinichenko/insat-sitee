@@ -17,6 +17,48 @@ body {
 .light {
   background-color: $white;
 
+  .form__button {
+    .slime {
+      &:hover {
+        .slime__block {
+          p {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  .slime {
+    border: 1px solid $gray-medium;
+
+    &__block {
+      p {
+        color: $black;
+      }
+
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+
+    &:hover {
+      .slime__block {
+        p {
+          color: $white;
+        }
+
+        svg {
+          path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
   .menu-mobile .accordion-toggle svg path {
     stroke: $gray-medium !important;
   }
@@ -25,25 +67,13 @@ body {
     border-top: 1px solid $gray !important;
   }
 
-  .section__head {
+  .section__title {
     p {
       color: $gray-medium;
     }
 
     h2 {
       color: $black;
-    }
-
-    .section__link {
-      border: 1px solid $gray-medium;
-
-      &::after {
-        content: url("../images/more-arrow-white.svg");
-      }
-
-      p {
-        color: $black;
-      }
     }
   }
 
@@ -818,14 +848,6 @@ body {
         }
       }
     }
-
-    .button__form {
-      input {
-        border: 1px solid $gray;
-        color: $orange;
-        background-color: transparent;
-      }
-    }
   }
 
   .error {
@@ -875,14 +897,6 @@ body {
       &::before {
         background-color: $gray-dark !important;
       }
-    }
-
-    .header__logo-white {
-      display: none;
-    }
-
-    .header__logo-black {
-      display: block;
     }
 
     .menu__item {
@@ -1157,42 +1171,6 @@ h6 {
     p {
       margin-bottom: 8px;
       color: $gray;
-    }
-  }
-
-  &__link {
-    @include relate;
-
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 50px 0 24px;
-    height: 56px;
-    overflow: hidden;
-    border: 1px solid $gray-dark;
-    border-radius: 32px;
-    line-height: 1;
-
-    &::after {
-      content: url("../images/more-arrow.svg");
-      position: absolute;
-      right: 24px;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-      transform: translateY(-50%);
-    }
-
-    p {
-      z-index: 5;
-      font-weight: 600;
-    }
-
-    &:hover {
-      span {
-        width: 350px;
-        height: 350px;
-      }
     }
   }
 }
@@ -1694,6 +1672,100 @@ h6 {
   }
 }
 
+.slime {
+  @include relate;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 56px;
+  overflow: hidden;
+  border: 1px solid $gray-dark;
+  border-radius: 32px;
+  background-color: transparent;
+
+  &__wrap {
+    z-index: 5;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+
+    p {
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      transition: all 0.5s;
+    }
+
+    svg {
+      path {
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  &__studies {
+    padding: 0 12px;
+    width: fit-content;
+    height: 30px;
+
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .slime__wrap {
+      height: 20px;
+    }
+  }
+
+  &__form {
+    span {
+      display: block;
+    }
+  }
+
+  &:hover {
+    span {
+      width: 500px;
+      height: 500px;
+    }
+
+    .slime__block {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.disable-link {
+  pointer-events: none;
+}
+
+@keyframes fade-link {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) translateX(-50%);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -1710,14 +1782,18 @@ h6 {
   }
 }
 
-@keyframes fade-link {
+@keyframes under-right {
   0% {
     opacity: 0;
-    transform: translateY(80px) translateX(-50%);
+    transform: translateX(100%);
+  }
+
+  30% {
+    opacity: 0;
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0);
   }
 }

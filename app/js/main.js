@@ -14,7 +14,7 @@ pic();
 
 
 $(function () {
-  $('.link__service, .section__link, .article__element, .expert__button, .footer__network')
+  $('.link__service, .slime, .article__element, .expert__button, .footer__network')
     .on('mouseenter', function (e) {
       let parentOffset = $(this).offset(),
         relX = e.pageX - parentOffset.left,
