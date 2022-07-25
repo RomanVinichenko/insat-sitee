@@ -162,7 +162,7 @@ function slidesItem(item, mainEl) {
       trigger: item,
       scrub: 1,
       start: "top 95%",
-      end: 'bottom 5%'
+      end: 'bottom 65%'
     }
   })
 
@@ -171,11 +171,6 @@ function slidesItem(item, mainEl) {
     duration: 0.1,
     ease: 'none'
   })
-  tl.to(item, {
-    width: `${containerWidth / 2}px`,
-    duration: 0.1,
-    ease: 'none'
-  }, '+=0.1')
 
 }
 
