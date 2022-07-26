@@ -1,55 +1,65 @@
-.do{
+.do {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
-.case-details{
+
+.case-details {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
-.digital{
+
+.digital {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
-.setup{
+
+.setup {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
-.key{
+
+.key {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
-.strategy{
+
+.strategy {
   position: relative;
   z-index: 2;
   background-color: $black;
 }
 
 .light {
-  .do{
-    background-color: $white;
-  }
-  .case-details{
-    background-color: $white;
-  }
-  .digital{
-    background-color: $white;
-  }
-  .setup{
-    background-color: $white;
-  }
-  .contact{
-    background-color: $white;
-  }
-  .key{
-    background-color: $white;
-  }
-  .strategy{
+  .do {
     background-color: $white;
   }
 
+  .case-details {
+    background-color: $white;
+  }
+
+  .digital {
+    background-color: $white;
+  }
+
+  .setup {
+    background-color: $white;
+  }
+
+  .contact {
+    background-color: $white;
+  }
+
+  .key {
+    background-color: $white;
+  }
+
+  .strategy {
+    background-color: $white;
+  }
 }

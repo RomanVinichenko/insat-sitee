@@ -346,13 +346,13 @@
 
   position: relative;
   padding: 160px 0;
+  animation: under-right 0.8s;
 
   &::after {
     right: 0;
     max-width: 1680px;
     border-radius: 40px 0 0 40px;
     background-color: $gray-dark;
-    animation: under-right 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -546,13 +546,13 @@
   position: relative;
   margin-bottom: 160px;
   padding: 160px 0;
+  animation: under-left 0.8s;
 
   &::after {
     left: 0;
     max-width: 1680px;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
-    animation: under-left 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -571,7 +571,7 @@
 
   ul {
     li {
-      animation: fade 1.2s;
+      animation: fade 1.8s;
     }
 
     h2 {
