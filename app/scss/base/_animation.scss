@@ -1,0 +1,55 @@
+.do{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+.case-details{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+.digital{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+.setup{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+.key{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+.strategy{
+  position: relative;
+  z-index: 2;
+  background-color: $black;
+}
+
+.light {
+  .do{
+    background-color: $white;
+  }
+  .case-details{
+    background-color: $white;
+  }
+  .digital{
+    background-color: $white;
+  }
+  .setup{
+    background-color: $white;
+  }
+  .contact{
+    background-color: $white;
+  }
+  .key{
+    background-color: $white;
+  }
+  .strategy{
+    background-color: $white;
+  }
+
+}
