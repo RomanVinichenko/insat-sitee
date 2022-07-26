@@ -147,7 +147,8 @@
   &__filter {
     display: grid;
     align-items: end;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 98px;
 
@@ -203,7 +204,8 @@
     }
 
     @include m($md) {
-      grid-gap: 30px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 30px;
       grid-template-columns: 1fr;
       margin-bottom: 50px;
     }
