@@ -112,7 +112,9 @@
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 Service
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -156,7 +158,9 @@
               <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                 Case studies
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -203,10 +207,13 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseThree">
                 Company
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -274,15 +281,22 @@
     <div class="container">
       <div class="preview__inner">
         <h1>Services</h1>
-        <div class="relate">
-          <a class="link__service" href="#">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span></span>
-          </a>
-        </div>
+        <a class="preview__link" href="#">
+          <div class="preview__link-wrap">
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <div class="preview__holder">
@@ -292,7 +306,7 @@
     <div class="container">
       <h2 class="wow">Engineering services</h2>
       <ul class="services__list wow">
-        <li class="services-block">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do1.jpg" alt="IT consulting">
             <h5>IT consulting</h5>
@@ -310,11 +324,12 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
-        <li class="services-block">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do2.jpg" alt="IT consulting">
             <h5>Software engineering</h5>
@@ -332,11 +347,12 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon1.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
-        <li class="services-block">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do3.jpg" alt="IT consulting">
             <span>Engineering services</span>
@@ -355,11 +371,12 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon2.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
-        <li class="services-block">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do4.jpg" alt="IT consulting">
             <span>Engineering services</span>
@@ -378,14 +395,15 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon3.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
       </ul>
       <h2 class="wow">Technology advisory</h2>
-      <ul class="services__list wow services__list-orange">
-        <li class="services-block">
+      <ul class="services__list services__list-orange">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do1.jpg" alt="IT consulting">
             <h5>IT consulting</h5>
@@ -403,11 +421,12 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon4.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
-        <li class="services-block">
+        <li class="services-block wow">
           <div class="services-block__holder">
             <img src="images/do2.jpg" alt="IT consulting">
             <h5>IT consulting</h5>
@@ -425,7 +444,8 @@
           </div>
           <div class="services-block__info">
             <img src="images/services-icon5.svg" alt="Icon">
-            <p>Our software development company delivers corporate and consumer applications based on our profound understanding of technologies and the markets they operate in.
+            <p>Our software development company delivers corporate and consumer applications based on our profound
+              understanding of technologies and the markets they operate in.
             </p>
           </div>
         </li>
@@ -480,9 +500,18 @@
             Please be informed that when you click the Send button Itransition Group will process your personal data in
             accordance with our Privacy notice for the purpose of providing you with appropriate information.
           </p>
-          <div class="button__form">
-            <input class="button" type="submit" value="Send">
-            <span></span>
+          <div class="form__button">
+            <input type="submit">
+            <div class="slime">
+              <div class="slime__wrap">
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+              </div>
+            </div>
           </div>
         </form>
       </div>

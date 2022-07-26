@@ -36,7 +36,8 @@
 
   ul {
     display: grid;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
 
     li {
@@ -65,7 +66,8 @@
     }
 
     @include m($lg) {
-      grid-gap: 40px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
   }
@@ -84,13 +86,13 @@
 
   position: relative;
   padding: 160px 0;
-  animation: under-right 0.8s;
 
   &::after {
     right: 0;
     max-width: 1680px;
     border-radius: 40px 0 0 40px;
     background-color: $gray-dark;
+    animation: under-right 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -261,13 +263,16 @@
     @include relate;
 
     position: relative;
+    padding: 0 32px;
     height: 88px;
-    min-width: 156px;
+    min-width: fit-content;
+    border: none;
     border-radius: 48px;
     background: $white;
 
     p {
       z-index: 15;
+      margin: 0;
       color: $orange;
       transition: all 0.4s;
     }
@@ -276,10 +281,6 @@
       span {
         width: 350px;
         height: 350px;
-      }
-
-      p {
-        color: $white;
       }
     }
 
@@ -306,13 +307,13 @@
 
   position: relative;
   padding: 160px 0;
-  animation: fade 0.8s;
 
   &::after {
     left: 0;
     max-width: 1680px;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
+    animation: under-left 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -321,11 +322,17 @@
 
   h2 {
     margin-bottom: 24px;
+    animation: fade 1.6s;
+  }
+
+  p {
+    animation: fade 1.8s;
   }
 
   ul {
     display: grid;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 56px;
 
@@ -351,6 +358,10 @@
         }
       }
 
+      p {
+        animation: none;
+      }
+
       p:last-child {
         font-size: 14px;
         line-height: 22px;
@@ -363,6 +374,18 @@
       h6 {
         margin: 24px 0 12px;
       }
+
+      &:first-child {
+        animation: fade 1.6s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.8s;
+      }
+
+      &:nth-child(3) {
+        animation: fade 2s;
+      }
     }
 
     @include m($lg) {
@@ -370,7 +393,8 @@
     }
 
     @include m($md) {
-      grid-gap: 40px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
   }
@@ -396,6 +420,7 @@
     max-width: 1680px;
     border-radius: 40px 0 0 40px;
     background-color: $orange;
+    animation: under-right 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -404,6 +429,7 @@
 
   h2 {
     margin-bottom: 64px;
+    animation: fade 1.6s;
 
     @include m($xl) {
       margin-bottom: 40px;
@@ -418,6 +444,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: fade 1.8s;
 
     li {
       max-width: 50%;
@@ -490,7 +517,7 @@
 
 .consulting {
   padding-top: 160px;
-  animation: fade 0.8s;
+  animation: fade 1s;
 
   h2 {
     margin-bottom: 40px;

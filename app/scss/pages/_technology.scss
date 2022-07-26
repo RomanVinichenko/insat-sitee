@@ -20,7 +20,8 @@
 
   ul {
     display: grid;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
 
     li {
@@ -49,7 +50,8 @@
     }
 
     @include m($md) {
-      grid-gap: 40px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
   }
@@ -97,7 +99,8 @@
 
   ul {
     display: grid;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     li {
@@ -116,12 +119,14 @@
     }
 
     @include m($lg) {
-      grid-gap: 24px;
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include m(680) {
-      grid-gap: 40px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
   }
@@ -341,13 +346,13 @@
 
   position: relative;
   padding: 160px 0;
-  animation: fade 0.8s;
 
   &::after {
     right: 0;
     max-width: 1680px;
     border-radius: 40px 0 0 40px;
     background-color: $gray-dark;
+    animation: under-right 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -362,12 +367,9 @@
     display: none;
   }
 
-  .relate__text {
-    margin-top: 16px;
-  }
-
   h2 {
     margin-bottom: 40px;
+    animation: fade 1.6s;
 
     @include m($lg) {
       margin-bottom: 24px;
@@ -376,7 +378,8 @@
 
   ul {
     display: grid;
-    grid-gap: 0 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0;
     grid-template-columns: 1fr 1fr;
 
     li {
@@ -388,13 +391,26 @@
         margin-bottom: 24px;
       }
 
+      &:first-child {
+        animation: fade 1.4s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.6s;
+      }
+
       @include m($lg) {
         padding: 24px;
       }
     }
 
+    p {
+      margin-bottom: 16px;
+    }
+
     @include m($lg) {
-      grid-gap: 24px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 24px;
       grid-template-columns: 1fr;
     }
   }
@@ -416,16 +432,9 @@
   padding: 160px 0;
   animation: fade 0.8s;
 
-  .relate__text {
-    margin-top: auto;
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 24px;
@@ -434,7 +443,8 @@
 
   ul {
     display: grid;
-    grid-gap: 24px;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
     grid-template-columns: 1fr 1fr;
 
     li {
@@ -453,6 +463,30 @@
         margin-bottom: 16px;
       }
 
+      &:first-child {
+        animation: fade 1s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.2s;
+      }
+
+      &:nth-child(3) {
+        animation: fade 1s;
+      }
+
+      &:nth-child(4) {
+        animation: fade 1.2s;
+      }
+
+      &:nth-child(5) {
+        animation: fade 1s;
+      }
+
+      &:nth-child(6) {
+        animation: fade 1.2s;
+      }
+
       @include m($lg) {
         padding: 24px;
       }
@@ -463,7 +497,8 @@
     }
 
     @include m($md) {
-      grid-gap: 24px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 24px;
       grid-template-columns: 1fr;
     }
   }
@@ -471,7 +506,8 @@
   .logos-roll {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 0;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     grid-template-columns: none;
     margin: 0 0 12px;
 
@@ -510,13 +546,13 @@
   position: relative;
   margin-bottom: 160px;
   padding: 160px 0;
-  animation: fade 0.8s;
 
   &::after {
     left: 0;
     max-width: 1680px;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
+    animation: under-left 0.8s;
 
     @include m($lg) {
       border-radius: 24px;
@@ -534,6 +570,10 @@
   }
 
   ul {
+    li {
+      animation: fade 1.2s;
+    }
+
     h2 {
       margin-bottom: 40px;
 
@@ -626,6 +666,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 64px;
+    animation: fade 1.2s;
 
     li {
       &:not(:last-child) {
@@ -727,7 +768,8 @@
     margin-top: 40px;
 
     @include m($md) {
-      grid-gap: 40px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
   }
@@ -765,7 +807,8 @@
     }
 
     @include m($md) {
-      grid-gap: 24px 0;
+      grid-column-gap: 0;
+      grid-row-gap: 24px;
       grid-template-columns: 1fr;
     }
   }
