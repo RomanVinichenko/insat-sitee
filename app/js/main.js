@@ -154,7 +154,7 @@ if (themeMob) {
 // });
 
 function slidesItem(item, mainEl) {
-  gsap.registerPlugin(ScrollTrigger);
+
   const containerWidth = mainEl.getBoundingClientRect().width
   const tl = gsap.timeline({
     paused: true,
@@ -174,9 +174,8 @@ function slidesItem(item, mainEl) {
 
 }
 
-
+gsap.registerPlugin(ScrollTrigger);
 const ww = window.innerWidth
-console.log(ww)
 if (ww > 767) {
   const item_do_slider = document.querySelectorAll('.item_do_slider')
   if (item_do_slider.length > 0) {
@@ -189,4 +188,72 @@ if (ww > 767) {
 
     })
   }
+}
+
+function firstScreen(element){
+  const wh = window.innerHeight
+  const elH1 = element.querySelector('h1')
+  const scrollHeight = wh * 0.20
+  const tl = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: element,
+      scrub: true,
+      start: "top top",
+      end: 'bottom +=40%'
+    }
+  })
+  tl.to(element, {
+    y: `${scrollHeight}px`,
+    duration: 0.1,
+    ease: 'none',
+  })
+
+  tl.to(elH1, {
+    y: `${scrollHeight/2}px`,
+    duration: 0.1,
+    ease: 'none',
+  }, '-=0.1')
+}
+
+function previewScreen(element){
+  const elHeight = element.getBoundingClientRect().height
+  const elH1 = element.querySelector('.preview__inner')
+  const scrollHeight = elHeight * 0.35
+  const tl = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: element,
+      scrub: true,
+      start: "top top",
+      end: `bottom +=${elHeight/2}px`
+    }
+  })
+  tl.to(element, {
+    y: `${scrollHeight}px`,
+    duration: 0.1,
+    ease: 'none',
+  })
+
+  tl.to(elH1, {
+    y: `${scrollHeight/2}px`,
+    duration: 0.1,
+    ease: 'none',
+  }, '-=0.1')
+}
+
+const homeTop = document.querySelector('.top')
+if(homeTop) {
+  setTimeout(()=>{
+    firstScreen(homeTop)
+  }, 500)
+
+}
+const preview = document.querySelector('.preview')
+
+if(preview) {
+  setTimeout(()=>{
+    previewScreen(preview)
+  }, 900)
+
 }

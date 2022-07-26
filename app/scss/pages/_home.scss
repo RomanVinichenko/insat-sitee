@@ -23,7 +23,7 @@
     border-radius: 0;
     background-color: transparent;
     transform: translateX(-50%);
-    animation: fade-link 2.8s;
+    animation: fade-link 0.8s;
 
     &__wrap {
       height: 20px;
@@ -69,7 +69,7 @@
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
-    animation: fade 1.6s;
+    animation: fade 0.5s;
 
     @include m($lg) {
       padding: 0 16px;
