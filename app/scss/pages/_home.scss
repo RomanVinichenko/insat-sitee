@@ -303,6 +303,7 @@
   background-position: top left -200px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: $black;
 
   .section__head {
     margin-bottom: 90px;
@@ -721,6 +722,7 @@
 
 .swiper__studies {
   margin-right: -34%;
+  overflow: visible;
   animation: fade 0.8s;
 
   @include m(1400) {

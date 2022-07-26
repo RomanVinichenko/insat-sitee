@@ -14,11 +14,12 @@
   <div class="container container--header">
     <nav class="menu">
       <a class="logo" href="index.html">
-        <img src="images/logo.svg" alt="Logo">
+        <lottie-player class="logo-black" src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
+        <lottie-player class="logo-white" src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
       </a>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="services.html">Service</a>
+          <a class="menu__item-link" href="services.html">Service</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -53,10 +54,10 @@
           </div>
         </li>
         <li class="menu__item">
-          <a href="case-details.html">Case studies</a>
+          <a class="menu__item-link" href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
-          <a href="about.html">Company</a>
+          <a class="menu__item-link" href="about.html">Company</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -112,7 +113,9 @@
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 Service
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -153,12 +156,8 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <a class="accordion-toggle collapsed" href="approach.html">
                 Case studies
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
-                  <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
               </a>
             </h6>
             <div id="collapseTwo" class="panel-collapse collapse">
@@ -203,10 +202,13 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseThree">
                 Company
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -250,6 +252,10 @@
           <img src="images/button.svg" alt="Button">
           <span>Contact</span>
         </a>
+        <button class="theme-toggle theme-mob">
+          <img src="images/dark.svg" alt="Dark">
+          <img src="images/light.svg" alt="Light">
+        </button>
         <ul class="menu-mobile__social">
           <li class="footer__network">
             <img src="images/linkedin.svg" alt="Linkedin">
@@ -277,15 +283,22 @@
           <p>Company</p>
           <h1>About us</h1>
         </div>
-        <div class="relate">
-          <a class="link__service" href="#">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span></span>
-          </a>
-        </div>
+        <a class="preview__link" href="#">
+          <div class="preview__link-wrap">
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <div class="preview__holder">

@@ -58,21 +58,17 @@ $(document).ready(function () {
 });
 
 let swiperStudies = new Swiper('.swiper__studies', {
-  loop: true,
   slidesPerView: 'auto',
   spaceBetween: 12,
   breakpoints: {
     1400: {
-      loop: true,
       spaceBetween: 24,
     },
     850: {
-      loop: true,
       slidesPerView: 'auto',
       spaceBetween: 24,
     },
     580: {
-      loop: true,
       slidesPerView: 'auto',
       spaceBetween: 24,
     }
@@ -80,17 +76,14 @@ let swiperStudies = new Swiper('.swiper__studies', {
 });
 
 let swiperScope = new Swiper('.swiper__scope', {
-  loop: true,
   slidesPerView: 'auto',
   spaceBetween: 12,
   breakpoints: {
     1400: {
-      loop: true,
       slidesPerView: 'auto',
       spaceBetween: 24,
     },
     695: {
-      loop: true,
       slidesPerView: 'auto',
       spaceBetween: 24,
     }
@@ -255,5 +248,4 @@ if(preview) {
   setTimeout(()=>{
     previewScreen(preview)
   }, 900)
-
 }

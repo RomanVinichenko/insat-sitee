@@ -17,6 +17,16 @@ body {
 .light {
   background-color: $white;
 
+  .header {
+    .logo-black {
+      display: none;
+    }
+
+    .logo-white {
+      display: block;
+    }
+  }
+
   .expert {
     .slime {
       border: none;
@@ -1211,7 +1221,6 @@ h6 {
   position: relative;
   overflow: hidden;
   border-radius: 0 0 40px 40px;
-  animation: fade 0.8s;
 
   &::before {
     content: url("../images/services-decor.svg");
@@ -1251,6 +1260,7 @@ h6 {
     left: 0;
     right: 0;
     top: 0;
+    z-index: -1;
     width: 100%;
     height: 389px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 100%);
@@ -1305,6 +1315,7 @@ h6 {
     justify-content: space-between;
     padding-bottom: 80px;
     height: 500px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       padding-bottom: 48px;
@@ -1705,6 +1716,7 @@ h6 {
 
 .swiper__scope {
   margin-right: -51%;
+  overflow: visible;
   animation: fade 0.8s;
 
   @include m(1400) {
