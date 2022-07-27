@@ -80,6 +80,12 @@
 .do {
   padding: 200px 0;
 
+  .item_do_slider {
+    @include m(767) {
+      animation: fade 0.8s;
+    }
+  }
+
   h6 {
     margin-bottom: 24px;
     animation: fade 0.8s;
@@ -108,7 +114,7 @@
       overflow: hidden;
 
       @include m(767) {
-        width: 100%;
+        width: 100% !important;
       }
 
       @media (max-width: 1400px) {
@@ -162,8 +168,8 @@
 
       @include m(767) {
         bottom: 2px;
-        flex: none;
-        width: 100%;
+        flex: none !important;
+        width: 100% !important;
       }
 
       @media (max-width: 1400px) {
@@ -357,9 +363,11 @@
   .slime {
     @include m($md) {
       position: absolute;
-      left: 50%;
+      left: 0;
+      right: 0;
       bottom: 72px;
-      transform: translateX(-50%);
+      margin: 0 auto;
+      width: fit-content;
     }
   }
 
@@ -444,12 +452,16 @@
 
   .slime {
     border: 1px solid $gray-medium;
+  }
 
+  .studies__button {
     @include m($md) {
       position: absolute;
-      left: 50%;
-      bottom: 80px;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
+      bottom: 72px;
+      margin: 0 auto;
+      width: fit-content;
     }
   }
 
@@ -487,8 +499,6 @@
     margin-bottom: 16px;
     font-size: 64px;
     line-height: 72px;
-
-    //animation: fade 0.8s;
 
     @include m($xl) {
       font-size: 56px;
