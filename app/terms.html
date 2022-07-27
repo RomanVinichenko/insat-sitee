@@ -14,11 +14,12 @@
   <div class="container container--header">
     <nav class="menu">
       <a class="logo" href="index.html">
-        <img src="images/logo.svg" alt="Logo">
+        <lottie-player class="logo-black" src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
+        <lottie-player class="logo-white" src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
       </a>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="services.html">Service</a>
+          <a class="menu__item-link" href="services.html">Service</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -53,10 +54,10 @@
           </div>
         </li>
         <li class="menu__item">
-          <a href="case-details.html">Case studies</a>
+          <a class="menu__item-link" href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
-          <a href="about.html">Company</a>
+          <a class="menu__item-link" href="about.html">Company</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -106,18 +107,20 @@
     </nav>
     <div class="menu-mobile models">
       <div class="container">
-        <div class="panel-group" id="accordion">
+        <div class="panel-group" id="accordion-mobile">
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-mobile" href="#collapseOne-m">
                 Service
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
             </h6>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne-m" class="panel-collapse collapse in">
               <div class="panel-body">
                 <div class="menu-mobile__block">
                   <span>Engineering services</span>
@@ -153,12 +156,8 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <a class="accordion-toggle collapsed" href="approach.html">
                 Case studies
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
-                  <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
               </a>
             </h6>
             <div id="collapseTwo" class="panel-collapse collapse">
@@ -203,15 +202,18 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-mobile"
+                 href="#collapseThree-m">
                 Company
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
             </h6>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseThree-m" class="panel-collapse collapse">
               <div class="panel-body">
                 <div class="menu-mobile__block">
                   <span>Engineering services</span>
@@ -250,6 +252,10 @@
           <img src="images/button.svg" alt="Button">
           <span>Contact</span>
         </a>
+        <button class="theme-toggle theme-mob">
+          <img src="images/dark.svg" alt="Dark">
+          <img src="images/light.svg" alt="Light">
+        </button>
         <ul class="menu-mobile__social">
           <li class="footer__network">
             <img src="images/linkedin.svg" alt="Linkedin">
@@ -367,10 +373,10 @@
   </section>
   <section class="touch">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <h4>info@smidige.com</h4>
+      <h2 class="anim-1">Get In Touch</h2>
+      <h4 class="anim-2">info@smidige.com</h4>
       <div class="touch__inner">
-        <ul class="touch__place">
+        <ul class="touch__place anim-3">
           <li>
             <h6>United States</h6>
             <a class="touch__tel" href="tel:720207282">720 207 2820</a>
@@ -384,7 +390,7 @@
             <p>Sales inquiries</p>
           </li>
         </ul>
-        <form class="form">
+        <form class="form anim-4">
           <div class="form__block">
             <label>
               <span>Name</span>
@@ -413,9 +419,18 @@
             Please be informed that when you click the Send button Itransition Group will process your personal data in
             accordance with our Privacy notice for the purpose of providing you with appropriate information.
           </p>
-          <div class="button__form">
-            <input class="button" type="submit" value="Send">
-            <span></span>
+          <div class="form__button">
+            <input type="submit">
+            <div class="slime">
+              <div class="slime__wrap">
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -450,7 +465,7 @@
           <a href="#">Service</a>
           <ul class="footer__submenu">
             <li>
-              <a href="#">Engineering services</a>
+              <span>Engineering services</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">IT consulting</a>
@@ -467,7 +482,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">Technology advisory</a>
+              <span>Technology advisory</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">Cloud</a>
@@ -484,7 +499,7 @@
             <a href="#">Case studies</a>
           </div>
           <div class="footer__item">
-            <a href="#">Company</a>
+            <a href="#" class="disable-link">Company</a>
             <ul class="footer__submenu">
               <li>
                 <a href="#">About us</a>
@@ -522,7 +537,14 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 <script src="js/main.js"></script>
 </body>
 

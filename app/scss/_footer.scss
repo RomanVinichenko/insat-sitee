@@ -1,9 +1,6 @@
 .footer {
   padding: 96px 0 42px;
 
-  //border-top: 1px solid rgba($white, 0.24);
-  animation: fade 0.8s;
-
   a {
     transition: all 0.2s;
 
@@ -51,6 +48,18 @@
     overflow: hidden;
     border: 1px solid $gray-dark;
     border-radius: 50%;
+
+    span {
+      z-index: -1;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+    }
 
     img {
       z-index: 10;
@@ -100,16 +109,35 @@
       }
     }
 
-    @include m(540) {
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-right: 0 !important;
-      margin-left: 11px !important;
+    .footer__item {
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+    }
+
+    @include m(853) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 80px !important;
+      width: 100%;
+    }
+
+    @include m(604) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 50px !important;
+      width: 100%;
+    }
+
+    @include m(570) {
+      flex-direction: column;
+      margin-left: 30px !important;
     }
   }
 
   &__item {
+    min-width: fit-content;
+
     a {
       display: block;
       margin-bottom: 16px;
@@ -123,13 +151,9 @@
         margin-left: 24px;
       }
 
-      @include m(540) {
+      @include m(570) {
         margin-left: 0;
       }
-    }
-
-    @include m(540) {
-      margin-right: 24px;
     }
   }
 

@@ -354,7 +354,15 @@
         @include m($md) {
           margin: 0 auto 16px;
           width: 100%;
-          max-width: 100%;
+          min-height: 384px;
+          max-width: 384px;
+        }
+
+        @include m($sm) {
+          margin: 0 auto 16px;
+          width: 100%;
+          min-height: 305px;
+          max-width: 305px;
         }
       }
 
