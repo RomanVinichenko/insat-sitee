@@ -738,8 +738,17 @@
         }
       }
 
+      .wpcf7-spinner {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
       input {
         position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 20;
         opacity: 0;
         width: 105px;
         height: 100%;
