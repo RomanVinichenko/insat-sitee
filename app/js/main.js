@@ -1,17 +1,44 @@
-function pic() {
-  const bgm = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top2.jpg'];
-  const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
+const bgm = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top2.jpg'];
+const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
 
-  $('.top').css({
-    'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
-  });
+const body = document.body
+const theme = document.querySelector('.theme-toggle');
+const themeMob = document.querySelector('.theme-mob');
 
-  $('.top--white').css({
-    'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
+if (theme) {
+  theme.addEventListener('click', function () {
+    setTimeout(function () {
+      body.classList.toggle('light');
+      if (body.classList.contains('light')) {
+        $('#top-section').css({
+          'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
+        });
+        localStorage.setItem('theme-color', 'light');
+      } else {
+        $('#top-section').css({
+          'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
+        });
+        localStorage.setItem('theme-color', 'black');
+      }
+    }, 200);
+    theme.classList.toggle('theme-toggle__active');
+    console.log(localStorage.getItem ('theme-color'))
   });
 }
-
-pic();
+if (themeMob) {
+  themeMob.addEventListener('click', function () {
+    setTimeout(function () {
+      body.classList.toggle('light');
+    }, 200);
+    themeMob.classList.toggle('theme-toggle__active');
+  });
+}
+// theme2.addEventListener('click', function () {
+//   setTimeout(function () {
+//     body.classList.toggle('light');
+//   }, 200);
+//   theme2.classList.toggle('theme-toggle__active');
+// });
 
 
 $(function () {
@@ -49,6 +76,14 @@ window.addEventListener('scroll', function () {
 
 $(document).ready(function () {
   let scrollPos = window.scrollY;
+  let myStr = localStorage.getItem('theme-color');
+  if (myStr == 'light' ) {
+    theme.click();
+  } 
+
+  $('#top-section').css({
+    'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
+  });
 
   if (header && scrollPos > 10) {
     header.classList.add("header--active");
@@ -120,32 +155,7 @@ elements.forEach(element => {
   element.appendChild(textContainer.cloneNode(true));
 });
 
-const body = document.body
-const theme = document.querySelector('.theme-toggle');
-const themeMob = document.querySelector('.theme-mob');
 
-if (theme) {
-  theme.addEventListener('click', function () {
-    setTimeout(function () {
-      body.classList.toggle('light');
-    }, 200);
-    theme.classList.toggle('theme-toggle__active');
-  });
-}
-if (themeMob) {
-  themeMob.addEventListener('click', function () {
-    setTimeout(function () {
-      body.classList.toggle('light');
-    }, 200);
-    themeMob.classList.toggle('theme-toggle__active');
-  });
-}
-// theme2.addEventListener('click', function () {
-//   setTimeout(function () {
-//     body.classList.toggle('light');
-//   }, 200);
-//   theme2.classList.toggle('theme-toggle__active');
-// });
 
 function slidesItem(item, mainEl) {
 

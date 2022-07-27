@@ -698,11 +698,11 @@
       justify-content: space-between;
       margin-bottom: 40px;
 
-      label:first-child {
-        margin: 0 24px 0 0;
+      label + label {
+        margin: 0 0 0 24px;
 
         @include m($md) {
-          margin: 0 0 40px;
+          margin: 40px 0 0;
         }
       }
 
@@ -803,11 +803,17 @@
 .contact {
   margin-top: 0;
   padding: 160px 0;
+  border-bottom: 1px solid $gray-dark;
   background-image: none;
   background-color: $black;
 
+  .touch__inner {
+    animation: fade 1.2s;
+  }
+
   h1 {
     margin-bottom: 24px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 16px;

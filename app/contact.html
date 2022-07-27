@@ -276,15 +276,22 @@
         <div class="preview__head">
           <h1>Contact</h1>
         </div>
-        <div class="relate">
-          <a class="link__service" href="#">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span></span>
-          </a>
-        </div>
+        <a class="preview__link" href="#">
+          <div class="preview__link-wrap">
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="preview__link-inner">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2.5V13.5" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 9L8 13.5L12.5 9" stroke="#010C21" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <div class="preview__holder">
@@ -292,8 +299,8 @@
   </section>
   <section class="touch contact">
     <div class="container">
-      <h1>Write to us</h1>
-      <div class="touch__inner">
+      <h1 class="wow">Write to us</h1>
+      <div class="touch__inner wow">
         <div class="touch__vac contact__vac">
           <div class="contact__wrap">
             <p>Drop us a line about your project at <a href="mailto:info@itransition.com">info@itransition.com</a> or via the contact form below, and we will contact you within a business day.
@@ -346,8 +353,18 @@
             Please be informed that when you click the Send button Itransition Group will process your personal data in
             accordance with our Privacy notice for the purpose of providing you with appropriate information.
           </p>
-          <div class="button__form">
-            <input class="button" type="submit" value="Send">
+          <div class="form__button">
+            <input type="submit">
+            <div class="slime">
+              <div class="slime__wrap">
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+              </div>
+            </div>
           </div>
         </form>
       </div>

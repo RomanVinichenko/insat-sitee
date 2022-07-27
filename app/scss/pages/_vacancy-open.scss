@@ -4,33 +4,28 @@
   border-radius: 0 0 40px 40px;
   background: $black;
 
-  &__back {
-    position: relative;
-    display: block;
+  .slime {
     margin-bottom: 40px;
-    padding-left: 26px;
+    padding: 0;
+    width: fit-content;
     height: 24px;
-    font-weight: 600;
+    border: none;
+    border-radius: 0;
+    animation: fade 0.8s;
 
-    &::before {
-      content: url("../images/vac-back.svg");
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-      font-size: 0;
-      line-height: 1;
-      transform: translateY(-50%);
-    }
-
-    @include m($lg) {
-      margin-bottom: 24px;
+    p {
+      margin: 0 0 0 10px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: $white;
+      animation: none;
     }
   }
 
   h1 {
     margin-bottom: 24px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 20px;
@@ -40,6 +35,7 @@
   p {
     margin-bottom: 32px;
     color: $gray;
+    animation: fade 1.2s;
 
     @include m($lg) {
       margin-bottom: 20px;
@@ -49,6 +45,7 @@
   &__params {
     display: flex;
     margin-bottom: 64px;
+    animation: fade 1.4s;
 
     span {
       display: block;
@@ -88,6 +85,7 @@
     grid-column-gap: 24px;
     grid-row-gap: 0;
     grid-template-columns: 384px 1fr;
+    animation: fade 1.6s;
 
     h4 {
       @include m($md) {
