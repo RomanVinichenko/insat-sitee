@@ -69,7 +69,7 @@
   position: relative;
   z-index: 10;
   padding: 160px 0;
-  animation: fade 0.8s;
+  animation: fade 1s;
 
   &::before {
     content: "";
@@ -570,10 +570,6 @@
   }
 
   ul {
-    li {
-      animation: fade 1.8s;
-    }
-
     h2 {
       margin-bottom: 40px;
 
@@ -590,6 +586,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      animation: fade 1.8s;
 
       &:not(:last-child) {
         margin-bottom: 80px;
