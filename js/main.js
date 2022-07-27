@@ -165,7 +165,6 @@ function slidesItem(item, mainEl) {
     duration: 0.1,
     ease: 'none'
   })
-
 }
 
 gsap.registerPlugin(ScrollTrigger);
@@ -261,7 +260,6 @@ function touchAnimation(){
   const a2 = element.querySelector('.anim-2')
   const a3 = element.querySelector('.anim-3')
   const a4 = element.querySelector('.anim-4')
-  // element.style.height
   const tl = gsap.timeline({
     paused: true,
     scrollTrigger: {
@@ -269,7 +267,7 @@ function touchAnimation(){
       scrub: true,
       pin: true,
       start: `top ${headerHeight}px`,
-      end: `bottom top`
+      end: `75% top`
     }
   })
   tl.from(a1, {
@@ -296,8 +294,29 @@ function touchAnimation(){
     duration: 0.3,
     ease: 'none',
   }, '-=0.2')
-
-
 }
 
 touchAnimation()
+
+function footerAnimation(){
+  const footer = document.querySelector('.footer');
+  const ww = window.innerHeight
+  const footerHeight = footer.getBoundingClientRect().height
+  const footerStart = ww - footerHeight
+  const footerTL = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: footer,
+      scrub: true,
+      start: `top +=${footerStart}px`,
+      end: `bottom +=${footerStart}px`
+    }
+  })
+  footerTL.to(footer, {
+    y: 0,
+    duration: 0.3,
+    ease: 'none',
+  })
+}
+
+footerAnimation()
