@@ -1244,10 +1244,14 @@ h6 {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 40px;
-    animation: fade 0.8s;
+
+    .slime {
+      animation: fade 0.8s;
+    }
 
     h5 {
       padding-bottom: 8px;
+      animation: fade 0.8s;
 
       span {
         display: inline-block;
@@ -1261,6 +1265,8 @@ h6 {
   }
 
   &__title {
+    animation: fade 0.8s;
+
     p {
       margin-bottom: 8px;
       color: $gray;
