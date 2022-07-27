@@ -620,12 +620,16 @@
 
   .slime {
     border: 1px solid $gray-medium;
+  }
 
+  .scope__button {
     @include m($md) {
       position: absolute;
-      left: 50%;
-      bottom: 80px;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
+      bottom: 72px;
+      margin: 0 auto;
+      width: fit-content;
     }
   }
 
