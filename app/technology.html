@@ -19,7 +19,7 @@
       </a>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="services.html">Service</a>
+          <a class="menu__item-link" href="services.html">Service</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -54,10 +54,10 @@
           </div>
         </li>
         <li class="menu__item">
-          <a href="case-details.html">Case studies</a>
+          <a class="menu__item-link" href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
-          <a href="about.html">Company</a>
+          <a class="menu__item-link" href="about.html">Company</a>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
@@ -113,7 +113,9 @@
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
                 Service
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -154,12 +156,8 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+              <a class="accordion-toggle collapsed" href="approach.html">
                 Case studies
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
-                  <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
               </a>
             </h6>
             <div id="collapse2" class="panel-collapse collapse">
@@ -204,10 +202,13 @@
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1"
+                 href="#collapse3">
                 Company
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="white" stroke-miterlimit="10"/>
+                  <path
+                    d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                    stroke="white" stroke-miterlimit="10"/>
                   <path d="M10.25 7.25L8 9.75L5.75 7.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
@@ -251,6 +252,10 @@
           <img src="images/button.svg" alt="Button">
           <span>Contact</span>
         </a>
+        <button class="theme-toggle theme-mob">
+          <img src="images/dark.svg" alt="Dark">
+          <img src="images/light.svg" alt="Light">
+        </button>
         <ul class="menu-mobile__social">
           <li class="footer__network">
             <img src="images/linkedin.svg" alt="Linkedin">
@@ -1216,7 +1221,7 @@
             <article class="article">
               <a href="#">
                 <div class="article__img">
-                  <img src="images/engineering-preview.jpg" alt="Article">
+                  <img src="images/article1.jpg" alt="Article">
                 </div>
                 <h6>Stock trading software development for TradeSmith</h6>
                 <a class="slime slime__studies" href="#">
@@ -1237,7 +1242,7 @@
             <article class="article">
               <a href="#">
                 <div class="article__img">
-                  <img src="images/engineering-preview.jpg" alt="Article">
+                  <img src="images/article2.jpg" alt="Article">
                 </div>
                 <h6>Stock trading software development for TradeSmith</h6>
                 <a class="slime slime__studies" href="#">
@@ -1258,7 +1263,7 @@
             <article class="article">
               <a href="#">
                 <div class="article__img">
-                  <img src="images/engineering-preview.jpg" alt="Article">
+                  <img src="images/article3.jpg" alt="Article">
                 </div>
                 <h6>Stock trading software development for TradeSmith</h6>
                 <a class="slime slime__studies" href="#">
@@ -1279,7 +1284,7 @@
             <article class="article">
               <a href="#">
                 <div class="article__img">
-                  <img src="images/engineering-preview.jpg" alt="Article">
+                  <img src="images/article4.jpg" alt="Article">
                 </div>
                 <h6>Stock trading software development for TradeSmith</h6>
                 <a class="slime slime__studies" href="#">
@@ -1300,7 +1305,7 @@
             <article class="article">
               <a href="#">
                 <div class="article__img">
-                  <img src="images/engineering-preview.jpg" alt="Article">
+                  <img src="images/article5.jpg" alt="Article">
                 </div>
                 <h6>Stock trading software development for TradeSmith</h6>
                 <a class="slime slime__studies" href="#">
@@ -1487,7 +1492,6 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
 <script src="js/wow.min.js"></script>
 <script>
   new WOW().init();

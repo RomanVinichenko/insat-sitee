@@ -72,6 +72,16 @@
   height: fit-content;
   max-width: 200px;
 
+  p {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: $orange;
+  }
+
   span {
     display: flex;
     margin-bottom: 12px;
