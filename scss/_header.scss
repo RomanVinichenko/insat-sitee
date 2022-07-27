@@ -17,6 +17,15 @@
     z-index: 30;
   }
 
+  .logo-black,
+  .logo-white {
+    width: 280px;
+
+    @include m($lg) {
+      width: 235px;
+    }
+  }
+
   .logo-black {
     display: block;
   }
@@ -151,6 +160,14 @@
         .menu__drop {
           visibility: visible;
           opacity: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        &:hover {
+          .menu__item-link {
+            color: $white;
+          }
         }
       }
     }

@@ -271,7 +271,25 @@
 <main class="main">
   <section class="vacancy-open">
     <div class="container">
-      <a class="vacancy-open__back" href="vacancies.html">Back</a>
+      <a class="vacancy-open__back" href="vacancies.html"></a>
+      <a class="slime" href="#">
+        <div class="slime__wrap">
+          <div class="slime__block">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 8L2.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 3.5L2.5 8L7 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+          </div>
+          <div class="slime__block">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 8L2.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 3.5L2.5 8L7 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Back</p>
+          </div>
+        </div>
+      </a>
       <h1>Angular Front-end Senior Developer</h1>
       <p>
         We are looking for experienced professionals capable of designing and developing complex systems using Angular,
@@ -335,7 +353,7 @@
   </section>
   <section class="touch">
     <div class="container">
-      <div class="touch__inner">
+      <div class="touch__inner anim-1">
         <div class="touch__vac">
           <h2>Apply for</h2>
           <p>Apply by filling in the form beside or sending your CV to hh@itransition.com</p>
@@ -347,17 +365,17 @@
               <input type="text">
             </label>
             <label>
-              <span>Work e-mail*</span>
+              <span>Last Name</span>
               <input type="text">
             </label>
           </div>
           <div class="form__block">
             <label>
-              <span>Phone*</span>
+              <span>Work email*</span>
               <input type="text">
             </label>
             <label>
-              <span>Company</span>
+              <span>Phone*</span>
               <input type="text">
             </label>
           </div>
@@ -375,9 +393,18 @@
             Please be informed that when you click the Send button Itransition Group will process your personal data in
             accordance with our Privacy notice for the purpose of providing you with appropriate information.
           </p>
-          <div class="button__form">
-            <input class="button" type="submit" value="Send">
-            <span></span>
+          <div class="form__button">
+            <input type="submit">
+            <div class="slime">
+              <div class="slime__wrap">
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+                <div class="slime__block">
+                  <p>Send</p>
+                </div>
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -394,16 +421,22 @@
         </a>
         <ul>
           <li class="footer__network">
-            <img src="images/linkedin.svg" alt="Linkedin">
-            <span></span>
+            <a href="#">
+              <img src="images/linkedin.svg" alt="Linkedin">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/facebook.svg" alt="Facebook">
-            <span></span>
+            <a href="#">
+              <img src="images/facebook.svg" alt="Facebook">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/instagram.svg" alt="Instagram">
-            <span></span>
+            <a href="#">
+              <img src="images/instagram.svg" alt="Instagram">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
@@ -412,7 +445,7 @@
           <a href="#">Service</a>
           <ul class="footer__submenu">
             <li>
-              <a href="#">Engineering services</a>
+              <span>Engineering services</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">IT consulting</a>
@@ -429,7 +462,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">Technology advisory</a>
+              <span>Technology advisory</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">Cloud</a>
@@ -446,7 +479,7 @@
             <a href="#">Case studies</a>
           </div>
           <div class="footer__item">
-            <a href="#">Company</a>
+            <a href="#" class="disable-link">Company</a>
             <ul class="footer__submenu">
               <li>
                 <a href="#">About us</a>
@@ -484,6 +517,13 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
