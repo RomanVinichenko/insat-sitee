@@ -1552,6 +1552,7 @@ h6 {
   }
 
   img {
+    width: 100%;
     min-height: 384px;
     max-height: 384px;
     border-radius: 16px;
@@ -1560,14 +1561,12 @@ h6 {
 
     @include m($xl) {
       min-height: 300px;
+      max-height: 300px;
     }
 
     @include m($xl) {
       min-height: 270px;
-    }
-
-    @include m($lg) {
-      margin-bottom: 16px;
+      max-height: 270px;
     }
   }
 
