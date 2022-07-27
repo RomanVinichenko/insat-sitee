@@ -5,6 +5,7 @@ function pic() {
   $('.top').css({
     'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
   });
+
   $('.top--white').css({
     'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
   });

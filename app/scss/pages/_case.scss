@@ -3,18 +3,32 @@
   padding: 200px 0 160px;
   border-radius: 0 0 40px 40px;
   background: $black;
-  animation: fade 0.8s;
+
+  &__slime {
+    margin: 0 auto;
+    animation: fade 1s;
+
+    p {
+      margin: 0;
+    }
+  }
 
   .slime {
-    padding: 0 24px;
+    width: fit-content;
 
     &::after {
       display: none;
     }
   }
 
+  &__active {
+    border-radius: 32px;
+    background-color: $orange;
+  }
+
   h1 {
     margin-bottom: 41px;
+    animation: fade 0.8s;
 
     @include m($xl) {
       margin-bottom: 30px;
@@ -39,8 +53,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 24px;
+    animation: fade 1s;
 
     li {
+      animation: fade 1s;
+
       &:not(:last-child) {
         margin: 0 16px 16px 0;
 
@@ -78,6 +95,10 @@
     grid-row-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 56px;
+
+    .article {
+      animation: fade 1.2s;
+    }
 
     @include m(830) {
       grid-column-gap: 20px;

@@ -280,6 +280,26 @@
           max-width: 70px;
         }
       }
+
+      @include m($md) {
+        margin: 0 -12px 0 0;
+        width: calc(25vw + 12px);
+        height: calc(25vw + 12px);
+        min-width: calc(25vw + 12px);
+        min-height: calc(25vw + 12px);
+        max-width: calc(25vw + 12px);
+        max-height: calc(25vw + 12px);
+      }
+
+      @include m($md) {
+        margin: 0 -8px 0 0;
+        width: calc(33.3vw + 8px);
+        height: calc(33.3vw + 8px);
+        min-width: calc(33.3vw + 8px);
+        min-height: calc(33.3vw + 8px);
+        max-width: calc(33.3vw + 8px);
+        max-height: calc(33.3vw + 8px);
+      }
     }
   }
 
@@ -303,7 +323,6 @@
   background-position: top left -200px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: $black;
 
   .section__head {
     margin-bottom: 90px;
@@ -416,6 +435,15 @@
     }
   }
 
+  .slime__studies {
+    @include m($md) {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      transform: none;
+    }
+  }
+
   @include m($xl) {
     padding: 150px 0;
   }
@@ -432,14 +460,16 @@
 .touch {
   margin-top: -40px;
   padding: 160px 0 120px;
-  background-image: linear-gradient(252.56deg, #6c57ff 26.71%, #ff5366 149.39%);
-  border-radius: 24px;
-  overflow: hidden;
   min-height: calc(100vh - 74px);
+  overflow: hidden;
+  border-radius: 24px;
+  background-image: linear-gradient(252.56deg, #6c57ff 26.71%, #ff5366 149.39%);
+
   h2 {
     margin-bottom: 16px;
     font-size: 64px;
     line-height: 72px;
+
     //animation: fade 0.8s;
 
     @include m($xl) {
@@ -488,6 +518,7 @@
 
   h4 {
     margin-bottom: 72px;
+
     //animation: fade 0.8s;
 
     @include m($xl) {
@@ -545,6 +576,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
     //animation: fade 0.8s;
 
     @include m($lg) {
@@ -726,6 +758,24 @@
   margin-right: -34%;
   overflow: visible;
   animation: fade 0.8s;
+
+  .swiper-slide {
+    &:first-child {
+      animation: fade 0.8s;
+    }
+
+    &:nth-child(2) {
+      animation: fade 1.2s;
+    }
+
+    &:nth-child(3) {
+      animation: fade 1.5s;
+    }
+
+    &:nth-child(4) {
+      animation: fade 1.6s;
+    }
+  }
 
   @include m(1400) {
     margin-right: 0;

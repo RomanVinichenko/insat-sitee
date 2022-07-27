@@ -17,6 +17,22 @@ body {
 .light {
   background-color: $white;
 
+  .slime--text {
+    border: none !important;
+
+    .slime__add {
+      border: 1px solid $gray;
+    }
+
+    &:hover {
+      .slime__block {
+        p {
+          color: $orange !important;
+        }
+      }
+    }
+  }
+
   .header {
     .logo-black {
       display: none;
@@ -69,6 +85,7 @@ body {
 
   .slime {
     border: 1px solid $gray-medium;
+    transition: all 0.4s;
 
     &__block {
       p {
@@ -83,6 +100,8 @@ body {
     }
 
     &:hover {
+      border: 1px solid transparent;
+
       .slime__block {
         p {
           color: $white;
@@ -582,6 +601,8 @@ body {
     background-color: $white;
 
     &__navigation {
+      position: relative;
+
       span {
         color: $gray-dark;
       }
@@ -1323,7 +1344,7 @@ h6 {
     }
 
     @include m($sm) {
-      height: 100vh;
+      height: 80vh;
     }
   }
 
@@ -1531,6 +1552,7 @@ h6 {
   }
 
   img {
+    width: 100%;
     min-height: 384px;
     max-height: 384px;
     border-radius: 16px;
@@ -1539,14 +1561,12 @@ h6 {
 
     @include m($xl) {
       min-height: 300px;
+      max-height: 300px;
     }
 
     @include m($xl) {
       min-height: 270px;
-    }
-
-    @include m($lg) {
-      margin-bottom: 16px;
+      max-height: 270px;
     }
   }
 
@@ -1909,6 +1929,7 @@ h6 {
   padding: 0;
   width: fit-content;
   height: 48px;
+  outline: none;
   border: none;
   border-radius: 0;
 
@@ -1934,9 +1955,7 @@ h6 {
       &:first-child {
         transform: translateX(100%) translateY(-100%);
       }
-    }
 
-    .slime__add-inner {
       &:last-child {
         transform: translateX(0) translateY(-100%);
       }

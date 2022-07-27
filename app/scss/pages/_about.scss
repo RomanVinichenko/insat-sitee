@@ -48,7 +48,7 @@
 
   position: relative;
   padding: 160px 0;
-  animation: fade 0.8s;
+  animation: under-right 0.8s;
 
   &::after {
     right: 0;
@@ -64,6 +64,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+    animation: fade 1.2s;
 
     @include m($lg) {
       flex-direction: column;
@@ -275,7 +276,7 @@
 
 .values {
   padding: 200px 0 160px;
-  animation: fade 0.8s;
+  animation: fade 1s;
 
   h2 {
     margin-bottom: 40px;
@@ -322,7 +323,7 @@
 
   position: relative;
   padding: 160px 0;
-  animation: fade 0.8s;
+  animation: under-left 0.8s;
 
   &::after {
     left: 0;
@@ -333,6 +334,10 @@
     @include m($lg) {
       border-radius: 24px;
     }
+  }
+
+  .container {
+    animation: fade 1.2s;
   }
 
   h2 {
