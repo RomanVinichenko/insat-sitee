@@ -210,6 +210,15 @@ function firstScreen(element){
   }, '-=0.1')
 }
 
+
+
+const homeTop = document.querySelector('.top')
+if(homeTop) {
+  setTimeout(()=>{
+    firstScreen(homeTop)
+  }, 500)
+
+}
 function previewScreen(element){
   const elHeight = element.getBoundingClientRect().height
   const elH1 = element.querySelector('.preview__inner')
@@ -236,13 +245,6 @@ function previewScreen(element){
   }, '-=0.1')
 }
 
-const homeTop = document.querySelector('.top')
-if(homeTop) {
-  setTimeout(()=>{
-    firstScreen(homeTop)
-  }, 500)
-
-}
 const preview = document.querySelector('.preview')
 
 if(preview) {
@@ -250,3 +252,52 @@ if(preview) {
     previewScreen(preview)
   }, 900)
 }
+
+
+function touchAnimation(){
+  const element = document.querySelector('.touch');
+  const headerHeight = document.querySelector('.header').getBoundingClientRect().height
+  const a1 = element.querySelector('.anim-1')
+  const a2 = element.querySelector('.anim-2')
+  const a3 = element.querySelector('.anim-3')
+  const a4 = element.querySelector('.anim-4')
+  // element.style.height
+  const tl = gsap.timeline({
+    paused: true,
+    scrollTrigger: {
+      trigger: element,
+      scrub: true,
+      pin: true,
+      start: `top ${headerHeight}px`,
+      end: `bottom top`
+    }
+  })
+  tl.from(a1, {
+    y: `40px`,
+    opacity: 0,
+    duration: 0.3,
+    ease: 'none',
+  })
+  tl.from(a2, {
+    y: `40px`,
+    opacity: 0,
+    duration: 0.3,
+    ease: 'none',
+  }, '-=0.2')
+  tl.from(a3, {
+    y: `40px`,
+    opacity: 0,
+    duration: 0.3,
+    ease: 'none',
+  }, '-=0.2')
+  tl.from(a4, {
+    y: `40px`,
+    opacity: 0,
+    duration: 0.3,
+    ease: 'none',
+  }, '-=0.2')
+
+
+}
+
+touchAnimation()
