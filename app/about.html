@@ -14,8 +14,14 @@
   <div class="container container--header">
     <nav class="menu">
       <a class="logo" href="index.html">
-        <lottie-player class="logo-black" src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
-        <lottie-player class="logo-white" src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"  background="transparent"  speed="1"  style="width: 316px; height: 32px;" hover loop></lottie-player>
+        <lottie-player class="logo-black"
+                       src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"
+                       background="transparent" speed="1"  hover
+                       loop></lottie-player>
+        <lottie-player class="logo-white"
+                       src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"
+                       background="transparent" speed="1"  hover
+                       loop></lottie-player>
       </a>
       <ul class="menu__list">
         <li class="menu__item">
@@ -53,7 +59,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item">
+        <li class="menu__item ">
           <a class="menu__item-link" href="case-details.html">Case studies</a>
         </li>
         <li class="menu__item menu__item-small">
@@ -107,10 +113,10 @@
     </nav>
     <div class="menu-mobile models">
       <div class="container">
-        <div class="panel-group" id="accordion">
+        <div class="panel-group" id="accordion-mobile">
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-mobile" href="#collapseOne-m">
                 Service
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -120,7 +126,7 @@
                 </svg>
               </a>
             </h6>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne-m" class="panel-collapse collapse in">
               <div class="panel-body">
                 <div class="menu-mobile__block">
                   <span>Engineering services</span>
@@ -160,50 +166,11 @@
                 Case studies
               </a>
             </h6>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="menu-mobile__block">
-                  <span>Engineering services</span>
-                  <ul>
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="approach.html">Approach</a>
-                    </li>
-                    <li>
-                      <a href="careers.html">Careers</a>
-                    </li>
-                    <li>
-                      <a href="vacancies.html">Vacancies</a>
-                    </li>
-                    <li>
-                      <a href="vacancy-open.html">Vacancy-open</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu-mobile__block">
-                  <span>Technology advisory</span>
-                  <ul>
-                    <li>
-                      <a href="error.html">404</a>
-                    </li>
-                    <li>
-                      <a href="terms.html">Terms</a>
-                    </li>
-                    <li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="panel">
             <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
-                 href="#collapseThree">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-mobile"
+                 href="#collapseThree-m">
                 Company
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -213,7 +180,7 @@
                 </svg>
               </a>
             </h6>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseThree-m" class="panel-collapse collapse">
               <div class="panel-body">
                 <div class="menu-mobile__block">
                   <span>Engineering services</span>
@@ -258,16 +225,22 @@
         </button>
         <ul class="menu-mobile__social">
           <li class="footer__network">
-            <img src="images/linkedin.svg" alt="Linkedin">
-            <span></span>
+            <a href="#">
+              <img src="images/linkedin.svg" alt="Linkedin">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/facebook.svg" alt="Facebook">
-            <span></span>
+            <a href="#">
+              <img src="images/facebook.svg" alt="Facebook">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/instagram.svg" alt="Instagram">
-            <span></span>
+            <a href="#">
+              <img src="images/instagram.svg" alt="Instagram">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
@@ -283,7 +256,7 @@
           <p>Company</p>
           <h1>About us</h1>
         </div>
-        <a class="preview__link" href="#">
+        <a class="preview__link" href="#digital">
           <div class="preview__link-wrap">
             <div class="preview__link-inner">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +277,7 @@
     <div class="preview__holder">
     </div>
   </section>
-  <div class="digital">
+  <div class="digital" id="digital">
     <div class="container">
       <div class="digital__wrap">
         <div class="digital__text">
