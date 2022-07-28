@@ -692,7 +692,7 @@
         }
 
         @include m($md) {
-          margin-bottom: 25px;
+          margin-bottom: 32px;
         }
       }
 
@@ -717,10 +717,10 @@
 
       label:last-child {
         margin: 0 0 0 24px;
-      }
 
-      label:last-of-type {
-        margin: 0 0 0 24px;
+        @include m($md) {
+          margin: 0;
+        }
       }
 
       &:last-child {
@@ -730,6 +730,7 @@
       @include m($md) {
         flex-direction: column;
         margin-bottom: 0;
+        height: auto;
       }
     }
 
@@ -913,6 +914,6 @@
 
 .dad-textarea-main-form {
   span {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 }
