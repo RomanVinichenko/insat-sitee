@@ -101,9 +101,9 @@ $(document).ready(function () {
     $('#top-section').css({
       'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
     }),
-    $('body').css({
-      'background-color': '#010c21'
-    });
+      $('body').css({
+        'background-color': '#010c21'
+      });
   };
 
   if (header && scrollPos > 10) {
@@ -327,8 +327,6 @@ function touchAnimation(){
   }, '-=0.2')
 }
 
-touchAnimation()
-
 function footerAnimation(){
   const footer = document.querySelector('.footer');
   const ww = window.innerHeight
@@ -349,8 +347,11 @@ function footerAnimation(){
     ease: 'none',
   })
 }
+if(document.documentElement.clientWidth > 750){
+  touchAnimation();
+  footerAnimation();
+}
 
-footerAnimation()
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
