@@ -659,7 +659,6 @@
         left: 0;
         top: 0;
         display: block;
-        margin-bottom: 8px;
         font-weight: 400;
         font-size: 12px;
         line-height: 20px;
@@ -706,7 +705,10 @@
     &__block {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 40px;
+
+      br {
+        display: none;
+      }
 
       label + label {
         margin: 0 0 0 24px;
@@ -767,6 +769,12 @@
 
       &:hover {
         cursor: pointer;
+
+        .slime {
+          &__block {
+            transform: translateY(-100%);
+          }
+        }
       }
     }
 

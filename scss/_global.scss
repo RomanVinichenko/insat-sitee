@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: $white;
-  background-color: $black;
   cursor: default;
 }
 
@@ -20,6 +19,10 @@ body {
   .vacancy-open {
     color: $black;
     background-color: $white;
+
+    p {
+      color: $gray-dark;
+    }
 
     .slime {
       border: none;
@@ -43,6 +46,10 @@ body {
           }
         }
       }
+    }
+
+    &__info + .vacancy-open__info {
+      border-top: 1px solid $gray;
     }
   }
 
@@ -77,6 +84,27 @@ body {
 
     .logo-white {
       display: block;
+    }
+
+    .menu__drop {
+      border: 1px solid $gray !important;
+      background-color: $white !important;
+
+      &::before {
+        border-bottom: 10px solid $white !important;
+      }
+
+      &::after {
+        border-bottom: 12px solid $gray !important;
+      }
+
+      ul {
+        color: $black !important;
+
+        a {
+          color: $black !important;
+        }
+      }
     }
   }
 
@@ -640,10 +668,12 @@ body {
     background-color: $white;
 
     &__navigation {
-      position: relative;
-
       span {
         color: $gray-dark;
+      }
+
+      @include m($lg) {
+        position: relative;
       }
     }
 
@@ -850,6 +880,10 @@ body {
         a {
           border-top: 1px solid $gray;
         }
+
+        &:last-child a {
+          border-bottom: 1px solid $gray;
+        }
       }
     }
 
@@ -1014,27 +1048,6 @@ body {
 
     .menu__item-link {
       color: $black;
-    }
-
-    .menu__drop {
-      border: 1px solid $gray !important;
-      background-color: $white !important;
-
-      &::before {
-        border-bottom: 10px solid $white !important;
-      }
-
-      &::after {
-        border-bottom: 12px solid $gray !important;
-      }
-
-      ul {
-        color: $black !important;
-
-        a {
-          color: $black !important;
-        }
-      }
     }
   }
 
