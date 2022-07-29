@@ -193,11 +193,6 @@
       height: 400px;
       max-width: 400px;
     }
-
-    @include m($sm) {
-      height: 344px;
-      max-width: 344px;
-    }
   }
 
   &__say {

@@ -294,6 +294,10 @@
 
     img {
       margin-bottom: 24px;
+
+      @include m(620) {
+        margin-bottom: 16px;
+      }
     }
 
     @include m($lg) {
@@ -304,7 +308,7 @@
 
     @include m(620) {
       grid-column-gap: 0;
-      grid-row-gap: 40px;
+      grid-row-gap: 32px;
       grid-template-columns: 1fr;
     }
   }
@@ -415,9 +419,9 @@
         min-width: 72px;
 
         @include m($lg) {
-          width: 49px;
-          height: 49px;
-          min-width: 49px;
+          width: 64px;
+          height: 64px;
+          min-width: 64px;
         }
       }
 

@@ -1,6 +1,11 @@
 .footer {
+  //transform: translateY(-100%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   padding: 96px 0 42px;
-  transform: translateY(-100%);
 
   a {
     transition: all 0.2s;

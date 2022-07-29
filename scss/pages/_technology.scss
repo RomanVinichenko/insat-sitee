@@ -172,6 +172,7 @@
 
   &__img {
     margin: 0 30px 0 0;
+    min-height: 588px;
 
     img {
       width: 100%;
@@ -193,6 +194,14 @@
 
     @include m($lg) {
       margin: 0 0 40px;
+    }
+
+    @include m($xl) {
+      min-height: 480px;
+    }
+
+    @include m($lg) {
+      min-height: auto;
     }
   }
 
