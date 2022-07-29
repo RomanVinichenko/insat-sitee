@@ -124,6 +124,12 @@ body {
         color: $white;
       }
     }
+
+    .slime {
+      &:hover {
+        border: none !important;
+      }
+    }
   }
 
   .form__button {
@@ -275,6 +281,14 @@ body {
 
     &__copy {
       color: $black;
+
+      ul {
+        li:first-child {
+          &::after {
+            background-color: rgba($black, 0.25);
+          }
+        }
+      }
     }
 
     &__inner {
@@ -1940,6 +1954,13 @@ h6 {
     }
   }
 
+  &:hover,
+  &:visited,
+  &:target,
+  &:active {
+    outline: none !important;
+  }
+
   &:hover {
     span {
       width: 500px;
@@ -2187,10 +2208,16 @@ h6 {
 
 .Linkedin-block {
   label {
-    margin: 0;
+    margin: 0 !important;
   }
 }
 
 .wpcf7-not-valid-tip {
   margin-top: 45px;
+}
+
+.footer__pusher {
+  @include m(853) {
+    min-height: 100vh !important;
+  }
 }
