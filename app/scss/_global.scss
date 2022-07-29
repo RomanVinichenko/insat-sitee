@@ -11,6 +11,7 @@ body {
   line-height: 24px;
   color: $white;
   cursor: default;
+  scroll-behavior: smooth;
 }
 
 .main {
@@ -19,6 +20,18 @@ body {
 
 .light {
   background-color: $white;
+
+  .page-template-home-php {
+    .header {
+      .logo-black {
+        display: none;
+      }
+
+      .logo-white {
+        display: block;
+      }
+    }
+  }
 
   .main {
     background-color: $white;
@@ -629,16 +642,6 @@ body {
 
     .menu__item svg path {
       stroke: #010c21;
-    }
-  }
-
-  .header-index {
-    .logo-black {
-      display: none;
-    }
-
-    .logo-white {
-      display: block;
     }
   }
 
