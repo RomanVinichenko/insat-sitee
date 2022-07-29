@@ -170,14 +170,6 @@
           opacity: 1;
         }
       }
-
-      &:nth-child(2) {
-        &:hover {
-          .menu__item-link {
-            color: $white;
-          }
-        }
-      }
     }
 
     .menu__item-link {

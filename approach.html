@@ -278,7 +278,7 @@
     <div class="preview__holder">
     </div>
   </section>
-  <section class="setup" id="setup">
+  <section class="setup wow" id="setup">
     <div class="container">
       <h2>Project setup</h2>
       <p>
@@ -403,8 +403,8 @@
   </section>
   <section class="cooperation wow">
     <div class="container">
-      <h2>Course of cooperation</h2>
-      <ul class="cooperation__head">
+      <h2 class="wow">Course of cooperation</h2>
+      <ul class="cooperation__head wow">
         <li>
           <h6>Stage</h6>
         </li>
@@ -415,7 +415,7 @@
           <h6>Itransition</h6>
         </li>
       </ul>
-      <ul class="cooperation__info">
+      <ul class="cooperation__info wow">
         <li>
           <span>Stage</span>
           <p>Preparation</p>
@@ -648,8 +648,8 @@
     <div class="vendor__inner">
       <div class="container">
         <div class="vendor__wrap">
-          <h2>Multi-vendor distributed projects</h2>
-          <ul>
+          <h2 class="wow">Multi-vendor distributed projects</h2>
+          <ul class="wow">
             <li>
               Many of Itransition’s clients embark on globally distributed development initiatives. With experience in
               remote team collaboration and Scrum development, we painlessly integrate into globally distributed
@@ -749,7 +749,9 @@
     </div>
   </section>
 </main>
-<footer class="footer wow">
+<div class="footer__pusher">
+</div>
+<footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__main">
@@ -759,16 +761,22 @@
         </a>
         <ul>
           <li class="footer__network">
-            <img src="images/linkedin.svg" alt="Linkedin">
-            <span></span>
+            <a href="#">
+              <img src="images/linkedin.svg" alt="Linkedin">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/facebook.svg" alt="Facebook">
-            <span></span>
+            <a href="#">
+              <img src="images/facebook.svg" alt="Facebook">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/instagram.svg" alt="Instagram">
-            <span></span>
+            <a href="#">
+              <img src="images/instagram.svg" alt="Instagram">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
@@ -777,7 +785,7 @@
           <a href="#">Service</a>
           <ul class="footer__submenu">
             <li>
-              <a href="#">Engineering services</a>
+              <span>Engineering services</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">IT consulting</a>
@@ -794,7 +802,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">Technology advisory</a>
+              <span>Technology advisory</span>
               <ul class="footer__thirdmenu">
                 <li>
                   <a href="#">Cloud</a>
@@ -811,7 +819,7 @@
             <a href="#">Case studies</a>
           </div>
           <div class="footer__item">
-            <a href="#">Company</a>
+            <a href="#" class="disable-link">Company</a>
             <ul class="footer__submenu">
               <li>
                 <a href="#">About us</a>

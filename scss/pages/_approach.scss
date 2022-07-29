@@ -121,7 +121,7 @@
 
   position: relative;
   padding: 160px 0;
-  animation: fade 0.8s;
+  animation: under-right 0.8s;
 
   &::after {
     right: 0;
@@ -136,10 +136,12 @@
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
   }
 
   &__head {
     display: flex;
+    animation: fade 1.2s;
 
     li {
       margin-right: 24px;
@@ -158,6 +160,8 @@
   }
 
   &__info {
+    animation: fade 1.4s;
+
     li {
       position: relative;
       display: flex;
@@ -299,12 +303,6 @@
       margin-bottom: 16px;
     }
   }
-
-  .models__img {
-    @include m($lg) {
-      margin: 0 0 24px;
-    }
-  }
 }
 
 .vendor {
@@ -312,7 +310,7 @@
   padding-bottom: 160px;
   border-radius: 0 0 40px 40px;
   background-color: $black;
-  animation: fade 0.8s;
+  animation: under-left 0.8s;
 
   &__wrap {
     z-index: 10;
@@ -347,6 +345,7 @@
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
 
     @include m($xl) {
       margin-bottom: 24px;
@@ -362,6 +361,7 @@
     grid-column-gap: 24px;
     grid-row-gap: 24px;
     grid-template-columns: 1fr 1fr;
+    animation: fade 1.2s;
 
     li {
       color: $gray;

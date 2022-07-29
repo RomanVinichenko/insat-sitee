@@ -4,6 +4,9 @@
   background-color: $black;
 
   .expert__button {
+    width: fit-content;
+    height: 48px;
+
     p {
       margin-bottom: 0;
       color: $orange;
@@ -11,7 +14,7 @@
 
     &:hover {
       p {
-        color: $white;
+        color: $orange !important;
       }
     }
   }
@@ -20,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     padding: 160px 0;
+    animation: fade 0.8s;
 
     h2 {
       margin-right: 30px;
@@ -71,6 +75,7 @@
   &__work {
     position: relative;
     padding: 160px 0;
+    animation: fade 0.8s;
 
     &::after {
       content: "";
@@ -197,6 +202,7 @@
 
   &__say {
     padding: 160px 0;
+    animation: fade 0.8s;
 
     @include m($xl) {
       padding: 120px 0;
