@@ -80,6 +80,17 @@
 .do {
   padding: 200px 0;
 
+  .slime {
+    @include m($md) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 72px;
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
+
   .item_do_slider {
     @include m(767) {
       animation: fade 0.8s;
@@ -105,6 +116,11 @@
 
       &:not(:last-child) {
         margin-bottom: 24px;
+      }
+
+      @include m(767) {
+        min-height: 140px;
+        max-height: 140px;
       }
     }
 
@@ -170,6 +186,10 @@
         bottom: 2px;
         flex: none !important;
         width: 100% !important;
+      }
+
+      @include m(767) {
+        padding: 24px;
       }
 
       @media (max-width: 1400px) {
@@ -539,7 +559,7 @@
     }
 
     @include m($lg) {
-      margin: 0 0 40px;
+      margin: 0;
       max-width: 100%;
     }
   }
@@ -697,7 +717,7 @@
       }
 
       @include m($md) {
-        height: 70px;
+        height: 85px;
       }
     }
 
@@ -915,5 +935,31 @@
 .dad-textarea-main-form {
   span {
     margin-bottom: 10px;
+    color: #fff;
+  }
+}
+
+.wpcf7-textarea {
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.cookie__policy {
+  display: block;
+  text-decoration: none;
+
+  span {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 1px), $orange 1px);
+    background-size: 0 86%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      background-size: 100% 90%;
+    }
   }
 }

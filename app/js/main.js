@@ -16,12 +16,18 @@ if (theme) {
         $('body').css({
           'background-color': '#fff'
         });
+        $('.main').css({
+          'background-color': '#fff'
+        });
         localStorage.setItem('theme-color', 'light');
       } else {
         $('#top-section').css({
           'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
         });
         $('body').css({
+          'background-color': '#010c21'
+        });
+        $('.main').css({
           'background-color': '#010c21'
         });
         localStorage.setItem('theme-color', 'black');
@@ -347,13 +353,16 @@ function footerAnimation(){
     ease: 'none',
   })
 }
+
 if(document.documentElement.clientWidth > 750){
-  touchAnimation();
-  footerAnimation();
+  let myCollection = document.getElementsByClassName('touch');
+  if(myCollection.length>0){
+    // touchAnimation();
+    // footerAnimation();
+  }
 }
 
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('.preview__link').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -361,3 +370,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+function calcFooterHeight() {
+  const footerAnim = document.querySelector('.footer').scrollHeight;
+  const footerPusher = document.querySelector('.footer__pusher');
+
+  footerPusher.style.minHeight = footerAnim + 'px';
+}
+
+window.addEventListener('DOMContentLoaded', calcFooterHeight);
+window.addEventListener('resize', calcFooterHeight);

@@ -352,17 +352,14 @@
         }
 
         @include m($md) {
-          margin: 0 auto 16px;
+          margin: 0 auto 16px 0;
           width: 100%;
-          min-height: 384px;
-          max-width: 384px;
+          max-width: 100%;
         }
 
         @include m($sm) {
           margin: 0 auto 16px;
           width: 100%;
-          min-height: 305px;
-          max-width: 305px;
         }
       }
 
@@ -397,13 +394,10 @@
     }
 
     @include m($lg) {
-      margin-top: 48px;
-    }
-
-    @include m($md) {
       grid-column-gap: 0;
       grid-row-gap: 40px;
       grid-template-columns: 1fr;
+      margin-top: 48px;
     }
   }
 

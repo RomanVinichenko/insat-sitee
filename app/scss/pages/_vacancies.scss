@@ -8,10 +8,26 @@
   &__list {
     li {
       a {
+        position: relative;
         display: flex;
         padding: 32px 0;
         border-top: 1px solid $gray-dark;
         transition: all 0.2s;
+
+        &::after {
+          content: url("../../images/vacancy-open.svg");
+          position: absolute;
+          right: 0;
+          top: 24px;
+          z-index: 0;
+          display: none;
+          width: 28px;
+          height: 27px;
+
+          @include m($md) {
+            display: block;
+          }
+        }
 
         span {
           display: none;
@@ -66,13 +82,14 @@
             text-align: right;
 
             @include m($md) {
+              margin-bottom: 24px;
               margin-left: 0;
               text-align: left;
             }
           }
 
           @include m($md) {
-            margin: 0 0 16px;
+            margin: 0 0 8px;
           }
         }
 
@@ -83,7 +100,7 @@
 
         @include m($md) {
           flex-direction: column;
-          padding: 16px 0 0;
+          padding: 24px 0 0;
         }
       }
 

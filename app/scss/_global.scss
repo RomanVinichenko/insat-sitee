@@ -13,8 +13,16 @@ body {
   cursor: default;
 }
 
+.main {
+  background-color: $black;
+}
+
 .light {
   background-color: $white;
+
+  .main {
+    background-color: $white;
+  }
 
   .vacancy-open {
     color: $black;
@@ -879,6 +887,10 @@ body {
       li {
         a {
           border-top: 1px solid $gray;
+
+          &::after {
+            content: url("../../images/vacancy-open-bl.svg");
+          }
         }
 
         &:last-child a {
@@ -964,6 +976,16 @@ body {
           color: $black;
         }
       }
+    }
+
+    .touch__tel {
+      color: $black;
+    }
+
+    .slime {
+      border: 1px solid $black !important;
+
+      //background-color: $black!important;
     }
   }
 
@@ -1345,8 +1367,8 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
     border-radius: 50%;
     background-color: $white;
 
@@ -1354,6 +1376,10 @@ h6 {
       .preview__link-inner {
         transform: translateY(0);
       }
+    }
+
+    @include m($sm) {
+      display: none;
     }
   }
 
@@ -1599,7 +1625,7 @@ h6 {
   max-width: 384px;
 
   &__img {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     overflow: hidden;
     border-radius: 16px;
   }
@@ -2011,20 +2037,11 @@ h6 {
       text-align: center;
       color: $orange;
     }
-
-    @include m($sm) {
-      margin-right: 0;
-      margin-bottom: 16px;
-    }
   }
 
   &__wrap {
     display: flex;
     align-items: center;
-
-    @include m($sm) {
-      flex-direction: column;
-    }
   }
 
   &__policy {
@@ -2032,10 +2049,6 @@ h6 {
     font-size: 14px;
     line-height: 22px;
     text-decoration: underline;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   @include m($sm) {
@@ -2056,6 +2069,10 @@ h6 {
   line-height: 1;
   background-image: url("../../images/close-pop.svg");
   background-color: transparent;
+
+  @include m($md) {
+    transform: scale(0.75);
+  }
 }
 
 .thank-sent {
@@ -2151,4 +2168,14 @@ h6 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.Linkedin-block {
+  label {
+    margin: 0;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 45px;
 }
