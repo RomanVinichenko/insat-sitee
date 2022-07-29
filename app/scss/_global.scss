@@ -18,20 +18,20 @@ body {
   background-color: $black;
 }
 
-.light {
-  background-color: $white;
+.page-template-home-php.light {
+  .header {
+    .logo-black {
+      display: none;
+    }
 
-  .page-template-home-php {
-    .header {
-      .logo-black {
-        display: none;
-      }
-
-      .logo-white {
-        display: block;
-      }
+    .logo-white {
+      display: block;
     }
   }
+}
+
+.light {
+  background-color: $white;
 
   .main {
     background-color: $white;
