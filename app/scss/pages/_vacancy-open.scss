@@ -21,6 +21,18 @@
       color: $white;
       animation: none;
     }
+
+    &:hover {
+      p {
+        color: $orange;
+      }
+
+      svg {
+        path {
+          stroke: $orange;
+        }
+      }
+    }
   }
 
   h1 {

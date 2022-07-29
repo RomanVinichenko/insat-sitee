@@ -120,6 +120,11 @@
     a {
       display: block;
       font-weight: 600;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $orange;
+      }
     }
   }
 
