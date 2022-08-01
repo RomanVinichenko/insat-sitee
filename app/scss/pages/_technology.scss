@@ -734,11 +734,10 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: 32px auto 0;
-      max-width: 400px;
     }
 
     @include m($sm) {
-      max-width: 320px;
+      justify-content: space-between;
     }
   }
 

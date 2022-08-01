@@ -34,7 +34,6 @@ if (theme) {
       }
     }, 200);
     theme.classList.toggle('theme-toggle__active');
-    console.log(localStorage.getItem ('theme-color'))
   });
 }
 
@@ -61,7 +60,6 @@ if (themeMob) {
       }
     }, 200);
     themeMob.classList.toggle('theme-toggle__active');
-    console.log(localStorage.getItem ('theme-color'))
   });
 }
 
@@ -121,18 +119,15 @@ $(document).ready(function () {
 });
 
 let swiperStudies = new Swiper('.swiper__studies', {
-  slidesPerView: 'auto',
-  spaceBetween: 12,
+  slidesPerView: 1,
+  spaceBetween: 24,
   breakpoints: {
-    1400: {
+    790: {
+      slidesPerView: 3,
       spaceBetween: 24,
     },
-    850: {
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-    },
-    580: {
-      slidesPerView: 'auto',
+    547: {
+      slidesPerView: 2,
       spaceBetween: 24,
     }
   }
@@ -155,6 +150,8 @@ if (burger) {
   burger.addEventListener('click', function () {
     burger.classList.toggle('menu__burger--active');
     menuMobile.classList.toggle('menu-mobile--active');
+    document.querySelector('.header .logo').classList.toggle('sun')
+    document.querySelector('.menu__burger').classList.toggle('menu__burger--sun')
   });
 }
 
@@ -177,8 +174,6 @@ elements.forEach(element => {
   element.appendChild(textContainer);
   element.appendChild(textContainer.cloneNode(true));
 });
-
-
 
 function slidesItem(item, mainEl) {
 
@@ -242,8 +237,6 @@ function firstScreen(element){
   }, '-=0.1')
 }
 
-
-
 const homeTop = document.querySelector('.top')
 if(homeTop) {
   setTimeout(()=>{
@@ -280,11 +273,13 @@ function previewScreen(element){
 const preview = document.querySelector('.preview')
 
 if(preview) {
-  setTimeout(()=>{
-    previewScreen(preview)
-  }, 900)
+  let myStr = location.protocol+"//"+location.hostname+'/contact/';
+  if(myStr != window.location.href){
+    setTimeout(()=>{
+      previewScreen(preview)
+    }, 900)
+  }
 }
-
 
 function touchAnimation(){
   const element = document.querySelector('.touch');

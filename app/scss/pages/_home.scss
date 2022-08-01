@@ -474,14 +474,6 @@
     }
   }
 
-  .swiper-slide {
-    max-width: 384px;
-
-    @include m(600) {
-      max-width: 300px;
-    }
-  }
-
   .slime {
     border: 1px solid $gray-medium;
   }
@@ -863,7 +855,6 @@
 }
 
 .swiper__studies {
-  margin-right: -34%;
   overflow: visible;
   animation: fade 0.8s;
 
@@ -885,13 +876,15 @@
     }
   }
 
-  @include m(1400) {
-    margin-right: 0;
+  .swiper-slide {
+    @include m(547) {
+      width: 100%;
+      max-width: 80%;
+    }
   }
 }
 
 .contact {
-  margin-top: 0;
   padding: 160px 0;
   border-bottom: 1px solid $gray-dark;
   background-image: none;
