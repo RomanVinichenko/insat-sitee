@@ -141,12 +141,15 @@ let swiperStudies = new Swiper('.swiper__studies', {
 let swiperScope = new Swiper('.swiper__scope', {
   slidesPerView: 'auto',
   spaceBetween: 12,
+  centeredSlides: true,
   breakpoints: {
     1400: {
+
       slidesPerView: 'auto',
       spaceBetween: 24,
     },
     695: {
+
       slidesPerView: 'auto',
       spaceBetween: 24,
     }

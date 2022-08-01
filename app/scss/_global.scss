@@ -1759,6 +1759,8 @@ h6 {
     justify-content: space-between;
     padding: 40px;
     height: 394px;
+    overflow: hidden;
+    border-radius: 24px;
 
     &::after {
       content: "";
@@ -1779,6 +1781,7 @@ h6 {
       height: 100%;
       border-radius: 24px;
       object-fit: cover;
+      transition: all 0.4s;
     }
 
     span {
@@ -1795,6 +1798,12 @@ h6 {
     h5,
     a {
       z-index: 10;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
     }
 
     @include m($xl) {
