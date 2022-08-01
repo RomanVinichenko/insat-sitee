@@ -139,18 +139,11 @@ let swiperStudies = new Swiper('.swiper__studies', {
 });
 
 let swiperScope = new Swiper('.swiper__scope', {
-  slidesPerView: 'auto',
+  slidesPerView: 1,
   spaceBetween: 12,
-  centeredSlides: true,
   breakpoints: {
-    1400: {
-
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-    },
-    695: {
-
-      slidesPerView: 'auto',
+    630: {
+      slidesPerView: 2,
       spaceBetween: 24,
     }
   }
