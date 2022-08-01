@@ -282,11 +282,11 @@ body {
     }
 
     .logo-white {
-      display: none;
+      display: block;
     }
 
     .logo-black {
-      display: block;
+      display: none;
     }
 
     &__copy {
@@ -2281,4 +2281,8 @@ h6 {
   @include m(853) {
     min-height: 100vh !important;
   }
+}
+
+#touch-contact {
+  margin: 0;
 }
