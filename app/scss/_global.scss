@@ -1852,13 +1852,8 @@ h6 {
 }
 
 .swiper__scope {
-  margin-right: -51%;
   overflow: visible;
   animation: fade 0.8s;
-
-  @include m(1400) {
-    margin-right: 0;
-  }
 }
 
 .rich-text {

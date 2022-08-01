@@ -592,11 +592,11 @@
   background-color: $black;
 
   .swiper-slide {
-    max-width: 588px;
+    //max-width: 588px;
 
-    @include m(600) {
-      max-width: 300px;
-    }
+    //@include m(600) {
+    //  max-width: 300px;
+    //}
   }
 
   .section__head {
