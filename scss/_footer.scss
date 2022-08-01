@@ -1,19 +1,10 @@
 .footer {
-  //transform: translateY(-100%);
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
   padding: 96px 0 42px;
-
-  a {
-    transition: all 0.2s;
-
-    &:hover {
-      color: $orange;
-    }
-  }
 
   .logo {
     margin: 0 0 52px;
@@ -147,7 +138,13 @@
     a {
       display: block;
       margin-bottom: 16px;
+      width: fit-content;
       font-weight: 600;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
     }
 
     + .footer__item {
@@ -168,12 +165,24 @@
     span {
       display: block;
       margin-bottom: 12px;
+      width: fit-content;
       font-weight: 400;
       font-size: 14px;
       line-height: 22px;
     }
 
+    a {
+      width: calc(100%);
+      max-width: max-content;
+      background-image: linear-gradient(transparent calc(100% - 1px), $orange 1px);
+      background-size: 0 90%;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
+    }
+
     span {
+      display: block;
+      margin-bottom: 12px;
       font-size: 12px;
       line-height: 20px;
       color: $gray-medium;
@@ -183,17 +192,23 @@
       &:not(:last-child) {
         margin-bottom: 16px;
       }
-    }
-  }
 
-  &__thirdmenu {
-    a {
-      margin-bottom: 0;
-    }
+      a {
+        &:hover {
+          color: $orange;
+          background-size: 100% 90%;
+        }
+      }
 
-    li {
-      &:not(:last-child) {
-        margin-bottom: 12px;
+      ul {
+        li {
+          a {
+            &:hover {
+              color: $orange;
+              background-size: 100% 90%;
+            }
+          }
+        }
       }
     }
   }
@@ -205,14 +220,6 @@
     font-size: 12px;
     line-height: 20px;
 
-    a {
-      text-decoration: underline transparent;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
     p {
       @include m(680) {
         margin-bottom: 16px;
@@ -222,6 +229,19 @@
 
     ul {
       display: flex;
+
+      a {
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 1px), $orange 1px);
+        background-size: 0 90%;
+        background-repeat: no-repeat;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $orange;
+          background-size: 100% 90%;
+        }
+      }
 
       li + li {
         margin-left: 24px;
@@ -259,9 +279,16 @@
   }
 
   &__by {
+    width: fit-content;
+
     a {
       display: inline-block;
       margin-left: 4px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
     }
 
     @include m(680) {
