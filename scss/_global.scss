@@ -33,6 +33,16 @@ body {
 .light {
   background-color: $white;
 
+  .sun {
+    .logo-black {
+      display: none !important;
+    }
+
+    .logo-white {
+      display: block !important;
+    }
+  }
+
   .main {
     background-color: $white;
   }
@@ -568,6 +578,42 @@ body {
   }
 
   .header {
+    .menu__burger {
+      border: 1px solid $white;
+
+      &::after,
+      &::before {
+        background-color: $white;
+      }
+    }
+
+    .menu__burger--sun {
+      border: 1px solid $black;
+
+      &::after,
+      &::before {
+        background-color: $black;
+      }
+    }
+
+    .button {
+      border: none;
+
+      .slime__block {
+        p {
+          color: $white;
+        }
+      }
+    }
+
+    .slime {
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+    }
+
     .menu__drop {
       border: 1px solid $gray !important;
       background-color: $white !important;
@@ -682,6 +728,10 @@ body {
       ol {
         li {
           color: $gray-dark;
+
+          &::marker {
+            color: $black;
+          }
         }
 
         span {
@@ -1078,15 +1128,8 @@ body {
   }
 
   .menu-mobile--active {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      z-index: 50;
-      width: 100vw;
-      height: 74px;
-      background-color: $gray-medium;
-      backdrop-filter: blur(20px);
+    .logo-white {
+      display: block !important;
     }
 
     .button {
