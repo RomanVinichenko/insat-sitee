@@ -874,9 +874,7 @@
     &:nth-child(4) {
       animation: fade 1.6s;
     }
-  }
 
-  .swiper-slide {
     @include m(547) {
       width: 100%;
       max-width: 80%;

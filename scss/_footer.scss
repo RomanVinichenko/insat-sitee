@@ -14,12 +14,21 @@
     }
   }
 
+  .logo-black,
   .logo-white {
-    display: block;
+    width: 280px;
+
+    @include m($lg) {
+      width: 255px;
+    }
+  }
+
+  .logo-white {
+    display: none;
   }
 
   .logo-black {
-    display: none;
+    display: block;
   }
 
   &__inner {
