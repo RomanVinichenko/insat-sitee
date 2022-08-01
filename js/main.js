@@ -99,7 +99,7 @@ window.addEventListener('scroll', function () {
 $(document).ready(function () {
   let scrollPos = window.scrollY;
   let myStr = localStorage.getItem('theme-color');
-  if (myStr == 'light' ) {
+  if (myStr == 'light') {
     theme.click();
   } else {
     $('#top-section').css({
@@ -108,7 +108,8 @@ $(document).ready(function () {
       $('body').css({
         'background-color': '#010c21'
       });
-  };
+  }
+  ;
 
   if (header && scrollPos > 10) {
     header.classList.add("header--active");
@@ -211,7 +212,7 @@ if (ww > 767) {
   }
 }
 
-function firstScreen(element){
+function firstScreen(element) {
   const wh = window.innerHeight
   const elH1 = element.querySelector('h1')
   const scrollHeight = wh * 0.20
@@ -231,20 +232,22 @@ function firstScreen(element){
   })
 
   tl.to(elH1, {
-    y: `${scrollHeight/2}px`,
+    y: `${scrollHeight / 2}px`,
     duration: 0.1,
     ease: 'none',
   }, '-=0.1')
 }
 
 const homeTop = document.querySelector('.top')
-if(homeTop) {
-  setTimeout(()=>{
-    firstScreen(homeTop)
-  }, 500)
-
+if (homeTop) {
+  if (document.documentElement.clientWidth > 750) {
+    setTimeout(() => {
+      firstScreen(homeTop);
+    }, 500);
+  }
 }
-function previewScreen(element){
+
+function previewScreen(element) {
   const elHeight = element.getBoundingClientRect().height
   const elH1 = element.querySelector('.preview__inner')
   const scrollHeight = elHeight * 0.35
@@ -254,7 +257,7 @@ function previewScreen(element){
       trigger: element,
       scrub: true,
       start: "top top",
-      end: `bottom +=${elHeight/2}px`
+      end: `bottom +=${elHeight / 2}px`
     }
   })
   tl.to(element, {
@@ -264,7 +267,7 @@ function previewScreen(element){
   })
 
   tl.to(elH1, {
-    y: `${scrollHeight/2}px`,
+    y: `${scrollHeight / 2}px`,
     duration: 0.1,
     ease: 'none',
   }, '-=0.1')
@@ -272,16 +275,19 @@ function previewScreen(element){
 
 const preview = document.querySelector('.preview')
 
-if(preview) {
-  let myStr = location.protocol+"//"+location.hostname+'/contact/';
-  if(myStr != window.location.href){
-    setTimeout(()=>{
-      previewScreen(preview)
-    }, 900)
+if (preview) {
+  let myStr = location.protocol + "//" + location.hostname + '/contact/';
+  if (myStr != window.location.href) {
+
+    if (document.documentElement.clientWidth > 750) {
+      setTimeout(() => {
+        previewScreen(preview)
+      }, 900)
+    }
   }
 }
 
-function touchAnimation(){
+function touchAnimation() {
   const element = document.querySelector('.touch');
   const headerHeight = document.querySelector('.header').getBoundingClientRect().height
   const a1 = element.querySelector('.anim-1')
@@ -324,7 +330,7 @@ function touchAnimation(){
   }, '-=0.2')
 }
 
-function footerAnimation(){
+function footerAnimation() {
   const footer = document.querySelector('.footer');
   const ww = window.innerHeight
   const footerHeight = footer.getBoundingClientRect().height
@@ -345,9 +351,9 @@ function footerAnimation(){
   })
 }
 
-if(document.documentElement.clientWidth > 750){
+if (document.documentElement.clientWidth > 750) {
   let myCollection = document.getElementsByClassName('touch');
-  if(myCollection.length>0){
+  if (myCollection.length > 0) {
     // touchAnimation();
     // footerAnimation();
   }
