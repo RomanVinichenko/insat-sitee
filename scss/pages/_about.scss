@@ -1,6 +1,5 @@
 .digital {
   padding: 160px 0;
-  animation: fade 0.8s;
 
   &__wrap {
     display: flex;
@@ -14,6 +13,7 @@
   &__text {
     margin-right: 30px;
     max-width: 588px;
+    animation: fade 1s;
 
     h2 {
       margin-bottom: 24px;
@@ -64,7 +64,6 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    animation: fade 1.2s;
 
     @include m($lg) {
       flex-direction: column;
@@ -74,6 +73,7 @@
   &__info {
     margin-right: 30px;
     max-width: 470px;
+    animation: fade 1.2s;
 
     h2 {
       margin-bottom: 24px;
@@ -92,6 +92,7 @@
 
   &__stats {
     max-width: 588px;
+    animation: fade 1.4s;
 
     h5 {
       margin-bottom: 32px;
@@ -180,6 +181,7 @@
 
 .digital-info {
   max-width: 588px;
+  animation: fade 1.2s;
 
   h6 {
     position: relative;
@@ -216,7 +218,6 @@
   padding: 160px 0;
   border-radius: 0 0 40px 40px;
   background-color: $black;
-  animation: fade 0.8s;
 
   @include m($xl) {
     padding: 120px 0;
@@ -229,10 +230,10 @@
 
 .say {
   padding: 160px 0 200px;
-  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 24px;
@@ -276,10 +277,10 @@
 
 .values {
   padding: 200px 0 160px;
-  animation: fade 1s;
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 24px;
@@ -291,6 +292,22 @@
     grid-column-gap: 24px;
     grid-row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    li:first-child {
+      animation: fade 1.2s;
+    }
+
+    li:nth-child(2) {
+      animation: fade 1.3s;
+    }
+
+    li:nth-child(3) {
+      animation: fade 1.4s;
+    }
+
+    li:nth-child(4) {
+      animation: fade 1.5s;
+    }
 
     img {
       margin-bottom: 24px;
@@ -346,6 +363,7 @@
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1s;
 
     @include m($lg) {
       margin-bottom: 16px;
@@ -364,6 +382,7 @@
   &__info {
     margin-right: 30px;
     max-width: 588px;
+    animation: fade 1.2s;
 
     p {
       margin-bottom: 18px;
@@ -405,6 +424,7 @@
 
   &__logos {
     max-width: 584px;
+    animation: fade 1.4s;
 
     ul {
       display: grid;
