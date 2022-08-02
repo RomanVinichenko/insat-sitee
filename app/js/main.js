@@ -1,5 +1,7 @@
-const bgm = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top2.jpg'];
-const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
+//const bgm = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top2.jpg'];
+const bgm = [];
+//const bgmWhite = ['https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white.jpg', 'https://raw.githubusercontent.com/RomanVinichenko/smidige/master/app/images/top-white1.jpg'];
+const bgmWhite = [];
 
 const body = document.body
 const theme = document.querySelector('.theme-toggle');
@@ -97,6 +99,7 @@ window.addEventListener('scroll', function () {
 });
 
 $(document).ready(function () {
+  AddingArraySrcImgHomeTop();
   let scrollPos = window.scrollY;
   let myStr = localStorage.getItem('theme-color');
   if (myStr == 'light') {
@@ -108,8 +111,7 @@ $(document).ready(function () {
       $('body').css({
         'background-color': '#010c21'
       });
-  }
-  ;
+  };
 
   if (header && scrollPos > 10) {
     header.classList.add("header--active");
@@ -118,6 +120,17 @@ $(document).ready(function () {
     header.classList.remove("header--active");
   }
 });
+
+function AddingArraySrcImgHomeTop(){
+  var myCollection = document.getElementsByClassName('home-black-theme-link');
+  for(let i=0; i<myCollection.length; i++){
+    bgm.push(myCollection[i].innerHTML);
+  }
+  var myCollection = document.getElementsByClassName('home-white-theme-link');
+  for(let i=0; i<myCollection.length; i++){
+    bgmWhite.push(myCollection[i].innerHTML);
+  }
+}
 
 let swiperStudies = new Swiper('.swiper__studies', {
   slidesPerView: 1,
