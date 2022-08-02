@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -277,7 +278,7 @@
   <section class="services" id="services">
     <div class="container">
       <h2 class="wow">Engineering services</h2>
-      <ul class="services__list wow">
+      <ul class="services__list">
         <li class="services-block wow">
           <a href="engineering.html">
             <div class="services-block__holder">
@@ -450,8 +451,8 @@
     <div class="container">
       <h2 class="wow">Get In Touch</h2>
       <h4 class="wow">info@smidige.com</h4>
-      <div class="touch__inner wow">
-        <ul class="touch__place">
+      <div class="touch__inner">
+        <ul class="touch__place wow">
           <li>
             <h6>United States</h6>
             <a class="touch__tel" href="tel:720207282">720 207 2820</a>
@@ -465,7 +466,7 @@
             <p>Sales inquiries</p>
           </li>
         </ul>
-        <form class="form">
+        <form class="form wow">
           <div class="form__block">
             <label>
               <span>Name</span>
@@ -512,41 +513,56 @@
     </div>
   </section>
 </main>
-<footer class="footer wow">
+<div class="footer__pusher"></div>
+<footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__main">
-        <a class="logo" href="#">
-          <img class="logo-white" src="images/logo.svg" alt="Logo">
-          <img class="logo-black" src="images/logo-black.svg" alt="Logo">
+        <a class="logo" href="index.html">
+          <lottie-player class="logo-black"
+                         src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"
+                         background="transparent" speed="1" hover loop></lottie-player>
+          <lottie-player class="logo-white"
+                         src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"
+                         background="transparent" speed="1" hover loop></lottie-player>
         </a>
         <ul>
           <li class="footer__network">
-            <img src="images/linkedin.svg" alt="Linkedin">
-            <span></span>
+            <a href="#">
+              <img src="images/linkedin.svg" alt="Linkedin">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/facebook.svg" alt="Facebook">
-            <span></span>
+            <a href="#">
+              <img src="images/facebook.svg" alt="Facebook">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/instagram.svg" alt="Instagram">
-            <span></span>
+            <a href="#">
+              <img src="images/instagram.svg" alt="Instagram">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
       <ul class="footer__menu">
         <li class="footer__item">
           <a href="#">Service</a>
-          <ul class="footer__submenu">
-            <li>
-              <a href="#">Engineering services</a>
-              <ul class="footer__thirdmenu">
+          <div class="footer__submenu">
+            <div>
+              <span>Engineering services</span>
+              <ul class="footer__submenu">
                 <li>
-                  <a href="#">IT consulting</a>
+                  <a href="#">
+                    IT consulting
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Software engineering</a>
+                  <a href="#">
+                    Software engineering
+                  </a>
                 </li>
                 <li>
                   <a href="#">Managed IT Services</a>
@@ -555,10 +571,10 @@
                   <a href="#">DevOps</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#">Technology advisory</a>
-              <ul class="footer__thirdmenu">
+            </div>
+            <div>
+              <span>Technology advisory</span>
+              <ul class="footer__submenu">
                 <li>
                   <a href="#">Cloud</a>
                 </li>
@@ -566,18 +582,20 @@
                   <a href="#">Atlassian</a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </li>
         <li class="footer__item footer__item-wrap">
           <div class="footer__item">
             <a href="#">Case studies</a>
           </div>
           <div class="footer__item">
-            <a href="#">Company</a>
+            <a href="#" class="disable-link">Company</a>
             <ul class="footer__submenu">
               <li>
-                <a href="#">About us</a>
+                <a href="#">
+                  About us
+                </a>
               </li>
               <li>
                 <a href="#">Approach</a>
@@ -610,8 +628,6 @@
     </div>
   </div>
 </footer>
-<div class="footer__pusher">
-</div>
 <script src="js/wow.min.js"></script>
 <script>
   new WOW().init();

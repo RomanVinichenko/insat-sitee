@@ -17,13 +17,14 @@
     position: absolute;
     left: 50%;
     bottom: 88px;
+    opacity: 0;
     padding: 0;
     height: 48px;
     border: none;
     border-radius: 0;
     background-color: transparent;
     transform: translateX(-50%);
-    animation: fade-link 0.8s;
+    animation: fade-link 1s 0.4s forwards;
 
     &__wrap {
       height: 20px;
@@ -66,10 +67,11 @@
   }
 
   h1 {
+    opacity: 0;
     max-width: 800px;
     text-align: center;
     text-transform: uppercase;
-    animation: fade 0.5s;
+    animation: fade 1s 0.2s forwards;
 
     @include m($lg) {
       padding: 0 16px;
@@ -81,6 +83,8 @@
   padding: 200px 0;
 
   .slime {
+    animation: fade 1s;
+
     @include m($md) {
       position: absolute;
       left: 0;
@@ -99,7 +103,7 @@
 
   h6 {
     margin-bottom: 24px;
-    animation: fade 0.8s;
+    animation: fade 1s;
   }
 
   ul {
@@ -274,7 +278,7 @@
   background-color: $gray-dark;
 
   &__list {
-    animation: fade 0.8s;
+    animation: fade 1.4s;
   }
 
   .section__title {
@@ -393,6 +397,8 @@
   }
 
   .slime {
+    animation: fade 1s;
+
     @include m($md) {
       position: absolute;
       left: 0;
@@ -410,7 +416,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: auto;
     max-width: 588px;
-    animation: fade 0.8s;
+    animation: fade 1.2s;
 
     li {
       width: 100%;
@@ -856,28 +862,29 @@
 
 .swiper__studies {
   overflow: visible;
-  animation: fade 0.8s;
 
   .swiper-slide {
+    opacity: 0;
+    animation: fade 1s forwards;
+
     &:first-child {
-      animation: fade 0.8s;
+      animation-delay: 0.2s;
     }
 
     &:nth-child(2) {
-      animation: fade 1.2s;
+      animation-delay: 0.3s;
     }
 
     &:nth-child(3) {
-      animation: fade 1.5s;
+      animation-delay: 0.4s;
     }
 
     &:nth-child(4) {
-      animation: fade 1.6s;
+      animation-delay: 0.5s;
     }
 
-    @include m(547) {
-      width: 100%;
-      max-width: 80%;
+    &:nth-child(5) {
+      animation-delay: 0.6s;
     }
   }
 }

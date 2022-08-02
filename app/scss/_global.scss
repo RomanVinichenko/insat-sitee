@@ -1353,12 +1353,12 @@ h6 {
     margin-bottom: 40px;
 
     .slime {
-      animation: fade 0.8s;
+      animation: fade 1s;
     }
 
     h5 {
       padding-bottom: 8px;
-      animation: fade 0.8s;
+      animation: fade 1s;
 
       span {
         display: inline-block;
@@ -1896,7 +1896,31 @@ h6 {
 
 .swiper__scope {
   overflow: visible;
-  animation: fade 0.8s;
+
+  .swiper-slide {
+    opacity: 0;
+    animation: fade 1s forwards;
+
+    &:first-child {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.6s;
+    }
+  }
 }
 
 .rich-text {
@@ -2024,22 +2048,6 @@ h6 {
   pointer-events: none;
 }
 
-@keyframes fade-link {
-  0% {
-    opacity: 0;
-    transform: translateY(80px) translateX(-50%);
-  }
-
-  30% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) translateX(-50%);
-  }
-}
-
 .slime--text {
   padding: 0;
   width: fit-content;
@@ -2164,7 +2172,6 @@ h6 {
   height: 24px;
   border: none;
   line-height: 1;
-  background-image: url("../../images/close-pop.svg");
   background-color: transparent;
 
   @include m($md) {
@@ -2264,6 +2271,22 @@ h6 {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-link {
+  0% {
+    opacity: 0;
+    transform: translateY(120px) translateX(-50%);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
   }
 }
 

@@ -136,7 +136,7 @@ let swiperStudies = new Swiper('.swiper__studies', {
 
 let swiperScope = new Swiper('.swiper__scope', {
   slidesPerView: 1,
-  spaceBetween: 12,
+  spaceBetween: 24,
   breakpoints: {
     630: {
       slidesPerView: 2,
