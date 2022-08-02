@@ -639,41 +639,57 @@
     </div>
   </section>
 </main>
-<footer class="footer wow">
+<div class="footer__pusher">
+</div>
+<footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__main">
-        <a class="logo" href="#">
-          <img class="logo-white" src="images/logo.svg" alt="Logo">
-          <img class="logo-black" src="images/logo-black.svg" alt="Logo">
+        <a class="logo" href="index.html">
+          <lottie-player class="logo-black"
+                         src="https://assets2.lottiefiles.com/packages/lf20_yu9bnld9/smidige_logo_hover.json"
+                         background="transparent" speed="1" hover loop></lottie-player>
+          <lottie-player class="logo-white"
+                         src="https://assets7.lottiefiles.com/packages/lf20_wka1qc1o/smidige_logo_hover_dark.json"
+                         background="transparent" speed="1" hover loop></lottie-player>
         </a>
         <ul>
           <li class="footer__network">
-            <img src="images/linkedin.svg" alt="Linkedin">
-            <span></span>
+            <a href="#">
+              <img src="images/linkedin.svg" alt="Linkedin">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/facebook.svg" alt="Facebook">
-            <span></span>
+            <a href="#">
+              <img src="images/facebook.svg" alt="Facebook">
+              <span></span>
+            </a>
           </li>
           <li class="footer__network">
-            <img src="images/instagram.svg" alt="Instagram">
-            <span></span>
+            <a href="#">
+              <img src="images/instagram.svg" alt="Instagram">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
       <ul class="footer__menu">
         <li class="footer__item">
           <a href="#">Service</a>
-          <ul class="footer__submenu">
-            <li>
+          <div class="footer__submenu">
+            <div>
               <span>Engineering services</span>
-              <ul class="footer__thirdmenu">
+              <ul class="footer__submenu">
                 <li>
-                  <a href="#">IT consulting</a>
+                  <a href="#">
+                    IT consulting
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Software engineering</a>
+                  <a href="#">
+                    Software engineering
+                  </a>
                 </li>
                 <li>
                   <a href="#">Managed IT Services</a>
@@ -682,10 +698,10 @@
                   <a href="#">DevOps</a>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <span>Technology advisory</span>
-              <ul class="footer__thirdmenu">
+              <ul class="footer__submenu">
                 <li>
                   <a href="#">Cloud</a>
                 </li>
@@ -693,8 +709,8 @@
                   <a href="#">Atlassian</a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </li>
         <li class="footer__item footer__item-wrap">
           <div class="footer__item">
@@ -704,7 +720,9 @@
             <a href="#" class="disable-link">Company</a>
             <ul class="footer__submenu">
               <li>
-                <a href="#">About us</a>
+                <a href="#">
+                  About us
+                </a>
               </li>
               <li>
                 <a href="#">Approach</a>
@@ -740,13 +758,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
   new WOW().init();
 </script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

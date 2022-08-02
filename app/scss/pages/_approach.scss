@@ -48,12 +48,21 @@
     margin-bottom: 24px;
   }
 
+  ul:first-child {
+    animation: fade 1s;
+  }
+
+  ul:last-child {
+    animation: fade 1.4s;
+  }
+
   p {
     color: $gray;
   }
 
   &__img {
     align-self: center;
+    animation: fade 1.2s;
 
     img {
       margin: 0 auto;
@@ -160,8 +169,6 @@
   }
 
   &__info {
-    animation: fade 1.4s;
-
     li {
       position: relative;
       display: flex;
@@ -169,6 +176,7 @@
       margin-top: 32px;
       padding-top: 32px;
       border-top: 1px solid $gray-medium;
+      animation: fade 1.4s;
 
       span {
         display: none;
@@ -282,6 +290,10 @@
     }
   }
 
+  &__text {
+    animation: fade 1.25s;
+  }
+
   ul {
     margin-top: 40px;
 
@@ -310,7 +322,6 @@
   padding-bottom: 160px;
   border-radius: 0 0 40px 40px;
   background-color: $black;
-  animation: under-left 0.8s;
 
   &__wrap {
     z-index: 10;
@@ -322,6 +333,7 @@
     position: relative;
     z-index: 10;
     padding: 160px 0;
+    animation: under-left 0.8s;
 
     &::after {
       left: 0;
@@ -361,10 +373,25 @@
     grid-column-gap: 24px;
     grid-row-gap: 24px;
     grid-template-columns: 1fr 1fr;
-    animation: fade 1.2s;
 
     li {
       color: $gray;
+
+      &:first-child {
+        animation: fade 1.2s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.3s;
+      }
+
+      &:nth-child(3) {
+        animation: fade 1.4s;
+      }
+
+      &:nth-child(4) {
+        animation: fade 1.5s;
+      }
     }
 
     ul {
