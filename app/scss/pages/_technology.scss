@@ -47,6 +47,18 @@
         font-size: 14px;
         line-height: 22px;
       }
+
+      &:first-child {
+        animation: fade 1s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.2s;
+      }
+
+      &:nth-child(3) {
+        animation: fade 1.4s;
+      }
     }
 
     @include m($md) {
@@ -91,10 +103,15 @@
 
   h2 {
     margin-bottom: 40px;
+    animation: fade 1.2s;
 
     @include m($lg) {
       margin-bottom: 24px;
     }
+  }
+
+  &__text {
+    animation: fade 1.3s;
   }
 
   ul {
@@ -115,6 +132,22 @@
         &:not(:last-child) {
           margin-bottom: 16px;
         }
+      }
+
+      &:first-child {
+        animation: fade 1.4s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 1.6s;
+      }
+
+      &:nth-child(3) {
+        animation: fade 1.8s;
+      }
+
+      &:nth-child(4) {
+        animation: fade 2s;
       }
     }
 
@@ -142,10 +175,14 @@
 
 .models {
   padding-top: 160px;
-  animation: fade 0.8s;
 
   h2 {
     margin-bottom: 24px;
+    animation: fade 1s;
+  }
+
+  &__text {
+    animation: fade 1.2s;
   }
 
   p {
@@ -176,6 +213,7 @@
     height: 588px;
     overflow: hidden;
     border-radius: 24px;
+    animation: fade 1.4s;
 
     img {
       width: 100%;
@@ -290,6 +328,7 @@
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
+    animation: fade 1.4s;
 
     + .panel {
       margin-top: 0;
@@ -596,7 +635,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      animation: fade 1.8s;
+      animation: fade 1.4s;
 
       &:not(:last-child) {
         margin-bottom: 80px;
