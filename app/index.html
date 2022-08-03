@@ -264,7 +264,7 @@
   <section class="top" id="top-section">
     <div class="top__inner">
       <h1>WORK BETTER WITH SMIDIGE TECHNOLOGIES</h1>
-      <a class="slime" href="#do">
+      <a class="slime slime-btn" href="#do">
         <div class="slime__add">
           <div class="slime__add-wrap">
             <div class="slime__add-inner">
@@ -803,28 +803,6 @@
     </div>
   </section>
 </main>
-
-<div class="cookie">
-  <h6>Cookies policy</h6>
-  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions, in order to make the navigation of our website easy and safe for our users.
-  </p>
-  <div class="cookie__wrap">
-    <a class="slime expert__button" href="#">
-      <div class="slime__wrap">
-        <div class="slime__block">
-          <p>Accept cookies</p>
-        </div>
-        <div class="slime__block">
-          <p>Accept cookies</p>
-        </div>
-      </div>
-    </a>
-    <a class="cookie__policy" href="#">
-      <span>Cookies policy</span>
-    </a>
-  </div>
-  <button class="close-pop"></button>
-</div>
 <!--<div class="thank-sent">-->
 <!--  <div class="thank-sent__inner">-->
 <!--    <h5>Thank you for your message</h5>-->
@@ -842,7 +820,31 @@
 <!--    <button class="close-pop"></button>-->
 <!--  </div>-->
 <!--</div>-->
-<div class="footer__pusher">
+<div id="cookie" class="cookie hide-cookie">
+  <h6>Cookies policy</h6>
+  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions, in order to make the navigation of our website easy and safe for our users.
+  </p>
+  <div class="cookie__wrap">
+    <a class="slime expert__button" href="#" onclick="CloseCookie(1)">
+      <div class="slime__wrap">
+        <div class="slime__block">
+          <p>Accept cookies</p>
+        </div>
+        <div class="slime__block">
+          <p>Accept cookies</p>
+        </div>
+      </div>
+    </a>
+    <a class="cookie__policy" href="<?php echo get_site_url() ?>">
+      <span>Cookies policy</span>
+    </a>
+  </div>
+  <button onclick="CloseCookie(2)" class="close-pop">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.75 5.25L5.25 18.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M18.75 18.75L5.25 5.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 </div>
 <footer class="footer">
   <div class="container">
@@ -958,6 +960,8 @@
     </div>
   </div>
 </footer>
+<div class="footer__pusher">
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
