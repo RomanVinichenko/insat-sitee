@@ -218,14 +218,6 @@ body {
     }
   }
 
-  .menu-mobile .accordion-toggle svg path {
-    stroke: $gray-medium !important;
-  }
-
-  .menu-mobile .accordion-toggle {
-    border-top: 1px solid $gray !important;
-  }
-
   .section__title {
     p {
       color: $gray-medium;
@@ -1160,6 +1152,14 @@ body {
 
   .menu-mobile {
     background-color: $white;
+
+    .accordion-toggle {
+      color: $gray-dark;
+    }
+
+    &__main {
+      color: $gray-dark;
+    }
   }
 
   .menu-mobile--active {
