@@ -381,6 +381,15 @@ document.querySelectorAll('.preview__link').forEach(anchor => {
   });
 });
 
+document.querySelectorAll('.slime-btn').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
 function calcFooterHeight() {
   const footerAnim = document.querySelector('.footer').scrollHeight;
   const footerPusher = document.querySelector('.footer__pusher');

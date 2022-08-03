@@ -49,6 +49,12 @@ body {
       border: 1px solid $gray !important;
     }
 
+    svg {
+      path {
+        stroke: $black;
+      }
+    }
+
     .cookie__policy {
       color: $black;
 
