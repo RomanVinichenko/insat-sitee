@@ -1046,10 +1046,14 @@ body {
       li {
         a {
           border-top: 1px solid $gray;
+        }
 
-          &::after {
-            content: url("../../images/vacancy-open-bl.svg");
-          }
+        .vacancies__img-white {
+          opacity: 0;
+        }
+
+        .vacancies__img-black {
+          opacity: 1;
         }
 
         &:last-child a {
@@ -2188,9 +2192,11 @@ h6 {
   }
 
   @include m($sm) {
+    left: 50%;
     right: 0;
     bottom: 16px;
-    max-width: 100%;
+    max-width: 93%;
+    transform: translateX(-50%);
   }
 }
 
