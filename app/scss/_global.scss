@@ -33,6 +33,31 @@ body {
 .light {
   background-color: $white;
 
+  .cookie {
+    border: 1px solid $gray;
+    background: $white;
+
+    h6 {
+      color: $black;
+    }
+
+    p {
+      color: $gray-dark;
+    }
+
+    .slime {
+      border: 1px solid $gray !important;
+    }
+
+    .cookie__policy {
+      color: $black;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
   .sun {
     .logo-black {
       display: none !important;
