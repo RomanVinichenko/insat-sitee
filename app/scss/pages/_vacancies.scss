@@ -6,7 +6,27 @@
 
   &__list {
     li {
+      position: relative;
       animation: fade 1.2s;
+
+      img {
+        position: absolute;
+        right: 0;
+        top: 35px;
+        display: none;
+
+        @include m($md) {
+          display: block;
+        }
+      }
+
+      .vacancies__img-white {
+        opacity: 1;
+      }
+
+      .vacancies__img-black {
+        opacity: 0;
+      }
 
       a {
         position: relative;
@@ -14,21 +34,6 @@
         padding: 32px 0;
         border-top: 1px solid $gray-dark;
         transition: all 0.2s;
-
-        &::after {
-          content: url("../../images/vacancy-open.svg");
-          position: absolute;
-          right: 0;
-          top: 24px;
-          z-index: 0;
-          display: none;
-          width: 28px;
-          height: 27px;
-
-          @include m($md) {
-            display: block;
-          }
-        }
 
         span {
           display: none;

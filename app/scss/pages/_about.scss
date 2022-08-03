@@ -311,6 +311,9 @@
 
     img {
       margin-bottom: 24px;
+      width: 141px;
+      height: 56px;
+      object-fit: cover;
 
       @include m(620) {
         margin-bottom: 16px;

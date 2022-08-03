@@ -338,6 +338,15 @@
   transition: all 0.3s;
   animation: none !important;
 
+  &__main {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+  }
+
   .theme-mob {
     margin: 0 auto 20px;
   }
@@ -354,25 +363,33 @@
   }
 
   .accordion-toggle {
-    height: 72px !important;
-    border-top: 1px solid $gray-dark !important;
-
-    svg {
-      path {
-        stroke: $white !important;
-      }
-    }
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+    color: $white;
   }
 
   .panel-group {
     margin-bottom: 40px !important;
   }
 
+  &__box {
+    display: flex;
+  }
+
   .panel-body {
     display: flex;
+    flex-direction: column;
 
     ul {
       margin-bottom: 24px !important;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 12px !important;
+        }
+      }
     }
   }
 
@@ -380,8 +397,10 @@
     span {
       display: block;
       margin-bottom: 12px;
+      font-weight: 400;
       font-size: 14px;
       line-height: 22px;
+      color: $gray-medium;
     }
 
     ul {
@@ -389,15 +408,10 @@
       flex-direction: column;
 
       a {
-        font-size: 12px;
-        line-height: 20px;
-        color: $gray-medium;
-      }
-
-      li {
-        &:not(:last-child) {
-          margin-bottom: 12px;
-        }
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
       }
     }
 
