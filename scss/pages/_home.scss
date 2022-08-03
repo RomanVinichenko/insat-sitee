@@ -971,6 +971,7 @@
 .cookie__policy {
   display: block;
   text-decoration: none;
+  transition: all 0.3s;
 
   span {
     width: calc(100%);
@@ -981,6 +982,8 @@
   }
 
   &:hover {
+    color: $orange;
+
     span {
       background-size: 100% 90%;
     }
