@@ -80,7 +80,7 @@ $(function () {
       $(this).find('span').css({top: relY, left: relX})
     });
   $('[href="#"]').click(function () {
-    return false
+    return false;
   });
 });
 
