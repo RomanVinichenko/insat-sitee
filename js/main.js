@@ -34,7 +34,7 @@ if (theme) {
         });
         localStorage.setItem('theme-color', 'black');
       }
-    }, 200);
+    }, 50);
     theme.classList.toggle('theme-toggle__active');
   });
 }
