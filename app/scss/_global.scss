@@ -951,12 +951,6 @@ body {
     &::after {
       background-color: $gray;
     }
-
-    &__info {
-      li:first-child {
-        border-top: 2px solid $black;
-      }
-    }
   }
 
   .model-approach {
@@ -1203,6 +1197,7 @@ body {
   width: 60px;
   height: 32px;
   min-width: 60px;
+  outline: none;
   border: 1px solid $gray-dark;
   border-radius: 100px;
   background-color: $black;
@@ -2266,7 +2261,7 @@ h6 {
 @keyframes under-left {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-60%);
   }
 
   30% {
@@ -2282,7 +2277,7 @@ h6 {
 @keyframes under-right {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(60%);
   }
 
   30% {

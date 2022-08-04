@@ -48,17 +48,13 @@
 
   position: relative;
   padding: 160px 0;
-  animation: under-right 0.8s;
+  animation: under-right 1s;
 
   &::after {
     right: 0;
-    max-width: 1680px;
+    max-width: 90%;
     border-radius: 40px 0 0 40px;
     background-color: $gray-dark;
-
-    @include m($lg) {
-      border-radius: 24px;
-    }
   }
 
   &__wrap {
@@ -347,17 +343,13 @@
 
   position: relative;
   padding: 160px 0;
-  animation: under-left 0.8s;
+  animation: under-left 1s;
 
   &::after {
     left: 0;
-    max-width: 1680px;
+    max-width: 90%;
     border-radius: 0 40px 40px 0;
     background-color: $gray-dark;
-
-    @include m($lg) {
-      border-radius: 24px;
-    }
   }
 
   .container {
