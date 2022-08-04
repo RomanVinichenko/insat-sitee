@@ -1825,6 +1825,11 @@ h6 {
     }
   }
 
+  a {
+    display: block;
+    border-radius: 24px;
+  }
+
   &__holder {
     position: relative;
     display: flex;

@@ -133,6 +133,10 @@
       width: calc((100vw - (100vw - 1200px)) / 2);
       overflow: hidden;
 
+      a {
+        display: block;
+      }
+
       @include m(767) {
         width: 100% !important;
       }
@@ -155,6 +159,7 @@
       justify-content: space-between;
       padding: 40px;
       width: calc((100vw - (100vw - 1200px)) / 2);
+      height: 100%;
       overflow: hidden;
       border-radius: 24px;
       background-position: center;
@@ -611,7 +616,7 @@
   }
 
   &__place {
-    //animation: fade 1s;
+    animation: fade 1s;
 
     li {
       &:not(:last-child) {
@@ -903,6 +908,10 @@
 
   .touch__inner {
     animation: fade 1.2s;
+  }
+
+  .touch__place {
+    animation: none;
   }
 
   h2 {
