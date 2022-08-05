@@ -164,8 +164,6 @@
       border-radius: 24px;
       background-position: center;
       background-size: 100%;
-
-      //background-size: cover;
       background-repeat: no-repeat;
       transition: background-size 0.3s;
 
@@ -196,6 +194,18 @@
 
       &:hover {
         background-size: 105%;
+
+        .relate__box {
+          svg:last-child {
+            left: 0;
+            top: 0;
+          }
+
+          svg:first-child {
+            left: 16px;
+            top: -16px;
+          }
+        }
       }
 
       @include m(767) {
