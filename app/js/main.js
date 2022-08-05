@@ -18,9 +18,9 @@ if (theme) {
         $('body').css({
           'background-color': '#fff'
         });
-        $('.main').css({
-          'background-color': '#fff'
-        });
+        // $('.main').css({
+        //   'background-color': '#fff'
+        // });
         localStorage.setItem('theme-color', 'light');
       } else {
         $('#top-section').css({
@@ -29,9 +29,9 @@ if (theme) {
         $('body').css({
           'background-color': '#010c21'
         });
-        $('.main').css({
-          'background-color': '#010c21'
-        });
+        // $('.main').css({
+        //   'background-color': '#010c21'
+        // });
         localStorage.setItem('theme-color', 'black');
       }
     }, 50);

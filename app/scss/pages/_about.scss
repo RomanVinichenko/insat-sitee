@@ -212,7 +212,6 @@
 .expertise-about {
   position: relative;
   padding: 160px 0;
-  border-radius: 0 0 40px 40px;
   background-color: $black;
 
   @include m($xl) {
@@ -449,7 +448,6 @@
       @include m($xl) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         grid-column-gap: 0;
         grid-row-gap: 0;
       }
