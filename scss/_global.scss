@@ -15,7 +15,7 @@ body {
 }
 
 .main {
-  background-color: $black;
+  background-color: $black; //need due to footer
 }
 
 .page-template-home-php.light {
@@ -31,7 +31,7 @@ body {
 }
 
 .light {
-  background-color: $white;
+  //background-color: $white;
 
   .cookie {
     border: 1px solid $gray;
