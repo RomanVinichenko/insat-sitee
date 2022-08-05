@@ -14,10 +14,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.main {
-  background-color: $black; //need due to footer
-}
-
 .page-template-home-php.light {
   .header {
     .logo-black {
@@ -31,8 +27,6 @@ body {
 }
 
 .light {
-  //background-color: $white;
-
   .cookie {
     border: 1px solid $gray;
     background: $white;
@@ -1615,12 +1609,6 @@ h6 {
     }
   }
 
-  .relate {
-    @include m($sm) {
-      display: none;
-    }
-  }
-
   @include m($lg) {
     border-radius: 0 0 32px 32px;
   }
@@ -1636,6 +1624,29 @@ h6 {
   min-width: 50px;
   overflow: hidden;
   border-radius: 50%;
+
+  &__box {
+    position: relative;
+    z-index: 20;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+
+    svg {
+      position: absolute;
+      transition: all 0.25s;
+    }
+
+    svg:last-child {
+      left: -16px;
+      top: 16px;
+    }
+
+    svg:first-child {
+      left: 0;
+      top: 0;
+    }
+  }
 
   &__text {
     display: flex;
@@ -1881,6 +1892,18 @@ h6 {
     &:hover {
       img {
         transform: scale(1.1);
+      }
+
+      .relate__box {
+        svg:last-child {
+          left: 0;
+          top: 0;
+        }
+
+        svg:first-child {
+          left: 16px;
+          top: -16px;
+        }
       }
     }
 
