@@ -24,10 +24,6 @@ body {
   }
 }
 
-.main {
-  background-color: $black;
-}
-
 .page-template-home-php.light {
   .header {
     .logo-black {
@@ -41,6 +37,10 @@ body {
 }
 
 .light {
+  .main {
+    background-color: $white;
+  }
+
   .cookie {
     border: 1px solid $gray;
     background: $white;
@@ -80,10 +80,6 @@ body {
     .logo-white {
       display: block !important;
     }
-  }
-
-  .main {
-    background-color: $white;
   }
 
   .vacancy-open {

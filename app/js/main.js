@@ -10,26 +10,30 @@ const themeMob = document.querySelector('.theme-mob');
 if (theme) {
   theme.addEventListener('click', function () {
     setTimeout(function () {
-      body.classList.toggle('light');
-      if (body.classList.contains('light')) {
+      if(localStorage.getItem('theme-color') == 'black'){
+        localStorage.setItem('theme-color', 'light');
+      }else{
+        localStorage.setItem('theme-color', 'black');
+      }
+      let myStr = localStorage.getItem('theme-color');
+      if(myStr == 'light'){
         $('#top-section').css({
           'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
         });
-        $('body').css({
-          'background-color': '#fff'
-        });
         localStorage.setItem('theme-color', 'light');
+        body.classList.add('light');
+        body.classList.remove('black');
+        theme.classList.add('theme-toggle__active');
       } else {
         $('#top-section').css({
           'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
         });
-        $('body').css({
-          'background-color': '#010c21'
-        });
         localStorage.setItem('theme-color', 'black');
+        body.classList.remove('light');
+        body.classList.add('black');
+        theme.classList.remove('theme-toggle__active');
       }
-    }, 50);
-    theme.classList.toggle('theme-toggle__active');
+    }, 0);
   });
 }
 
@@ -55,7 +59,6 @@ if (themeMob) {
         localStorage.setItem('theme-color', 'black');
       }
     }, 200);
-    themeMob.classList.toggle('theme-toggle__active');
   });
 }
 
@@ -97,16 +100,20 @@ $(document).ready(function () {
   let scrollPos = window.scrollY;
   let myStr = localStorage.getItem('theme-color');
   if (myStr == 'light') {
-    theme.click();
+    body.classList.add('light');
+    body.classList.remove('black');
+    theme.classList.add('theme-toggle__active');
+    $('#top-section').css({
+      'background-image': 'url(' + bgmWhite[Math.floor(Math.random() * bgmWhite.length)] + ')',
+    });
   } else {
+    body.classList.remove('light');
+    body.classList.add('black');
     $('#top-section').css({
       'background-image': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ')',
-    }),
-      $('body').css({
-        'background-color': '#010c21'
-      });
-  };
-
+    })
+    theme.classList.remove('theme-toggle__active');
+  }
   if (header && scrollPos > 10) {
     header.classList.add("header--active");
 
