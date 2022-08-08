@@ -14,6 +14,20 @@ body {
   scroll-behavior: smooth;
 }
 
+.black {
+  .main {
+    background-color: $black;
+  }
+
+  .footer {
+    background-color: $black;
+  }
+}
+
+.main {
+  background-color: $black;
+}
+
 .page-template-home-php.light {
   .header {
     .logo-black {
@@ -1634,7 +1648,7 @@ h6 {
 
     svg {
       position: absolute;
-      transition: all 0.4s;
+      transition: all 0.23s;
     }
 
     svg:last-child {
