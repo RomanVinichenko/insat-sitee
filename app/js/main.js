@@ -103,6 +103,8 @@ window.addEventListener('scroll', function () {
 $(document).ready(function () {
   AddingArraySrcImgHomeTop();
   let scrollPos = window.scrollY;
+  let footerStart = document.querySelector('.footer')
+  footerStart.style.opacity = '1';
   let myStr = localStorage.getItem('theme-color');
   if (myStr == 'light') {
     body.classList.add('light');
@@ -350,11 +352,11 @@ function touchAnimation() {
 }
 
 function footerAnimation() {
-  const footer = document.querySelector('.footer');
-  const ww = window.innerHeight
-  const footerHeight = footer.getBoundingClientRect().height
-  const footerStart = ww - footerHeight
-  const footerTL = gsap.timeline({
+  let footer = document.querySelector('.footer');
+  let ww = window.innerHeight
+  let footerHeight = footer.getBoundingClientRect().height
+  let footerStart = ww - footerHeight
+  let footerTL = gsap.timeline({
     paused: true,
     scrollTrigger: {
       trigger: footer,
