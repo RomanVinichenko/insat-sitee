@@ -4,6 +4,12 @@
   }
 }
 
+@mixin h($width) {
+  @media only screen and (max-height: $width + "px") {
+    @content;
+  }
+}
+
 @mixin bg-figure {
   &::after {
     content: "";
