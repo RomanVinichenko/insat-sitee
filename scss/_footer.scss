@@ -13,6 +13,10 @@
     @include m($md) {
       margin: 0 0 42px;
     }
+
+    @include m($lg) {
+      display: none;
+    }
   }
 
   .logo-black,

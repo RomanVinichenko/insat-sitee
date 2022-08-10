@@ -2374,7 +2374,7 @@ h6 {
 
 .footer__pusher {
   @include m(853) {
-    min-height: 100vh !important;
+    min-height: fit-content;
   }
 }
 
