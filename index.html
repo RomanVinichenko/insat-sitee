@@ -990,7 +990,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
-  new WOW().init();
+  $( document ).ready(function() {
+    if(document.documentElement.clientWidth>1024){
+      new WOW().init();
+    }
+  });
 </script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
