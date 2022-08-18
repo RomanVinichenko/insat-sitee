@@ -168,6 +168,20 @@ let swiperScope = new Swiper('.swiper__scope', {
   }
 });
 
+let swiperTrusted = new Swiper('.trusted__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: -24,
+  loop: true,
+  disableOnInteraction: false,
+  noSwiping: true,
+  noSwipingClass: 'swiper-slide',
+  speed: 6000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  }
+});
+
 const burger = document.querySelector('.menu__burger');
 const menuMobile = document.querySelector('.menu-mobile');
 if (burger) {
