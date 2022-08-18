@@ -300,10 +300,6 @@
   overflow: hidden;
   background-color: $gray-dark;
 
-  &__list {
-    animation: fade 1.4s;
-  }
-
   .section__title {
     p {
       @include m($lg) {
@@ -333,56 +329,46 @@
     }
   }
 
-  ul {
+  &__slider {
+    animation: fade 1s;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  &__slide {
     display: flex;
-    width: 100vw;
-    animation: trusted 12s linear infinite;
+    align-items: center;
+    justify-content: center;
+    height: 298px;
+    min-width: 298px;
+    max-width: 298px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba($white, 0.24);
+    border-radius: 50%;
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 -24px 0 0;
-      width: calc(20vw + 24px);
-      height: calc(20vw + 24px);
-      min-width: calc(20vw + 24px);
-      min-height: calc(20vw + 24px);
-      max-width: calc(20vw + 24px);
-      max-height: calc(20vw + 24px);
-      border-style: solid;
-      border-width: 1px;
-      border-color: rgba($white, 0.24);
-      border-radius: 50%;
-
-      img {
-        @include m($lg) {
-          max-width: 80px;
-        }
-
-        @include m($md) {
-          max-width: 70px;
-        }
+    img {
+      @include m($lg) {
+        max-width: 80px;
       }
 
       @include m($md) {
-        margin: 0 -12px 0 0;
-        width: calc(25vw + 12px);
-        height: calc(25vw + 12px);
-        min-width: calc(25vw + 12px);
-        min-height: calc(25vw + 12px);
-        max-width: calc(25vw + 12px);
-        max-height: calc(25vw + 12px);
+        max-width: 70px;
       }
+    }
 
-      @include m($md) {
-        margin: 0 -8px 0 0;
-        width: calc(33.3vw + 8px);
-        height: calc(33.3vw + 8px);
-        min-width: calc(33.3vw + 8px);
-        min-height: calc(33.3vw + 8px);
-        max-width: calc(33.3vw + 8px);
-        max-height: calc(33.3vw + 8px);
-      }
+    @include m($lg) {
+      height: 200px;
+      min-width: 200px;
+      max-width: 200px;
+    }
+
+    @include m($lg) {
+      height: 185px;
+      min-width: 185px;
+      max-width: 185px;
     }
   }
 
@@ -868,16 +854,6 @@
 
   @include m($lg) {
     padding: 111px 0 80px;
-  }
-}
-
-@keyframes trusted {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
   }
 }
 
