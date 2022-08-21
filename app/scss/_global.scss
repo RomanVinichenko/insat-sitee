@@ -41,6 +41,14 @@ body {
     background-color: $white;
   }
 
+  .trusted__slide {
+    border: 1px solid #7987a4;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
   .cookie {
     border: 1px solid $gray;
     background: $white;
