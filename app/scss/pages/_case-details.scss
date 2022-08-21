@@ -5,8 +5,6 @@
     display: flex;
     justify-content: space-between;
 
-    //animation: fade 0.8s;
-
     h5 {
       @include m($lg) {
         margin: 56px 0 16px;
