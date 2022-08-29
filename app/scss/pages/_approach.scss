@@ -12,11 +12,15 @@
 
     h6 {
       margin-bottom: 8px;
+      text-align: center;
     }
 
     p {
+      margin: 0 auto;
+      max-width: 95%;
       font-size: 12px;
       line-height: 20px;
+      text-align: center;
       color: $gray;
     }
 
@@ -33,10 +37,6 @@
 
   &__mobile-inner {
     display: flex;
-
-    .setup__mobile-block:first-child {
-      margin-right: 16px;
-    }
 
     .setup__mobile-block {
       width: 100%;
