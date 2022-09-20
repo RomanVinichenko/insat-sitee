@@ -1,4 +1,4 @@
-# Gulp template
+# Gulp template smidige
 1. npm i
 2. gulp - for start gulp
 3. gulp build - production
