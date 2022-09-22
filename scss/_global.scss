@@ -37,6 +37,107 @@ body {
 }
 
 .light {
+  .align {
+    h2 {
+      color: #010c21;
+    }
+
+    &__start-box {
+      p {
+        color: #2b3549;
+      }
+    }
+
+    &__item {
+      border-top: 2px solid #010c21;
+
+      h5 {
+        color: #010c21;
+      }
+
+      ul {
+        li {
+          color: #2b3549;
+        }
+      }
+    }
+  }
+
+  .automation {
+    h2 {
+      color: #010c21;
+    }
+
+    .nav-tabs {
+      &::after {
+        background-image: linear-gradient(270deg, #fff 5%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      a {
+        color: #010c21;
+      }
+    }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:focus,
+    .nav-tabs > li.active > a:hover {
+      color: #6c57ff;
+    }
+
+    .nav-tabs > li > a:hover {
+      color: #6c57ff;
+    }
+
+    &__start {
+      h4 {
+        color: #010c21;
+      }
+    }
+
+    &__start-box {
+      p {
+        color: #2b3549;
+      }
+    }
+
+    &__item {
+      li {
+        h6 {
+          color: #010c21;
+        }
+
+        p {
+          color: #2b3549;
+        }
+      }
+    }
+
+    &__pic-black {
+      display: none;
+    }
+
+    &__pic-white {
+      display: block;
+    }
+  }
+
+  .engagement {
+    color: #010c21;
+    background: #bcc5d7;
+
+    &__check {
+      svg {
+        path {
+          stroke: #010c21;
+        }
+
+        rect {
+          stroke: #010c21;
+        }
+      }
+    }
+  }
+
   .main {
     background-color: $white;
   }
@@ -2087,9 +2188,11 @@ h6 {
 
     p {
       margin: 0;
+      width: max-content;
       font-weight: 400;
       font-size: 12px;
       line-height: 20px;
+      text-align: center;
     }
 
     .slime__wrap {
