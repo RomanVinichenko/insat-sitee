@@ -495,8 +495,32 @@
   margin: 160px 0;
 
   h2 {
+    position: relative;
     margin-bottom: 40px;
     animation: fade 0.8s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -64px;
+      z-index: 5;
+      width: 190px;
+      height: 24px;
+      background-image: linear-gradient(270deg, #010c21 5%, rgba(255, 255, 255, 0) 100%);
+
+      @include m($xl) {
+        bottom: -54px;
+      }
+
+      @include m($lg) {
+        bottom: -48px;
+      }
+
+      @include m($md) {
+        width: 100px;
+      }
+    }
 
     @include m($xl) {
       margin-bottom: 30px;
@@ -681,21 +705,13 @@
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
     width: 100%;
     overflow-x: scroll;
-    border-bottom: 2px solid #7987a4;
-    animation: fade 1s;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0 !important;
-      top: 0;
-      width: 190px;
-      height: 24px;
-      background-image: linear-gradient(270deg, #010c21 5%, rgba(255, 255, 255, 0) 100%);
-    }
+    //border-bottom: 2px solid #7987a4;
+    border: none;
+    animation: fade 1s;
 
     li {
       min-width: fit-content;
@@ -714,6 +730,52 @@
         margin-left: 32px;
       }
     }
+
+    //
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 8px none #fff;
+      border-radius: 50px;
+      background: #6c57ff;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #6c57ff;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+      background: #6c57ff;
+    }
+
+    &::-webkit-scrollbar-track {
+      border: 0 none #fff;
+      border-radius: 21px;
+      background: #303030;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+      //background: #aaa;
+    }
+
+    &::-webkit-scrollbar-track:active {
+      //background: #aaa;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+
+    //
   }
 
   .tab-content {
