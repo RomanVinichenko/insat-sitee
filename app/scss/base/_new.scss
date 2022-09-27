@@ -368,35 +368,36 @@
   }
 
   &__middle {
-    display: grid;
-    grid-gap: 0 24px;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     margin-top: 80px;
 
     ul {
       display: grid;
       grid-gap: 32px 24px;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      animation: fade 1.2s;
 
-      &:first-of-type {
-        animation: fade 1.2s;
-
-        @include m($md) {
-          margin-bottom: 24px;
-        }
-      }
-
-      &:last-of-type {
-        animation: fade 1.4s;
+      li {
+        padding-right: 15px;
+        width: 100%;
+        max-width: 170px;
       }
 
       @include m($lg) {
-        grid-gap: 24px;
+        grid-gap: 24px 18px;
       }
     }
 
     h6 {
+      margin-right: 24px;
+      width: 100%;
+      max-width: 32%;
       animation: fade 1s;
+
+      @include m($lg) {
+        margin-right: 18px;
+      }
 
       @include m($md) {
         margin-bottom: 24px;
@@ -408,12 +409,12 @@
     }
 
     @include m($lg) {
-      grid-gap: 0 18px;
+      //grid-gap: 0 18px;
       margin-top: 40px;
     }
 
     @include m($md) {
-      grid-template-columns: 1fr;
+      //grid-template-columns: 1fr;
     }
   }
 
