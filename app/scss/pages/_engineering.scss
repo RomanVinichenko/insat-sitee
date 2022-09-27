@@ -1,4 +1,5 @@
 .key {
+  margin: 160px 0;
   padding: 160px 0;
   animation: fade 0.8s;
 
@@ -85,10 +86,12 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
@@ -97,6 +100,7 @@
   @include bg-figure;
 
   position: relative;
+  margin: 160px 0;
   padding: 160px 0;
   animation: under-right 1s;
 
@@ -195,16 +199,18 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
 
 .expert {
-  padding: 160px 0;
+  margin: 160px 0;
   animation: fade 1.2s;
 
   &__wrapper {
@@ -302,11 +308,11 @@
   }
 
   @include m($xl) {
-    padding: 120px 0;
+    margin: 120px 0;
   }
 
   @include m($lg) {
-    padding: 80px 0;
+    margin: 80px 0;
   }
 }
 
@@ -418,6 +424,7 @@
   @include bg-figure;
 
   position: relative;
+  margin: 160px 0;
   padding: 160px 0;
   animation: under-right 1s;
 
@@ -508,16 +515,18 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
 
 .consulting {
-  padding-top: 160px;
+  margin: 160px 0;
 
   h2 {
     margin-bottom: 40px;
@@ -581,14 +590,18 @@
     padding-top: 120px;
   }
 
+  @include m($xl) {
+    margin: 120px 0;
+  }
+
   @include m($lg) {
-    padding-top: 80px;
+    margin: 80px 0;
   }
 }
 
 .scope {
   position: relative;
-  padding: 40px 0 200px;
+  margin: 200px 0;
   overflow: hidden;
   background-color: $black;
 
@@ -621,14 +634,10 @@
   }
 
   @include m($xl) {
-    padding: 40px 0 150px;
+    margin: 150px 0;
   }
 
   @include m($lg) {
-    padding: 0 0 80px;
-  }
-
-  @include m($md) {
-    padding: 0 0 176px;
+    margin: 80px 0;
   }
 }

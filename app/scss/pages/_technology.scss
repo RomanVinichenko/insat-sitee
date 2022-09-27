@@ -1,5 +1,5 @@
 .strategy {
-  padding-top: 160px;
+  margin: 160px 0;
   animation: fade 0.8s;
 
   &__img-black {
@@ -69,17 +69,18 @@
   }
 
   @include m($xl) {
-    padding-top: 120px;
+    margin: 120px 0;
   }
 
   @include m($lg) {
-    padding-top: 80px;
+    margin: 80px 0;
   }
 }
 
 .expertise {
   position: relative;
   z-index: 10;
+  margin: 160px 0;
   padding: 160px 0;
   animation: fade 1s;
 
@@ -165,16 +166,18 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
 
 .models {
-  padding-top: 160px;
+  margin: 160px 0;
 
   h2 {
     margin-bottom: 24px;
@@ -382,11 +385,11 @@
   }
 
   @include m($xl) {
-    padding-top: 120px;
+    margin: 120px 0;
   }
 
   @include m($lg) {
-    padding-top: 80px;
+    margin: 80px 0;
   }
 }
 
@@ -394,6 +397,7 @@
   @include bg-figure;
 
   position: relative;
+  margin: 160px 0;
   padding: 160px 0;
   animation: under-right 1s;
 
@@ -465,16 +469,18 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
 
 .options {
-  padding: 160px 0;
+  margin: 160px 0;
   animation: fade 0.8s;
 
   h2 {
@@ -576,11 +582,11 @@
   }
 
   @include m($xl) {
-    padding: 120px 0;
+    margin: 120px 0;
   }
 
   @include m($lg) {
-    padding: 80px 0;
+    margin: 80px 0;
   }
 }
 
@@ -588,7 +594,7 @@
   @include bg-figure;
 
   position: relative;
-  margin-bottom: 160px;
+  margin: 160px 0;
   padding: 160px 0;
   animation: under-left 1s;
 
@@ -772,21 +778,13 @@
   }
 
   @include m($xl) {
-    margin-bottom: 120px;
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
-    margin-bottom: 80px;
+    margin: 80px 0;
     padding: 80px 0;
-  }
-
-  @include m($md) {
-    padding: 80px 0 64px;
-  }
-
-  @include m(375) {
-    padding: 80px 0 75px;
   }
 }
 
