@@ -379,13 +379,16 @@
       animation: fade 1.2s;
 
       li {
-        padding-right: 15px;
         width: 100%;
         max-width: 170px;
       }
 
       @include m($lg) {
         grid-gap: 24px 18px;
+      }
+
+      @include m(600) {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -400,7 +403,9 @@
       }
 
       @include m($md) {
+        margin-right: 0;
         margin-bottom: 24px;
+        max-width: 100%;
       }
     }
 
@@ -409,12 +414,11 @@
     }
 
     @include m($lg) {
-      //grid-gap: 0 18px;
       margin-top: 40px;
     }
 
     @include m($md) {
-      //grid-template-columns: 1fr;
+      flex-direction: column;
     }
   }
 
