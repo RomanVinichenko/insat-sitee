@@ -1,6 +1,5 @@
 .key {
   margin: 160px 0;
-  padding: 160px 0;
   animation: fade 0.8s;
 
   &__img-black {
@@ -87,12 +86,10 @@
 
   @include m($xl) {
     margin: 120px 0;
-    padding: 120px 0;
   }
 
   @include m($lg) {
     margin: 80px 0;
-    padding: 80px 0;
   }
 }
 

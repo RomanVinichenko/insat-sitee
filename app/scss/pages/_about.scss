@@ -189,7 +189,7 @@
 
     &::after,
     &::before {
-      content: url("../images/quote-violet.svg");
+      content: url("../../images/quote-violet.svg");
       position: absolute;
       width: 32px;
       height: 20px;
@@ -214,16 +214,7 @@
 
 .expertise-about {
   position: relative;
-  padding: 160px 0;
   background-color: $black;
-
-  @include m($xl) {
-    padding: 120px 0;
-  }
-
-  @include m($lg) {
-    padding: 80px 0;
-  }
 }
 
 .say {
