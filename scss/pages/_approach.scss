@@ -132,8 +132,8 @@
   @include bg-figure;
 
   position: relative;
-  margin: 160px 0;
-  padding: 160px 0;
+  margin: 0 0 160px;
+  padding-top: 160px;
   animation: under-right 1s;
 
   &::after {
@@ -257,13 +257,13 @@
   }
 
   @include m($xl) {
-    margin: 120px 0;
-    padding: 120px 0;
+    margin: 0 0 120px;
+    padding-top: 120px;
   }
 
   @include m($lg) {
-    margin: 80px 0;
-    padding: 80px 0;
+    margin: 0 0 80px;
+    padding-top: 80px;
   }
 }
 
