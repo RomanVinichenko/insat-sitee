@@ -268,7 +268,7 @@
 }
 
 .values {
-  padding: 200px 0 160px;
+  margin: 160px 0;
 
   h2 {
     margin-bottom: 40px;
@@ -326,11 +326,11 @@
   }
 
   @include m($xl) {
-    padding: 150px 0 120px;
+    margin: 120px 0;
   }
 
   @include m($lg) {
-    padding: 80px 0;
+    margin: 80px 0;
   }
 }
 
@@ -338,6 +338,7 @@
   @include bg-figure;
 
   position: relative;
+  margin: 160px 0;
   padding: 160px 0;
   animation: under-left 1s;
 
@@ -456,10 +457,12 @@
   }
 
   @include m($xl) {
+    margin: 120px 0;
     padding: 120px 0;
   }
 
   @include m($lg) {
+    margin: 80px 0;
     padding: 80px 0;
   }
 }
