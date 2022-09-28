@@ -585,11 +585,11 @@
     margin-top: 72px;
     min-height: 169px;
 
-    @include m($xl) {
+    @include m($lg) {
       margin-top: 56px;
     }
 
-    @include m($lg) {
+    @include m($md) {
       margin-top: 48px;
     }
   }
@@ -609,88 +609,57 @@
   &__items {
     margin-bottom: 72px;
 
-    @include m($xl) {
+    @include m($lg) {
       margin-bottom: 56px;
     }
 
-    @include m($lg) {
+    @include m($md) {
       margin-bottom: 48px;
     }
   }
 
   &__item {
-    ul {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-      li {
-        width: 100%;
-        max-width: 180px;
+    h6 {
+      margin-right: 24px;
+      width: 100%;
+      max-width: 387px;
 
-        + li {
-          margin-left: 24px;
+      @include m($xl) {
+        max-width: 270px;
+      }
 
-          @include m($xl) {
-            margin-left: 16px;
-          }
-
-          @include m($md) {
-            margin-left: 0;
-          }
-        }
-
-        p:not(:last-child) {
-          margin-bottom: 32px;
-
-          @include m($lg) {
-            margin-bottom: 24px;
-          }
-        }
-
-        &:first-child {
-          margin-left: 0;
-          width: 100%;
-          max-width: 387px;
-
-          @include m($xl) {
-            max-width: 300px;
-          }
-
-          @include m($lg) {
-            min-width: 160px;
-          }
-
-          @include m($md) {
-            margin-right: 0;
-            margin-bottom: 24px;
-            padding-right: 0;
-            max-width: 100%;
-          }
-        }
-
-        &:nth-child(2),
-        &:nth-child(3) {
-          @include m($md) {
-            margin-bottom: 24px;
-          }
-        }
-
-        @include m($xl) {
-          max-width: 150px;
-        }
-
-        @include m($lg) {
-          max-width: 130px;
-        }
-
-        @include m($md) {
-          padding-right: 10px;
-          max-width: 50%;
-        }
+      @include m($lg) {
+        margin-right: 15px;
+        max-width: 155px;
       }
 
       @include m($md) {
-        flex-wrap: wrap;
+        margin-right: 0;
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      display: grid;
+      flex-wrap: wrap;
+      grid-gap: 32px 24px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+
+      @include m($lg) {
+        grid-gap: 24px 15px;
+      }
+
+      @include m($md) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include m($sm) {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -704,6 +673,10 @@
         padding-bottom: 40px;
       }
     }
+
+    @include m($md) {
+      flex-direction: column;
+    }
   }
 
   .nav-tabs {
@@ -713,8 +686,6 @@
     padding-bottom: 16px;
     width: 100%;
     overflow-x: scroll;
-
-    //border-bottom: 2px solid #7987a4;
     border: none;
     animation: fade 1s;
 
@@ -735,8 +706,6 @@
         margin-left: 32px;
       }
     }
-
-    //
 
     &::-webkit-scrollbar {
       width: 5px;
@@ -768,19 +737,9 @@
       background: #303030;
     }
 
-    &::-webkit-scrollbar-track:hover {
-      //background: #aaa;
-    }
-
-    &::-webkit-scrollbar-track:active {
-      //background: #aaa;
-    }
-
     &::-webkit-scrollbar-corner {
       background: transparent;
     }
-
-    //
   }
 
   .tab-content {
