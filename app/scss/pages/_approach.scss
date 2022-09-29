@@ -269,10 +269,6 @@
     margin: 0;
     max-width: 370px;
   }
-
-  @include m($lg) {
-    padding: 80px 0 110px;
-  }
 }
 
 .expertise-approach {
