@@ -37,6 +37,10 @@ body {
 }
 
 .light {
+  .rv-wrapper {
+    background-color: #ffff;
+  }
+
   .align {
     h2 {
       color: #010c21;
@@ -2502,7 +2506,7 @@ h6 {
   z-index: 2;
   margin: 0 0 160px;
   padding-top: 160px;
-  background-color: #fff;
+  background-color: $black;
 
   @include m($xl) {
     margin: 0 0 120px;

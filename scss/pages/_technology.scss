@@ -813,7 +813,7 @@
 }
 
 .expertise--extras {
-  //padding: 160px 0 0;
+  padding: 0;
 
   &::before {
     display: none;
@@ -850,11 +850,11 @@
     }
   }
 
-  //@include m($xl) {
-  //  padding: 120px 0 0;
-  //}
-  //
-  //@include m($lg) {
-  //  padding: 80px 0 0;
-  //}
+  @include m($xl) {
+    padding: 0;
+  }
+
+  @include m($lg) {
+    padding: 0;
+  }
 }
