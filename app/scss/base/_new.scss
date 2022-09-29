@@ -510,7 +510,7 @@
       right: 0;
       bottom: -64px;
       z-index: 5;
-      width: 190px;
+      width: 120px;
       height: 24px;
       background-image: linear-gradient(270deg, #010c21 5%, rgba(255, 255, 255, 0) 100%);
 
@@ -524,6 +524,10 @@
 
       @include m($md) {
         width: 100px;
+      }
+
+      @include m($sm) {
+        width: 75px;
       }
     }
 
@@ -682,10 +686,9 @@
   .nav-tabs {
     position: relative;
     display: flex;
-    flex-wrap: nowrap;
     padding-bottom: 16px;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     border: none;
     animation: fade 1s;
 
