@@ -37,6 +37,10 @@ body {
 }
 
 .light {
+  .rv-wrapper {
+    background-color: #ffff;
+  }
+
   .align {
     h2 {
       color: #010c21;
@@ -2495,4 +2499,22 @@ h6 {
 
 .hidden-block-with-img-link {
   display: none;
+}
+
+.rv-wrapper {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 160px;
+  padding-top: 160px;
+  background-color: $black;
+
+  @include m($xl) {
+    margin: 0 0 120px;
+    padding-top: 120px;
+  }
+
+  @include m($lg) {
+    margin: 0 0 80px;
+    padding-top: 80px;
+  }
 }
