@@ -1,3 +1,9 @@
+.vac-title-wrap {
+  @include m($md) {
+    margin-top: 25px !important;
+  }
+}
+
 .vacancies {
   position: relative;
   padding: 160px 0;
@@ -13,6 +19,7 @@
         right: 0;
         top: 35px;
         display: none;
+        transition: all 0.2s;
 
         @include m($md) {
           display: block;
@@ -29,7 +36,10 @@
 
       a {
         position: relative;
-        display: flex;
+        display: grid;
+        align-items: center;
+        grid-gap: 0 26px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 100px;
         padding: 32px 0;
         border-top: 1px solid $gray-dark;
         transition: all 0.2s;
@@ -37,6 +47,7 @@
         span {
           display: none;
           margin-bottom: 4px;
+          width: 100%;
           font-weight: 400;
           font-size: 14px;
           line-height: 22px;
@@ -48,64 +59,75 @@
         }
 
         p {
-          margin: 0 26px 0 0;
           font-weight: 600;
 
-          &:first-of-type {
-            width: 100%;
-            max-width: 384px;
+          span {
+            position: relative;
+            display: block;
+            margin: 0;
+            width: fit-content;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
+            transition: all 0.2s;
 
-            @include m($xl) {
-              max-width: 320px;
-            }
-
-            @include m($lg) {
-              max-width: 180px;
-            }
-
-            @include m($md) {
-              max-width: 100%;
-            }
-          }
-
-          &:nth-of-type(2) {
-            width: 100%;
-            max-width: 282px;
-
-            @include m($lg) {
-              max-width: 180px;
-            }
-
-            @include m($md) {
-              max-width: 100%;
+            span {
+              position: absolute;
+              left: 0;
+              top: -17px;
+              margin: 0;
+              width: fit-content;
+              border-radius: 2px;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 14px;
+              color: #fff !important;
+              background-color: red;
             }
           }
 
-          &:last-child {
-            margin-right: 0;
-            margin-left: auto;
+          &:last-of-type {
             text-align: right;
 
             @include m($md) {
-              margin-bottom: 24px;
-              margin-left: 0;
+              margin: 0 0 24px;
               text-align: left;
             }
           }
 
           @include m($md) {
             margin: 0 0 8px;
+            width: 100%;
           }
         }
 
         &:hover {
           border-top: 1px solid $orange;
           color: $orange;
+
+          p {
+            span {
+              color: $orange;
+            }
+          }
         }
 
         @include m($md) {
+          display: flex;
           flex-direction: column;
+          align-items: start;
           padding: 24px 0 0;
+        }
+      }
+
+      &:hover {
+        .vacancies__img-white {
+          opacity: 0;
+        }
+
+        .vacancies__img-black {
+          opacity: 1;
         }
       }
 
@@ -118,7 +140,10 @@
   }
 
   &__symbol {
-    display: flex;
+    display: grid;
+    align-items: center;
+    grid-gap: 0 26px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 100px;
     padding-bottom: 24px;
     animation: fade 1s;
 
@@ -127,39 +152,8 @@
       line-height: 22px;
       color: $gray-medium;
 
-      &:first-child {
-        margin-right: 26px;
-        width: 100%;
-        max-width: 384px;
-
-        @include m($xl) {
-          max-width: 320px;
-        }
-
-        @include m($lg) {
-          max-width: 180px;
-        }
-      }
-
       &:last-child {
-        margin-left: auto;
         text-align: right;
-      }
-
-      &:nth-child(2) {
-        margin-right: 26px;
-        width: 100%;
-        max-width: 282px;
-
-        @include m($lg) {
-          max-width: 180px;
-        }
-      }
-
-      &:nth-child(3) {
-        @include m($lg) {
-          margin-right: 26px;
-        }
       }
     }
 
