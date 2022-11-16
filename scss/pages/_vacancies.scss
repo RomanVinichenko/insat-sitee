@@ -1,9 +1,3 @@
-.vac-title-wrap {
-  @include m($md) {
-    margin-top: 25px !important;
-  }
-}
-
 .vacancies {
   position: relative;
   padding: 160px 0;
@@ -77,6 +71,7 @@
               left: 0;
               top: -17px;
               margin: 0;
+              padding: 0 2px;
               width: fit-content;
               border-radius: 2px;
               font-weight: 400;
@@ -84,6 +79,11 @@
               line-height: 14px;
               color: #fff !important;
               background-color: red;
+
+              @include m($md) {
+                position: static;
+                margin: 3px 0 4px;
+              }
             }
           }
 
