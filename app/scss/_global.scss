@@ -2523,23 +2523,30 @@ h6 {
 
 .lang_changer {
   display: flex;
+
   button {
+    margin: 0;
+    padding: 0;
+    border: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #fff;
     background-color: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
     transition: all 0.2s;
+
     &:hover {
       color: #bcc5d7;
     }
   }
 }
+
 .lang-active {
   a {
-    color: #6C57FF!important;
+    color: #6c57ff !important;
   }
+}
+
+.header .button .slime__block p {
+  color: #fff!important;
 }

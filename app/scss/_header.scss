@@ -73,12 +73,15 @@
 
       + .menu__item {
         margin-left: 80px;
+
         @include m(1300) {
           margin-left: 50px;
         }
+
         @include m(1100) {
           margin-left: 30px;
         }
+
         //@include m($xl) {
         //  margin-left: 50px;
         //}
