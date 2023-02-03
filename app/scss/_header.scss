@@ -25,6 +25,10 @@
       width: 235px;
     }
 
+    @include m(1140) {
+      width: 210px;
+    }
+
     @include m($md) {
       width: 200px;
     }
@@ -69,10 +73,15 @@
 
       + .menu__item {
         margin-left: 80px;
-
-        @include m($xl) {
+        @include m(1300) {
           margin-left: 50px;
         }
+        @include m(1100) {
+          margin-left: 30px;
+        }
+        //@include m($xl) {
+        //  margin-left: 50px;
+        //}
       }
 
       .menu__drop {

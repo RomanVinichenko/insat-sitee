@@ -2518,3 +2518,28 @@ h6 {
     padding-top: 80px;
   }
 }
+
+// lang changer
+
+.lang_changer {
+  display: flex;
+  button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s;
+    &:hover {
+      color: #bcc5d7;
+    }
+  }
+}
+.lang-active {
+  a {
+    color: #6C57FF!important;
+  }
+}
