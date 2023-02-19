@@ -2539,6 +2539,12 @@ h6 {
       color: #bcc5d7;
     }
   }
+
+  &:hover {
+    button {
+      color: #bcc5d7;
+    }
+  }
 }
 
 .lang-active {
@@ -2547,6 +2553,10 @@ h6 {
   }
 }
 
+.light .header .menu__drop ul .lang-active a {
+  color: #6c57ff !important;
+}
+
 .header .button .slime__block p {
-  color: #fff!important;
+  color: #fff !important;
 }

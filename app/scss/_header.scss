@@ -71,20 +71,16 @@
         }
       }
 
-      + .menu__item {
-        margin-left: 80px;
+      &:not(:last-child) {
+        margin-right: 80px;
 
         @include m(1300) {
-          margin-left: 50px;
+          margin-right: 50px;
         }
 
         @include m(1100) {
-          margin-left: 30px;
+          margin-right: 30px;
         }
-
-        //@include m($xl) {
-        //  margin-left: 50px;
-        //}
       }
 
       .menu__drop {
@@ -358,6 +354,11 @@
     font-size: 16px;
     line-height: 24px;
     color: $white;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #6c57ff;
+    }
   }
 
   .theme-mob {
@@ -381,6 +382,11 @@
     line-height: 32px;
     letter-spacing: -0.04em;
     color: $white;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #6c57ff;
+    }
   }
 
   .panel-group {
@@ -425,6 +431,11 @@
         font-size: 16px;
         line-height: 24px;
         color: $white;
+        transition: all 0.2s;
+
+        &:hover {
+          color: #6c57ff;
+        }
       }
     }
 
