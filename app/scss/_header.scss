@@ -381,11 +381,15 @@
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.04em;
-    color: $white;
+    color: #6c57ff;
     transition: all 0.2s;
 
     &:hover {
       color: #6c57ff;
+    }
+
+    &.collapsed {
+      color: $white;
     }
   }
 

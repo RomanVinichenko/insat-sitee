@@ -37,6 +37,26 @@ body {
 }
 
 .light {
+  .menu-mobile {
+    background-color: $white;
+
+    &__main {
+      color: $gray-dark;
+    }
+
+    .accordion-toggle {
+      color: #6c57ff;
+
+      &:hover {
+        color: #6c57ff;
+      }
+
+      &.collapsed {
+        color: $gray-dark;
+      }
+    }
+  }
+
   .rv-wrapper {
     background-color: #ffff;
   }
@@ -823,6 +843,10 @@ body {
     .menu__item-link {
       color: $black;
     }
+
+    .lang_changer button {
+      color: $black;
+    }
   }
 
   .header-custom {
@@ -1260,18 +1284,6 @@ body {
 
     &::before {
       z-index: 5;
-    }
-  }
-
-  .menu-mobile {
-    background-color: $white;
-
-    .accordion-toggle {
-      color: $gray-dark;
-    }
-
-    &__main {
-      color: $gray-dark;
     }
   }
 
@@ -2145,6 +2157,7 @@ h6 {
     justify-content: center;
     width: 48px;
     height: 48px;
+    min-width: 48px;
     border-radius: 50%;
     background-color: $white;
   }
