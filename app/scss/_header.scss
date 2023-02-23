@@ -165,7 +165,7 @@
           color: $gray;
         }
 
-        svg {
+        a + svg {
           transform: rotate(180deg);
 
           path {
