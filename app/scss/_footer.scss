@@ -7,6 +7,28 @@
   opacity: 0;
   padding: 96px 0 42px;
 
+  &__lang {
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        background-image: none !important;
+        background-size: 0 !important;
+        background-color: transparent !important;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__lang-actie {
+    a {
+      color: #6c57ff;
+    }
+  }
+
   .logo {
     margin: 0 0 52px;
 

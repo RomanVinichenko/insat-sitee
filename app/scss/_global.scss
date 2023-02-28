@@ -2535,11 +2535,13 @@ h6 {
 // lang changer
 
 .lang_changer {
-  display: flex;
   position: relative;
+  display: flex;
+
   svg:first-of-type {
     position: relative;
   }
+
   //&::after {
   //  position: absolute;
   //  top: 13px;
@@ -2549,25 +2551,26 @@ h6 {
   //  height: 14px;
   //  background-color: #010C21;
   //}
-  img{
+  img {
     position: absolute;
+    right: -7px;
     top: 12px;
     z-index: 2;
-    right: -7px;
     transform: scale(0.6);
   }
+
   .menu__drop {
     img {
-      position: relative!important;
-      top: 0!important;
-      z-index: 2!important;
-      right: 0!important;
-      transform: none!important;
+      position: relative !important;
+      right: 0 !important;
+      top: 0 !important;
+      z-index: 2 !important;
+      transform: none !important;
     }
-
   }
+
   svg {
-    margin-left: 0!important;
+    margin-left: 0 !important;
   }
 
   button {
@@ -2586,33 +2589,36 @@ h6 {
     }
   }
 
+  .lang-item {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex !important;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 12px !important;
+    }
+
+    svg {
+      width: 24px !important;
+      height: 16px !important;
+      transform: none !important;
+
+      &:hover {
+        transform: none !important;
+      }
+    }
+  }
+
   &:hover {
     .lang-item {
       svg {
         path {
 
         }
-      }
-    }
-  }
-  .lang-item {
-    display: flex;
-    align-items: center;
-    a {
-      display: flex!important;
-      align-items: center;
-    }
-    img {
-      margin-right: 12px!important;
-
-    }
-    svg {
-      width: 24px!important;
-      height: 16px!important;
-      transform: none!important;
-      &:hover {
-        transform: none!important;
-
       }
     }
   }
