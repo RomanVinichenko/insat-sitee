@@ -277,7 +277,7 @@
     line-height: 20px;
 
     p {
-      @include m(680) {
+      @include m(940) {
         margin-bottom: 16px;
         text-align: center;
       }
@@ -322,7 +322,7 @@
         }
       }
 
-      @include m(680) {
+      @include m(940) {
         justify-content: center;
         margin-bottom: 16px;
       }
@@ -336,7 +336,7 @@
       padding-top: 35px;
     }
 
-    @include m(680) {
+    @include m(940) {
       flex-direction: column;
       align-items: center;
       padding-top: 24px;
@@ -360,7 +360,7 @@
       }
     }
 
-    @include m(680) {
+    @include m(940) {
       margin-bottom: 0 !important;
     }
   }
